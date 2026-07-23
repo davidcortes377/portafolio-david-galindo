@@ -1,4 +1,3 @@
-
 :root {
   --ink: #111111;
   --paper: #f4f2ec;
@@ -291,7 +290,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   background: var(--violet);
   height: 33vw;
   right: -10vw;
-  top: 20vh;
+  top: 14%;
   width: 33vw;
 }
 
@@ -300,7 +299,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   background: var(--orange);
   height: 18vw;
   left: 5vw;
-  top: 51vh;
+  top: 58%;
   width: 18vw;
 }
 
@@ -775,7 +774,7 @@ footer h2 span {
 
   .hero h1 {
     line-height: 0.77;
-    margin-top: 14vh;
+    margin-top: 3.5rem;
   }
 
   .hero h1 span {
@@ -786,7 +785,7 @@ footer h2 span {
     align-items: start;
     flex-direction: column;
     gap: 3rem;
-    margin: 13vh 0 7vh 15vw;
+    margin: 3.5rem 0 3rem 15vw;
   }
 
   .orb-one {
@@ -860,7 +859,7 @@ footer h2 span {
 
   .hero h1 {
     font-size: 23vw;
-    margin-top: 16vh;
+    margin-top: 4rem;
   }
 
   .hero h1 span {
@@ -869,6 +868,10 @@ footer h2 span {
 
   .hero-bottom {
     margin-left: 0;
+  }
+
+  .ticker {
+    font-size: clamp(1.5rem, 8.5vw, 2.6rem);
   }
 
   .hero-index {
@@ -887,7 +890,7 @@ footer h2 span {
   }
 
   .project-grid {
-    gap: 6rem;
+    row-gap: 6rem;
   }
 
   .visit-pill {
