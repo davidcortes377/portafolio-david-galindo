@@ -160,15 +160,55 @@ body.nav-open .nav-toggle span:nth-child(3) {
   gap: 0.6rem;
 }
 
+.header-right {
+  align-items: center;
+  display: flex;
+  gap: 1.2rem;
+  justify-self: end;
+}
+
 .availability {
   align-items: center;
   display: flex;
   font-family: "Courier New", monospace;
   font-size: 0.65rem;
   gap: 0.55rem;
-  justify-self: end;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.lang-switch {
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  display: flex;
+  overflow: hidden;
+}
+
+.lang-btn {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.44rem 0.66rem;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.lang-btn[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.lang-btn[aria-pressed="false"]:hover {
+  background: rgba(17, 17, 17, 0.09);
+}
+
+.lang-btn:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: -2px;
 }
 
 .availability i {
@@ -463,7 +503,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 }
 
 .project-type,
-.project-time span {
+.project-time .pt-label {
   font-family: "Courier New", monospace;
   font-size: 0.6rem;
   letter-spacing: 0.1em;
@@ -484,7 +524,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   text-align: right;
 }
 
-.project-time span {
+.project-time .pt-label {
   display: block;
   margin-bottom: 0.4rem;
   opacity: 0.55;
@@ -850,6 +890,10 @@ footer h2 span {
 
   .site-header nav a {
     font-size: 1.15rem;
+  }
+
+  .header-right {
+    gap: 0.75rem;
   }
 
   .hero {

@@ -9,23 +9,80 @@
     />
     <meta name="theme-color" content="#f4f2ec" />
     <title>David Galindo — Diseño & Marketing</title>
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="https://davidcortes377.github.io/portafolio-david-galindo/?lang=es"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://davidcortes377.github.io/portafolio-david-galindo/?lang=en"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://davidcortes377.github.io/portafolio-david-galindo/"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main>
       <header class="site-header">
-        <a class="monogram" href="#inicio" aria-label="Ir al inicio">
+        <a
+          class="monogram"
+          href="#inicio"
+          data-i18n-aria="nav.homeAria"
+          aria-label="Ir al inicio"
+        >
           DG<span>®</span>
         </a>
-        <nav id="site-nav" aria-label="Navegación principal">
-          <a href="#proyectos">Proyectos</a>
-          <a href="#perfil">Perfil</a>
-          <a href="#contacto">Contacto</a>
-          <a class="nav-contact" href="https://wa.me/541125546238" target="_blank" rel="noreferrer"
-            >Escribime<span>↗</span></a
+        <nav
+          id="site-nav"
+          data-i18n-aria="nav.mainAria"
+          aria-label="Navegación principal"
+        >
+          <a href="#proyectos" data-i18n="nav.work">Proyectos</a>
+          <a href="#perfil" data-i18n="nav.profile">Perfil</a>
+          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+          <a
+            class="nav-contact"
+            href="https://wa.me/541125546238"
+            target="_blank"
+            rel="noreferrer"
+            ><span data-i18n="nav.cta">Escribime</span><span>↗</span></a
           >
         </nav>
-        <span class="availability"><i></i>Disponible</span>
+        <div class="header-right">
+          <span class="availability"
+            ><i></i><span data-i18n="header.available">Disponible</span></span
+          >
+          <div
+            class="lang-switch"
+            role="group"
+            data-i18n-aria="lang.groupAria"
+            aria-label="Seleccionar idioma"
+          >
+            <button
+              class="lang-btn"
+              type="button"
+              data-lang="es"
+              aria-pressed="true"
+              lang="es"
+            >
+              ES
+            </button>
+            <button
+              class="lang-btn"
+              type="button"
+              data-lang="en"
+              aria-pressed="false"
+              lang="en"
+            >
+              EN
+            </button>
+          </div>
+        </div>
         <button
           class="nav-toggle"
           type="button"
@@ -40,25 +97,32 @@
       <section class="hero" id="inicio">
         <div class="hero-orb orb-one"></div>
         <div class="hero-orb orb-two"></div>
-        <p class="eyebrow">Diseño digital + estrategia de marca</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">
+          Diseño digital + estrategia de marca
+        </p>
         <h1>David<br /><span>Galindo</span></h1>
         <div class="hero-bottom">
-          <p class="hero-intro">
+          <p class="hero-intro" data-i18n="hero.intro">
             Diseño experiencias digitales que convierten ideas complejas en
             marcas claras, memorables y preparadas para crecer.
           </p>
-          <a class="round-link" href="#proyectos" aria-label="Ver proyectos">
-            <span>Ver trabajo</span>↓
+          <a
+            class="round-link"
+            href="#proyectos"
+            data-i18n-aria="hero.ctaAria"
+            aria-label="Ver proyectos"
+          >
+            <span data-i18n="hero.cta">Ver trabajo</span>↓
           </a>
         </div>
         <div class="hero-index">
-          <span>PORTFOLIO / 2026</span>
-          <span>DISEÑO · MARKETING · WEB</span>
+          <span data-i18n="hero.indexLeft">PORTFOLIO / 2026</span>
+          <span data-i18n="hero.indexRight">DISEÑO · MARKETING · WEB</span>
         </div>
       </section>
 
       <div class="ticker" aria-hidden="true">
-        <div>
+        <div data-i18n-html="ticker">
           ESTRATEGIA <span>✳</span> DISEÑO WEB <span>✳</span> E-COMMERCE
           <span>✳</span> EXPERIENCIAS DIGITALES <span>✳</span> ESTRATEGIA
           <span>✳</span> DISEÑO WEB <span>✳</span> E-COMMERCE <span>✳</span>
@@ -68,534 +132,704 @@
       <section class="work-section" id="proyectos">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Selección / 14 proyectos</p>
-            <h2>Trabajo reciente</h2>
+            <p class="eyebrow" data-i18n="work.eyebrow">
+              Selección / 14 proyectos
+            </p>
+            <h2 data-i18n="work.title">Trabajo reciente</h2>
           </div>
-          <p>
+          <p data-i18n="work.lead">
             Sistemas visuales y productos digitales pensados desde la marca
             hasta el último clic.
           </p>
         </div>
 
         <div class="project-grid">
-          <article class="project-card project-xl">
+          <article class="project-card project-xl" data-project="Moon Cheese">
             <a
               class="project-visual"
               href="https://mooncheese.com/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Moon Cheese"
             >
               <img
                 src="./projects/moon-cheese.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Moon Cheese"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">01</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">E-commerce · Food</p>
+                  <p class="project-type" data-i18n="p1.type">
+                    E-commerce · Food
+                  </p>
                   <h3>Moon Cheese</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>6–8 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p1.time">6–8 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p1.summary">
                 Una experiencia D2C de alto impacto: fotografía de producto,
                 promociones y una identidad visual que convierte el snack en un
                 universo propio.
               </p>
               <div class="tags">
-                <span>Shopify</span><span>Dirección visual</span
-                ><span>Conversión</span>
+                <span data-i18n="p1.tag1">Shopify</span
+                ><span data-i18n="p1.tag2">Dirección visual</span
+                ><span data-i18n="p1.tag3">Conversión</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-wide">
+          <article class="project-card project-wide" data-project="Clínica Vizu">
             <a
               class="project-visual"
               href="https://clinicavizu.com/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Clínica Vizu"
             >
               <img
                 src="./projects/clinica-vizu.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Clínica Vizu"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">02</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">Salud · Servicios</p>
+                  <p class="project-type" data-i18n="p2.type">
+                    Salud · Servicios
+                  </p>
                   <h3>Clínica Vizu</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>5–6 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p2.time">5–6 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p2.summary">
                 Sitio editorial y sofisticado para una clínica estética, con
                 narrativa humana, video inmersivo y recorridos orientados a
                 reserva.
               </p>
               <div class="tags">
-                <span>UX estratégico</span><span>Video hero</span
-                ><span>Reservas</span>
+                <span data-i18n="p2.tag1">UX estratégico</span
+                ><span data-i18n="p2.tag2">Video hero</span
+                ><span data-i18n="p2.tag3">Reservas</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-wide">
+          <article class="project-card project-wide" data-project="OLIPOP">
             <a
               class="project-visual"
               href="https://drinkolipop.com/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar OLIPOP"
             >
               <img
                 src="./projects/olipop.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio OLIPOP"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">03</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">E-commerce · Beverage</p>
+                  <p class="project-type" data-i18n="p3.type">
+                    E-commerce · Beverage
+                  </p>
                   <h3>OLIPOP</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>5–7 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p3.time">5–7 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p3.summary">
                 E-commerce de marca con color, ilustración y storytelling para
                 explicar una propuesta de producto diferente sin perder
                 claridad comercial.
               </p>
               <div class="tags">
-                <span>E-commerce</span><span>Storytelling</span
-                ><span>Motion</span>
+                <span data-i18n="p3.tag1">E-commerce</span
+                ><span data-i18n="p3.tag2">Storytelling</span
+                ><span data-i18n="p3.tag3">Motion</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-tall">
+          <article
+            class="project-card project-tall"
+            data-project="Chef Nicolás Prieto"
+          >
             <a
               class="project-visual"
               href="https://chefnicolasprieto.com/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Chef Nicolás Prieto"
             >
               <img
                 src="./projects/chef-nicolas-prieto.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Chef Nicolás Prieto"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">04</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">Educación · Gastronomía</p>
+                  <p class="project-type" data-i18n="p4.type">
+                    Educación · Gastronomía
+                  </p>
                   <h3>Chef Nicolás Prieto</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>4–5 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p4.time">4–5 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p4.summary">
                 Plataforma de formación que ordena cursos, metodología,
                 cronogramas y tienda alrededor de una marca personal sólida.
               </p>
               <div class="tags">
-                <span>Arquitectura UX</span><span>Cursos</span
-                ><span>Marca personal</span>
+                <span data-i18n="p4.tag1">Arquitectura UX</span
+                ><span data-i18n="p4.tag2">Cursos</span
+                ><span data-i18n="p4.tag3">Marca personal</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-standard">
+          <article class="project-card project-standard" data-project="Voltra">
             <a
               class="project-visual"
               href="https://voltra.com.ar/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Voltra"
             >
               <img
                 src="./projects/voltra.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Voltra"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">05</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">E-commerce · Retail</p>
+                  <p class="project-type" data-i18n="p5.type">
+                    E-commerce · Retail
+                  </p>
                   <h3>Voltra</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>4–6 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p5.time">4–6 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p5.summary">
                 Tienda de alto volumen con promociones visibles, navegación
                 comercial y catálogo preparado para descubrir productos
                 rápidamente.
               </p>
               <div class="tags">
-                <span>Catálogo</span><span>Promociones</span
-                ><span>Mobile UX</span>
+                <span data-i18n="p5.tag1">Catálogo</span
+                ><span data-i18n="p5.tag2">Promociones</span
+                ><span data-i18n="p5.tag3">Mobile UX</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-standard">
+          <article
+            class="project-card project-standard"
+            data-project="Casa en Orden"
+          >
             <a
               class="project-visual"
               href="https://casaenorden.shop"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Casa en Orden"
             >
               <img
                 src="./projects/casa-en-orden.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Casa en Orden"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">06</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">E-commerce · Hogar</p>
+                  <p class="project-type" data-i18n="p6.type">
+                    E-commerce · Hogar
+                  </p>
                   <h3>Casa en Orden</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>4–5 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p6.time">4–5 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p6.summary">
                 Tienda cálida y directa para soluciones de organización, con
                 jerarquía comercial, productos protagonistas y acceso inmediato
                 a WhatsApp.
               </p>
               <div class="tags">
-                <span>Tienda online</span><span>Campañas</span
-                ><span>WhatsApp</span>
+                <span data-i18n="p6.tag1">Tienda online</span
+                ><span data-i18n="p6.tag2">Campañas</span
+                ><span data-i18n="p6.tag3">WhatsApp</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-wide">
+          <article class="project-card project-wide" data-project="Magic Spoon">
             <a
               class="project-visual"
               href="https://magicspoon.com/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Magic Spoon"
             >
               <img
                 src="./projects/magic-spoon.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Magic Spoon"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">07</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">E-commerce · Food</p>
+                  <p class="project-type" data-i18n="p7.type">
+                    E-commerce · Food
+                  </p>
                   <h3>Magic Spoon</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>5–7 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p7.time">5–7 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p7.summary">
                 Sistema visual de máxima energía para un portafolio amplio de
                 productos, bundles y suscripciones con foco en conversión.
               </p>
               <div class="tags">
-                <span>D2C</span><span>Suscripción</span><span>Campañas</span>
+                <span data-i18n="p7.tag1">D2C</span
+                ><span data-i18n="p7.tag2">Suscripción</span
+                ><span data-i18n="p7.tag3">Campañas</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-standard">
+          <article
+            class="project-card project-standard"
+            data-project="iPatagonic"
+          >
             <a
               class="project-visual"
               href="https://ipatagonic.com/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar iPatagonic"
             >
               <img
                 src="./projects/ipatagonic.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio iPatagonic"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">08</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">Corporativo · Tecnología</p>
+                  <p class="project-type" data-i18n="p8.type">
+                    Corporativo · Tecnología
+                  </p>
                   <h3>iPatagonic</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>3–4 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p8.time">3–4 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p8.summary">
                 Presencia corporativa bilingüe para consultoría tecnológica,
                 con servicios complejos convertidos en un recorrido simple y
                 confiable.
               </p>
               <div class="tags">
-                <span>Bilingüe</span><span>Servicios B2B</span
-                ><span>Contenido</span>
+                <span data-i18n="p8.tag1">Bilingüe</span
+                ><span data-i18n="p8.tag2">Servicios B2B</span
+                ><span data-i18n="p8.tag3">Contenido</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-standard">
+          <article
+            class="project-card project-standard"
+            data-project="Flash Realty"
+          >
             <a
               class="project-visual"
               href="https://nivaxel.site/flash/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Flash Realty"
             >
               <img
                 src="./projects/nivaxel-flash.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Flash Realty"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">09</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">Inmobiliaria · Leads</p>
+                  <p class="project-type" data-i18n="p9.type">
+                    Inmobiliaria · Leads
+                  </p>
                   <h3>Flash Realty</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>3–4 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p9.time">3–4 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p9.summary">
                 Landing inmobiliaria orientada a captación: propuesta clara,
                 prueba de experiencia y llamados a la acción de baja fricción.
               </p>
               <div class="tags">
-                <span>Landing page</span><span>Generación de leads</span
-                ><span>WhatsApp</span>
+                <span data-i18n="p9.tag1">Landing page</span
+                ><span data-i18n="p9.tag2">Generación de leads</span
+                ><span data-i18n="p9.tag3">WhatsApp</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-wide">
+          <article
+            class="project-card project-wide"
+            data-project="Ferretería Candelaria"
+          >
             <a
               class="project-visual"
               href="https://nivaxel.site/ferreteriacandelaria/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Ferretería Candelaria"
             >
               <img
                 src="./projects/ferreteria-candelaria.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Ferretería Candelaria"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">10</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">Retail · Construcción</p>
+                  <p class="project-type" data-i18n="p10.type">
+                    Retail · Construcción
+                  </p>
                   <h3>Ferretería Candelaria</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>4–5 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p10.time">4–5 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p10.summary">
                 Portal comercial robusto con catálogo, cotización y un shopper
                 virtual pensado para clientes y contratistas.
               </p>
               <div class="tags">
-                <span>Catálogo</span><span>Cotizador</span
-                ><span>Shopper virtual</span>
+                <span data-i18n="p10.tag1">Catálogo</span
+                ><span data-i18n="p10.tag2">Cotizador</span
+                ><span data-i18n="p10.tag3">Shopper virtual</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-standard">
+          <article
+            class="project-card project-standard"
+            data-project="Hematólogo Tijuana"
+          >
             <a
               class="project-visual"
               href="https://hematologotijuana.com/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Hematólogo Tijuana"
             >
               <img
                 src="./projects/hematologo-tijuana.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Hematólogo Tijuana"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">11</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">Salud · Marca personal</p>
+                  <p class="project-type" data-i18n="p11.type">
+                    Salud · Marca personal
+                  </p>
                   <h3>Hematólogo Tijuana</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>3–4 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p11.time">3–4 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p11.summary">
                 Sitio médico que combina autoridad profesional, información
                 clara y un camino directo hacia la consulta.
               </p>
               <div class="tags">
-                <span>Marca personal</span><span>Contenido médico</span
-                ><span>Contacto</span>
+                <span data-i18n="p11.tag1">Marca personal</span
+                ><span data-i18n="p11.tag2">Contenido médico</span
+                ><span data-i18n="p11.tag3">Contacto</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-standard">
+          <article
+            class="project-card project-standard"
+            data-project="Mundo Tesis"
+          >
             <a
               class="project-visual"
               href="https://mundotesis.pe/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Mundo Tesis"
             >
               <img
                 src="./projects/mundo-tesis.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Mundo Tesis"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">12</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">Educación · Comunidad</p>
+                  <p class="project-type" data-i18n="p12.type">
+                    Educación · Comunidad
+                  </p>
                   <h3>Mundo Tesis</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>3–4 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p12.time">3–4 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p12.summary">
                 Ecosistema académico para cursos, seminarios, talleres y
                 recursos con una navegación escalable.
               </p>
               <div class="tags">
-                <span>Plataforma educativa</span><span>Cursos</span
-                ><span>E-commerce</span>
+                <span data-i18n="p12.tag1">Plataforma educativa</span
+                ><span data-i18n="p12.tag2">Cursos</span
+                ><span data-i18n="p12.tag3">E-commerce</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-standard">
+          <article
+            class="project-card project-standard"
+            data-project="Astroterapéutica"
+          >
             <a
               class="project-visual"
               href="https://www.astroterapeutica.com/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Astroterapéutica"
             >
               <img
                 src="./projects/astroterapeutica.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Astroterapéutica"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">13</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">Educación · Wellness</p>
+                  <p class="project-type" data-i18n="p13.type">
+                    Educación · Wellness
+                  </p>
                   <h3>Astroterapéutica</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>4–5 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p13.time">4–5 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p13.summary">
                 Escuela online con atmósfera inmersiva, oferta formativa
                 jerarquizada y un lenguaje visual reconocible.
               </p>
               <div class="tags">
-                <span>Academia online</span><span>Cursos</span
-                ><span>Dirección de arte</span>
+                <span data-i18n="p13.tag1">Academia online</span
+                ><span data-i18n="p13.tag2">Cursos</span
+                ><span data-i18n="p13.tag3">Dirección de arte</span>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-standard">
+          <article
+            class="project-card project-standard"
+            data-project="Taller Saberes"
+          >
             <a
               class="project-visual"
               href="https://www.tallersaberes.com/"
               target="_blank"
               rel="noreferrer"
+              data-i18n-aria="project.visitAria"
               aria-label="Visitar Taller Saberes"
             >
               <img
                 src="./projects/taller-saberes.jpg"
+                data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Taller Saberes"
                 loading="lazy"
               />
-              <span class="visit-pill">Visitar sitio <span>↗</span></span>
+              <span class="visit-pill"
+                ><span data-i18n="project.visit">Visitar sitio</span>
+                <span>↗</span></span
+              >
               <span class="project-number">14</span>
             </a>
             <div class="project-copy">
               <div class="project-title-row">
                 <div>
-                  <p class="project-type">Educación · Institucional</p>
+                  <p class="project-type" data-i18n="p14.type">
+                    Educación · Institucional
+                  </p>
                   <h3>Taller Saberes</h3>
                 </div>
                 <p class="project-time">
-                  <span>Tiempo estimado</span>2–3 semanas
+                  <span class="pt-label" data-i18n="project.timeLabel"
+                    >Tiempo estimado</span
+                  ><span data-i18n="p14.time">2–3 semanas</span>
                 </p>
               </div>
-              <p class="project-summary">
+              <p class="project-summary" data-i18n="p14.summary">
                 Web institucional para acompañamiento educativo, con
                 información de ingresos, clases y contacto centralizada.
               </p>
               <div class="tags">
-                <span>Sitio institucional</span><span>Servicios</span
-                ><span>Contacto</span>
+                <span data-i18n="p14.tag1">Sitio institucional</span
+                ><span data-i18n="p14.tag2">Servicios</span
+                ><span data-i18n="p14.tag3">Contacto</span>
               </div>
             </div>
           </article>
@@ -604,12 +838,14 @@
 
       <section class="profile" id="perfil">
         <div class="profile-label">
-          <p class="eyebrow">Perfil / Enfoque</p>
+          <p class="eyebrow" data-i18n="profile.eyebrow">Perfil / Enfoque</p>
           <span class="profile-mark">DG</span>
         </div>
         <div class="profile-copy">
-          <h2>Diseño con criterio.<br />Marketing con intención.</h2>
-          <p>
+          <h2 data-i18n-html="profile.title">
+            Diseño con criterio.<br />Marketing con intención.
+          </h2>
+          <p data-i18n="profile.lead">
             Soy David Galindo, especialista en diseño y marketing. Conecto
             identidad, contenido y tecnología para crear experiencias que se
             sienten distintas y funcionan en el mundo real.
@@ -617,18 +853,24 @@
           <div class="services">
             <div>
               <span>01</span>
-              <h3>Diseño web</h3>
-              <p>Websites, landing pages, tiendas y plataformas.</p>
+              <h3 data-i18n="service1.title">Diseño web</h3>
+              <p data-i18n="service1.text">
+                Websites, landing pages, tiendas y plataformas.
+              </p>
             </div>
             <div>
               <span>02</span>
-              <h3>Identidad</h3>
-              <p>Sistemas visuales, dirección de arte y marca digital.</p>
+              <h3 data-i18n="service2.title">Identidad</h3>
+              <p data-i18n="service2.text">
+                Sistemas visuales, dirección de arte y marca digital.
+              </p>
             </div>
             <div>
               <span>03</span>
-              <h3>Estrategia</h3>
-              <p>Arquitectura, contenido y recorridos orientados a objetivos.</p>
+              <h3 data-i18n="service3.title">Estrategia</h3>
+              <p data-i18n="service3.text">
+                Arquitectura, contenido y recorridos orientados a objetivos.
+              </p>
             </div>
           </div>
         </div>
@@ -636,24 +878,34 @@
 
       <footer id="contacto">
         <div class="footer-top">
-          <p class="eyebrow">¿Tienes una idea?</p>
-          <a href="#inicio" aria-label="Volver al inicio">↑</a>
+          <p class="eyebrow" data-i18n="footer.eyebrow">¿Tienes una idea?</p>
+          <a
+            href="#inicio"
+            data-i18n-aria="footer.topAria"
+            aria-label="Volver al inicio"
+            >↑</a
+          >
         </div>
-        <h2>Hagamos algo<br /><span>imposible de ignorar.</span></h2>
+        <h2 data-i18n-html="footer.title">
+          Hagamos algo<br /><span>imposible de ignorar.</span>
+        </h2>
         <a
           class="whatsapp-link"
           href="https://wa.me/541125546238"
           target="_blank"
           rel="noreferrer"
+          data-i18n-aria="footer.waAria"
           aria-label="Contactar a David Galindo por WhatsApp"
         >
-          <span>Conversemos por WhatsApp</span>
+          <span data-i18n="footer.waLabel">Conversemos por WhatsApp</span>
           <strong>+54 11 2554 6238</strong>
           <span>↗</span>
         </a>
         <div class="footer-bottom">
-          <p>David Galindo — Diseño & Marketing</p>
-          <p>Disponible para proyectos y colaboraciones</p>
+          <p data-i18n="footer.name">David Galindo — Diseño & Marketing</p>
+          <p data-i18n="footer.status">
+            Disponible para proyectos y colaboraciones
+          </p>
           <p>© 2026</p>
         </div>
       </footer>
@@ -661,6 +913,459 @@
 
     <script>
       (function () {
+        var STORAGE_KEY = "dg-lang";
+
+        var DICT = {
+          es: {
+            "meta.title": "David Galindo — Diseño & Marketing",
+            "meta.description":
+              "Portafolio de David Galindo, especialista en diseño, marketing y experiencias digitales.",
+
+            "nav.homeAria": "Ir al inicio",
+            "nav.mainAria": "Navegación principal",
+            "nav.work": "Proyectos",
+            "nav.profile": "Perfil",
+            "nav.contact": "Contacto",
+            "nav.cta": "Escribime",
+            "nav.open": "Abrir menú",
+            "nav.close": "Cerrar menú",
+            "header.available": "Disponible",
+            "lang.groupAria": "Seleccionar idioma",
+
+            "hero.eyebrow": "Diseño digital + estrategia de marca",
+            "hero.intro":
+              "Diseño experiencias digitales que convierten ideas complejas en marcas claras, memorables y preparadas para crecer.",
+            "hero.cta": "Ver trabajo",
+            "hero.ctaAria": "Ver proyectos",
+            "hero.indexLeft": "PORTFOLIO / 2026",
+            "hero.indexRight": "DISEÑO · MARKETING · WEB",
+
+            ticker:
+              "ESTRATEGIA <span>✳</span> DISEÑO WEB <span>✳</span> E-COMMERCE <span>✳</span> EXPERIENCIAS DIGITALES <span>✳</span> ESTRATEGIA <span>✳</span> DISEÑO WEB <span>✳</span> E-COMMERCE <span>✳</span>",
+
+            "work.eyebrow": "Selección / 14 proyectos",
+            "work.title": "Trabajo reciente",
+            "work.lead":
+              "Sistemas visuales y productos digitales pensados desde la marca hasta el último clic.",
+
+            "project.visit": "Visitar sitio",
+            "project.visitAria": "Visitar {name}",
+            "project.shotAlt": "Captura de pantalla del sitio {name}",
+            "project.timeLabel": "Tiempo estimado",
+
+            "p1.type": "E-commerce · Food",
+            "p1.time": "6–8 semanas",
+            "p1.summary":
+              "Una experiencia D2C de alto impacto: fotografía de producto, promociones y una identidad visual que convierte el snack en un universo propio.",
+            "p1.tag1": "Shopify",
+            "p1.tag2": "Dirección visual",
+            "p1.tag3": "Conversión",
+
+            "p2.type": "Salud · Servicios",
+            "p2.time": "5–6 semanas",
+            "p2.summary":
+              "Sitio editorial y sofisticado para una clínica estética, con narrativa humana, video inmersivo y recorridos orientados a reserva.",
+            "p2.tag1": "UX estratégico",
+            "p2.tag2": "Video hero",
+            "p2.tag3": "Reservas",
+
+            "p3.type": "E-commerce · Beverage",
+            "p3.time": "5–7 semanas",
+            "p3.summary":
+              "E-commerce de marca con color, ilustración y storytelling para explicar una propuesta de producto diferente sin perder claridad comercial.",
+            "p3.tag1": "E-commerce",
+            "p3.tag2": "Storytelling",
+            "p3.tag3": "Motion",
+
+            "p4.type": "Educación · Gastronomía",
+            "p4.time": "4–5 semanas",
+            "p4.summary":
+              "Plataforma de formación que ordena cursos, metodología, cronogramas y tienda alrededor de una marca personal sólida.",
+            "p4.tag1": "Arquitectura UX",
+            "p4.tag2": "Cursos",
+            "p4.tag3": "Marca personal",
+
+            "p5.type": "E-commerce · Retail",
+            "p5.time": "4–6 semanas",
+            "p5.summary":
+              "Tienda de alto volumen con promociones visibles, navegación comercial y catálogo preparado para descubrir productos rápidamente.",
+            "p5.tag1": "Catálogo",
+            "p5.tag2": "Promociones",
+            "p5.tag3": "Mobile UX",
+
+            "p6.type": "E-commerce · Hogar",
+            "p6.time": "4–5 semanas",
+            "p6.summary":
+              "Tienda cálida y directa para soluciones de organización, con jerarquía comercial, productos protagonistas y acceso inmediato a WhatsApp.",
+            "p6.tag1": "Tienda online",
+            "p6.tag2": "Campañas",
+            "p6.tag3": "WhatsApp",
+
+            "p7.type": "E-commerce · Food",
+            "p7.time": "5–7 semanas",
+            "p7.summary":
+              "Sistema visual de máxima energía para un portafolio amplio de productos, bundles y suscripciones con foco en conversión.",
+            "p7.tag1": "D2C",
+            "p7.tag2": "Suscripción",
+            "p7.tag3": "Campañas",
+
+            "p8.type": "Corporativo · Tecnología",
+            "p8.time": "3–4 semanas",
+            "p8.summary":
+              "Presencia corporativa bilingüe para consultoría tecnológica, con servicios complejos convertidos en un recorrido simple y confiable.",
+            "p8.tag1": "Bilingüe",
+            "p8.tag2": "Servicios B2B",
+            "p8.tag3": "Contenido",
+
+            "p9.type": "Inmobiliaria · Leads",
+            "p9.time": "3–4 semanas",
+            "p9.summary":
+              "Landing inmobiliaria orientada a captación: propuesta clara, prueba de experiencia y llamados a la acción de baja fricción.",
+            "p9.tag1": "Landing page",
+            "p9.tag2": "Generación de leads",
+            "p9.tag3": "WhatsApp",
+
+            "p10.type": "Retail · Construcción",
+            "p10.time": "4–5 semanas",
+            "p10.summary":
+              "Portal comercial robusto con catálogo, cotización y un shopper virtual pensado para clientes y contratistas.",
+            "p10.tag1": "Catálogo",
+            "p10.tag2": "Cotizador",
+            "p10.tag3": "Shopper virtual",
+
+            "p11.type": "Salud · Marca personal",
+            "p11.time": "3–4 semanas",
+            "p11.summary":
+              "Sitio médico que combina autoridad profesional, información clara y un camino directo hacia la consulta.",
+            "p11.tag1": "Marca personal",
+            "p11.tag2": "Contenido médico",
+            "p11.tag3": "Contacto",
+
+            "p12.type": "Educación · Comunidad",
+            "p12.time": "3–4 semanas",
+            "p12.summary":
+              "Ecosistema académico para cursos, seminarios, talleres y recursos con una navegación escalable.",
+            "p12.tag1": "Plataforma educativa",
+            "p12.tag2": "Cursos",
+            "p12.tag3": "E-commerce",
+
+            "p13.type": "Educación · Wellness",
+            "p13.time": "4–5 semanas",
+            "p13.summary":
+              "Escuela online con atmósfera inmersiva, oferta formativa jerarquizada y un lenguaje visual reconocible.",
+            "p13.tag1": "Academia online",
+            "p13.tag2": "Cursos",
+            "p13.tag3": "Dirección de arte",
+
+            "p14.type": "Educación · Institucional",
+            "p14.time": "2–3 semanas",
+            "p14.summary":
+              "Web institucional para acompañamiento educativo, con información de ingresos, clases y contacto centralizada.",
+            "p14.tag1": "Sitio institucional",
+            "p14.tag2": "Servicios",
+            "p14.tag3": "Contacto",
+
+            "profile.eyebrow": "Perfil / Enfoque",
+            "profile.title":
+              "Diseño con criterio.<br />Marketing con intención.",
+            "profile.lead":
+              "Soy David Galindo, especialista en diseño y marketing. Conecto identidad, contenido y tecnología para crear experiencias que se sienten distintas y funcionan en el mundo real.",
+            "service1.title": "Diseño web",
+            "service1.text": "Websites, landing pages, tiendas y plataformas.",
+            "service2.title": "Identidad",
+            "service2.text":
+              "Sistemas visuales, dirección de arte y marca digital.",
+            "service3.title": "Estrategia",
+            "service3.text":
+              "Arquitectura, contenido y recorridos orientados a objetivos.",
+
+            "footer.eyebrow": "¿Tienes una idea?",
+            "footer.topAria": "Volver al inicio",
+            "footer.title":
+              "Hagamos algo<br /><span>imposible de ignorar.</span>",
+            "footer.waLabel": "Conversemos por WhatsApp",
+            "footer.waAria": "Contactar a David Galindo por WhatsApp",
+            "footer.name": "David Galindo — Diseño & Marketing",
+            "footer.status": "Disponible para proyectos y colaboraciones"
+          },
+
+          en: {
+            "meta.title": "David Galindo — Design & Marketing",
+            "meta.description":
+              "David Galindo's portfolio — design, marketing, and digital experiences specialist.",
+
+            "nav.homeAria": "Go to home",
+            "nav.mainAria": "Main navigation",
+            "nav.work": "Work",
+            "nav.profile": "Profile",
+            "nav.contact": "Contact",
+            "nav.cta": "Message me",
+            "nav.open": "Open menu",
+            "nav.close": "Close menu",
+            "header.available": "Available",
+            "lang.groupAria": "Select language",
+
+            "hero.eyebrow": "Digital design + brand strategy",
+            "hero.intro":
+              "I design digital experiences that turn complex ideas into clear, memorable brands built to grow.",
+            "hero.cta": "See work",
+            "hero.ctaAria": "See work",
+            "hero.indexLeft": "PORTFOLIO / 2026",
+            "hero.indexRight": "DESIGN · MARKETING · WEB",
+
+            ticker:
+              "STRATEGY <span>✳</span> WEB DESIGN <span>✳</span> E-COMMERCE <span>✳</span> DIGITAL EXPERIENCES <span>✳</span> STRATEGY <span>✳</span> WEB DESIGN <span>✳</span> E-COMMERCE <span>✳</span>",
+
+            "work.eyebrow": "Selected / 14 projects",
+            "work.title": "Recent work",
+            "work.lead":
+              "Visual systems and digital products designed from the brand down to the last click.",
+
+            "project.visit": "Visit site",
+            "project.visitAria": "Visit {name}",
+            "project.shotAlt": "Screenshot of the {name} site",
+            "project.timeLabel": "Estimated time",
+
+            "p1.type": "E-commerce · Food",
+            "p1.time": "6–8 weeks",
+            "p1.summary":
+              "A high-impact D2C experience: product photography, promotions, and a visual identity that turns the snack into a world of its own.",
+            "p1.tag1": "Shopify",
+            "p1.tag2": "Art direction",
+            "p1.tag3": "Conversion",
+
+            "p2.type": "Health · Services",
+            "p2.time": "5–6 weeks",
+            "p2.summary":
+              "An editorial, sophisticated site for an aesthetic clinic, with human storytelling, immersive video, and booking-focused journeys.",
+            "p2.tag1": "Strategic UX",
+            "p2.tag2": "Video hero",
+            "p2.tag3": "Bookings",
+
+            "p3.type": "E-commerce · Beverage",
+            "p3.time": "5–7 weeks",
+            "p3.summary":
+              "Brand-led e-commerce with color, illustration, and storytelling that explains a different kind of product without losing commercial clarity.",
+            "p3.tag1": "E-commerce",
+            "p3.tag2": "Storytelling",
+            "p3.tag3": "Motion",
+
+            "p4.type": "Education · Culinary",
+            "p4.time": "4–5 weeks",
+            "p4.summary":
+              "A training platform that organizes courses, methodology, schedules, and a shop around a strong personal brand.",
+            "p4.tag1": "UX architecture",
+            "p4.tag2": "Courses",
+            "p4.tag3": "Personal brand",
+
+            "p5.type": "E-commerce · Retail",
+            "p5.time": "4–6 weeks",
+            "p5.summary":
+              "A high-volume store with visible promotions, commercial navigation, and a catalog built for fast product discovery.",
+            "p5.tag1": "Catalog",
+            "p5.tag2": "Promotions",
+            "p5.tag3": "Mobile UX",
+
+            "p6.type": "E-commerce · Home",
+            "p6.time": "4–5 weeks",
+            "p6.summary":
+              "A warm, direct store for home organization products, with clear commercial hierarchy, featured products, and instant WhatsApp access.",
+            "p6.tag1": "Online store",
+            "p6.tag2": "Campaigns",
+            "p6.tag3": "WhatsApp",
+
+            "p7.type": "E-commerce · Food",
+            "p7.time": "5–7 weeks",
+            "p7.summary":
+              "A high-energy visual system for a wide product portfolio, bundles, and subscriptions with a focus on conversion.",
+            "p7.tag1": "D2C",
+            "p7.tag2": "Subscription",
+            "p7.tag3": "Campaigns",
+
+            "p8.type": "Corporate · Technology",
+            "p8.time": "3–4 weeks",
+            "p8.summary":
+              "A bilingual corporate presence for a tech consultancy, turning complex services into a simple, trustworthy journey.",
+            "p8.tag1": "Bilingual",
+            "p8.tag2": "B2B services",
+            "p8.tag3": "Content",
+
+            "p9.type": "Real estate · Leads",
+            "p9.time": "3–4 weeks",
+            "p9.summary":
+              "A lead-focused real estate landing page: a clear pitch, proof of experience, and low-friction calls to action.",
+            "p9.tag1": "Landing page",
+            "p9.tag2": "Lead generation",
+            "p9.tag3": "WhatsApp",
+
+            "p10.type": "Retail · Construction",
+            "p10.time": "4–5 weeks",
+            "p10.summary":
+              "A robust commercial portal with catalog, quoting, and a virtual shopper built for both customers and contractors.",
+            "p10.tag1": "Catalog",
+            "p10.tag2": "Quote builder",
+            "p10.tag3": "Virtual shopper",
+
+            "p11.type": "Health · Personal brand",
+            "p11.time": "3–4 weeks",
+            "p11.summary":
+              "A medical site that combines professional authority, clear information, and a direct path to booking a consultation.",
+            "p11.tag1": "Personal brand",
+            "p11.tag2": "Medical content",
+            "p11.tag3": "Contact",
+
+            "p12.type": "Education · Community",
+            "p12.time": "3–4 weeks",
+            "p12.summary":
+              "An academic ecosystem for courses, seminars, workshops, and resources with scalable navigation.",
+            "p12.tag1": "Education platform",
+            "p12.tag2": "Courses",
+            "p12.tag3": "E-commerce",
+
+            "p13.type": "Education · Wellness",
+            "p13.time": "4–5 weeks",
+            "p13.summary":
+              "An online school with an immersive atmosphere, a clearly tiered course offering, and a recognizable visual language.",
+            "p13.tag1": "Online academy",
+            "p13.tag2": "Courses",
+            "p13.tag3": "Art direction",
+
+            "p14.type": "Education · Institutional",
+            "p14.time": "2–3 weeks",
+            "p14.summary":
+              "An institutional site for educational support programs, centralizing admissions info, classes, and contact.",
+            "p14.tag1": "Institutional site",
+            "p14.tag2": "Services",
+            "p14.tag3": "Contact",
+
+            "profile.eyebrow": "Profile / Focus",
+            "profile.title":
+              "Design with judgment.<br />Marketing with intent.",
+            "profile.lead":
+              "I'm David Galindo, a design and marketing specialist. I connect identity, content, and technology to create experiences that feel distinct and work in the real world.",
+            "service1.title": "Web design",
+            "service1.text": "Websites, landing pages, stores, and platforms.",
+            "service2.title": "Identity",
+            "service2.text":
+              "Visual systems, art direction, and digital branding.",
+            "service3.title": "Strategy",
+            "service3.text":
+              "Architecture, content, and goal-driven user journeys.",
+
+            "footer.eyebrow": "Got an idea?",
+            "footer.topAria": "Back to top",
+            "footer.title":
+              "Let's build something<br /><span>impossible to ignore.</span>",
+            "footer.waLabel": "Let's talk on WhatsApp",
+            "footer.waAria": "Contact David Galindo on WhatsApp",
+            "footer.name": "David Galindo — Design & Marketing",
+            "footer.status": "Available for projects and collaborations"
+          }
+        };
+
+        var current = "es";
+
+        function t(key) {
+          var pack = DICT[current] || DICT.es;
+          return pack[key] != null ? pack[key] : DICT.es[key];
+        }
+
+        function fill(value, el) {
+          if (value.indexOf("{name}") === -1) return value;
+          var holder = el.closest("[data-project]");
+          var name = holder ? holder.getAttribute("data-project") : "";
+          return value.replace("{name}", name);
+        }
+
+        function readStored() {
+          try {
+            return localStorage.getItem(STORAGE_KEY);
+          } catch (error) {
+            return null;
+          }
+        }
+
+        function store(lang) {
+          try {
+            localStorage.setItem(STORAGE_KEY, lang);
+          } catch (error) {
+            /* modo privado: la elección solo dura la sesión */
+          }
+        }
+
+        function resolveInitial() {
+          var fromUrl = new URLSearchParams(window.location.search).get("lang");
+          if (fromUrl && DICT[fromUrl]) return fromUrl;
+
+          var saved = readStored();
+          if (saved && DICT[saved]) return saved;
+
+          var browser = (
+            navigator.language ||
+            navigator.userLanguage ||
+            "en"
+          ).toLowerCase();
+          return browser.indexOf("es") === 0 ? "es" : "en";
+        }
+
+        function apply(lang) {
+          current = DICT[lang] ? lang : "es";
+          document.documentElement.lang = current;
+          document.title = t("meta.title");
+
+          var description = document.querySelector('meta[name="description"]');
+          if (description) {
+            description.setAttribute("content", t("meta.description"));
+          }
+
+          document.querySelectorAll("[data-i18n]").forEach(function (el) {
+            el.textContent = t(el.getAttribute("data-i18n"));
+          });
+
+          document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+            el.innerHTML = t(el.getAttribute("data-i18n-html"));
+          });
+
+          document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+            el.setAttribute(
+              "aria-label",
+              fill(t(el.getAttribute("data-i18n-aria")), el)
+            );
+          });
+
+          document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+            el.setAttribute("alt", fill(t(el.getAttribute("data-i18n-alt")), el));
+          });
+
+          document.querySelectorAll(".lang-btn").forEach(function (button) {
+            var isActive = button.getAttribute("data-lang") === current;
+            button.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+
+          var toggle = document.querySelector(".nav-toggle");
+          if (toggle) {
+            var isOpen = document.body.classList.contains("nav-open");
+            toggle.setAttribute("aria-label", t(isOpen ? "nav.close" : "nav.open"));
+          }
+        }
+
+        function setLanguage(lang) {
+          apply(lang);
+          store(current);
+
+          var url = new URL(window.location.href);
+          url.searchParams.set("lang", current);
+          window.history.replaceState(null, "", url);
+        }
+
+        document.querySelectorAll(".lang-btn").forEach(function (button) {
+          button.addEventListener("click", function () {
+            setLanguage(button.getAttribute("data-lang"));
+          });
+        });
+
+        apply(resolveInitial());
+
         var toggle = document.querySelector(".nav-toggle");
         var nav = document.getElementById("site-nav");
         if (!toggle || !nav) return;
@@ -668,13 +1373,13 @@
         function closeNav() {
           document.body.classList.remove("nav-open");
           toggle.setAttribute("aria-expanded", "false");
-          toggle.setAttribute("aria-label", "Abrir menú");
+          toggle.setAttribute("aria-label", t("nav.open"));
         }
 
         function openNav() {
           document.body.classList.add("nav-open");
           toggle.setAttribute("aria-expanded", "true");
-          toggle.setAttribute("aria-label", "Cerrar menú");
+          toggle.setAttribute("aria-label", t("nav.close"));
         }
 
         toggle.addEventListener("click", function () {
