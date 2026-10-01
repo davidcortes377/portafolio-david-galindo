@@ -3,581 +3,713 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f2efe8">
+<meta name="theme-color" content="#efeae0">
 <title>David Galindo — Diseño web & Estrategia digital</title>
 <meta name="description" content="Portafolio de David Galindo, diseñador web y estratega digital. Sitios, ecommerce y landing pages pensados para convertir visitas en clientes.">
-<link rel="preload" href="./fonts/inter-tight-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="./fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:"Inter";font-style:normal;font-weight:400 700;font-display:swap;src:url("./fonts/inter-variable.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-@font-face{font-family:"Inter Tight";font-style:normal;font-weight:400 900;font-display:swap;src:url("./fonts/inter-tight-variable.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url("./fonts/ibm-plex-mono-400.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url("./fonts/ibm-plex-mono-500.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:600;font-display:swap;src:url("./fonts/ibm-plex-mono-600.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url("./fonts/instrument-serif-regular.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url("./fonts/instrument-serif-italic.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 
 :root{
-  --ink:#0b0b0b;--charcoal:#282828;--paper:#f2efe8;--paper2:#e6e0d5;--stone:#b7b3aa;
-  --green:#123d32;--red:#8b1e1e;--mustard:#d6a21f;
-  --line:rgba(11,11,11,.18);--lightline:rgba(255,255,255,.22);
-  --display:"Inter Tight","Helvetica Neue",Arial,sans-serif;
+  --ink:#121110;--paper:#efeae0;--paper2:#e3dccd;--paper3:#d8cfbd;
+  --green:#14392d;--green2:#0f2c23;--red:#8e1f1a;--mustard:#d39b22;--stone:#8d877c;
+  --line:rgba(18,17,16,.16);--rule:2px solid var(--ink);
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
   --sans:"Inter","Helvetica Neue",Arial,sans-serif;
   --mono:"IBM Plex Mono","Courier New",monospace;
-  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --shadow:8px 8px 0 var(--ink);
+  --stone-tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.035 .09' numOctaves='5' seed='7'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='1.9' intercept='-.42'/%3E%3CfeFuncG type='linear' slope='1.9' intercept='-.42'/%3E%3CfeFuncB type='linear' slope='1.9' intercept='-.42'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E");
+  --paper-tex:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E");
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body.nav-open{overflow:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;width:100%;height:auto}
-h1,h2,h3{font-family:var(--display);text-wrap:balance}
+h1,h2,h3{font-family:var(--serif);font-weight:400;text-wrap:balance;margin:0}
 p,li{text-wrap:pretty}
-em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+em{font-family:var(--serif);font-style:italic;font-weight:400}
 ::selection{background:var(--red);color:var(--paper)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
-.skip{position:fixed;left:3vw;top:0;z-index:300;background:var(--ink);color:var(--paper);font:500 .8rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;padding:.9rem 1.1rem;transform:translateY(-120%);transition:transform .2s}
+a:focus-visible,button:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
+.skip{position:fixed;left:3vw;top:0;z-index:300;background:var(--ink);color:var(--paper);font:500 .8rem/1 var(--mono);text-transform:uppercase;padding:.9rem 1.1rem;transform:translateY(-120%);transition:transform .2s}
 .skip:focus{transform:translateY(12px)}
-section[id]{scroll-margin-top:72px}
-.noise{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:.11;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.23'/%3E%3C/svg%3E")}
+section[id]{scroll-margin-top:68px}
+.grain{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:.16;mix-blend-mode:multiply;background-image:var(--paper-tex)}
+
+/* utilidades brutalistas */
+.tag{font:500 .78rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.label{display:flex;justify-content:space-between;align-items:center;border-top:var(--rule);padding-top:14px;font:500 .78rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.dark .label,.green .label{border-color:var(--paper)}
+.btn{display:inline-flex;align-items:center;gap:1.6rem;border:var(--rule);background:var(--red);color:var(--paper);padding:1.05rem 1.4rem;font:600 .8rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translate(4px,4px);box-shadow:4px 4px 0 var(--ink)}
+.btn:active{transform:translate(8px,8px);box-shadow:0 0 0 var(--ink)}
+.btn-ghost{background:transparent;color:inherit}
+.link{font:600 .8rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;border-bottom:2px solid var(--red);padding-bottom:.45rem;display:inline-flex;gap:.8rem}
+.link:hover{color:var(--red)}
+
+/* collage */
+.collage{position:relative;pointer-events:none}
+.c{position:absolute}
+.c-stone{background:var(--stone-tex),linear-gradient(160deg,#9b958a,#3f3b35);background-size:240px,cover;background-blend-mode:multiply;filter:contrast(1.05);box-shadow:0 18px 30px #0004}
+.c-stone.s1{clip-path:polygon(4% 18%,30% 0,78% 6%,100% 34%,94% 88%,58% 100%,12% 92%,0 54%)}
+.c-stone.s2{clip-path:polygon(0 30%,22% 4%,70% 0,100% 22%,96% 76%,64% 100%,18% 96%,3% 70%)}
+.c-mountain{background:linear-gradient(180deg,#f4f1ea 0 18%,#bdb6a9 30%,#6c665d 58%,#2c2925 100%),var(--stone-tex);background-blend-mode:multiply;background-size:cover,260px;clip-path:polygon(0 100%,14% 62%,24% 70%,40% 22%,47% 30%,55% 0,66% 34%,74% 28%,88% 62%,100% 100%)}
+.c-sun{border-radius:50%;background:var(--red)}
+.c-dot{border-radius:50%;background:var(--mustard)}
+.c-block{background:var(--mustard)}
+.c-green{background:var(--green)}
+.c-thread{width:2px;background:var(--red)}
+.c-torn{background:var(--paper2);clip-path:polygon(0 3%,9% 0,21% 4%,33% 1%,46% 5%,58% 0,71% 4%,84% 1%,100% 3%,98% 97%,86% 100%,72% 96%,60% 100%,47% 97%,34% 100%,20% 96%,8% 100%,1% 96%);background-image:var(--paper-tex)}
+.c-leaf svg{width:100%;height:100%;display:block}
+.c-frame{border:var(--rule);background:var(--paper);box-shadow:var(--shadow);overflow:hidden}
+.c-frame .bar{height:22px;border-bottom:var(--rule);display:flex;gap:6px;align-items:center;padding:0 8px;background:var(--paper2)}
+.c-frame .bar i{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--ink)}
+.c-frame img{aspect-ratio:16/10;object-fit:cover;object-position:top}
 
 /* header */
-header{height:72px;position:fixed;inset:0 0 auto;z-index:100;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 3vw;background:rgba(242,239,232,.84);backdrop-filter:blur(17px);-webkit-backdrop-filter:blur(17px);border-bottom:1px solid var(--line)}
-.brand{font-family:var(--display);font-size:1.45rem;font-weight:900;letter-spacing:-.05em}
-.brand sup{font-size:.42em;vertical-align:top}
-.nav{display:flex;gap:2.4rem;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
-.nav a{position:relative}
-.nav a:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .3s}
-.nav a:hover:after,.nav a[aria-current]:after{transform:scaleX(1);transform-origin:left}
+header{height:68px;position:fixed;inset:0 0 auto;z-index:100;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 3vw;background:rgba(239,234,224,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:var(--rule)}
+.brand{font-family:var(--serif);font-size:1.9rem;line-height:1;letter-spacing:-.02em}
+.brand sup{font:500 .7rem/1 var(--mono);vertical-align:top;margin-left:2px}
+.nav{display:flex;gap:.4rem}
+.nav a{font:500 .78rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;padding:.65rem .8rem;border:2px solid transparent;transition:border-color .2s,background .2s}
+.nav a:hover,.nav a[aria-current]{border-color:var(--ink);background:var(--paper2)}
 .nav .nav-wa{display:none}
-.header-meta{justify-self:end;display:flex;align-items:center;gap:.75rem;font:500 .75rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em}
-.header-meta i{width:8px;height:8px;border-radius:50%;background:var(--mustard)}
-.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--ink);background:none;padding:0;cursor:pointer;position:relative}
-.menu-btn span{position:absolute;left:11px;right:11px;height:1px;background:var(--ink);transition:transform .3s,opacity .3s,top .3s}
-.menu-btn span:nth-child(1){top:16px}.menu-btn span:nth-child(2){top:21px}.menu-btn span:nth-child(3){top:26px}
+.status{justify-self:end;display:flex;align-items:center;gap:.6rem;border:var(--rule);padding:.55rem .8rem;font:500 .75rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.status i{width:8px;height:8px;border-radius:50%;background:#2f8a4a;box-shadow:0 0 0 3px #2f8a4a33}
+.menu-btn{display:none;width:46px;height:46px;border:var(--rule);background:var(--paper);padding:0;cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:11px;right:11px;height:2px;background:var(--ink);transition:transform .3s,opacity .3s,top .3s}
+.menu-btn span:nth-child(1){top:14px}.menu-btn span:nth-child(2){top:21px}.menu-btn span:nth-child(3){top:28px}
 .nav-open .menu-btn span:nth-child(1){top:21px;transform:rotate(45deg)}
 .nav-open .menu-btn span:nth-child(2){opacity:0}
 .nav-open .menu-btn span:nth-child(3){top:21px;transform:rotate(-45deg)}
 
-.section-label{display:grid;grid-template-columns:90px 1fr auto;gap:1rem;border-top:1px solid currentColor;padding-top:16px;font:500 .78rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
-
 /* hero */
-.hero{min-height:100svh;padding:112px 3vw 34px;position:relative;overflow:hidden;display:grid;grid-template-rows:auto 1fr auto}
-.hero-grid{position:absolute;inset:72px 0 0;opacity:.2;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:100% 25%,25% 100%}
-.folk-pattern{position:absolute;pointer-events:none;opacity:.1;background:linear-gradient(45deg,transparent 44%,currentColor 44% 47%,transparent 47% 53%,currentColor 53% 56%,transparent 56%),linear-gradient(-45deg,transparent 44%,currentColor 44% 47%,transparent 47% 53%,currentColor 53% 56%,transparent 56%);background-size:32px 32px}
-.hero-pattern{right:-4vw;top:16vh;width:28vw;height:28vw;color:var(--ink);transform:rotate(5deg)}
-.hero-eyebrow{position:relative;z-index:3;display:flex;justify-content:space-between;gap:1rem;font:500 .78rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
-.hero-main{align-self:center;position:relative;z-index:3}
-h1{font-size:clamp(5.5rem,14vw,13rem);line-height:.8;letter-spacing:-.045em;text-transform:uppercase;margin:5vh 0 0;font-weight:800}
-h1 span{display:block}
-.hero-name-2{margin-left:18vw;position:relative}
-.hero-name-2:after{content:"";position:absolute;width:.16em;height:.16em;background:var(--red);border-radius:50%;right:4%;top:10%;box-shadow:0 0 0 .07em var(--paper)}
-.hero-intro{width:min(640px,48vw);margin:5.5vh 0 0 25vw;font-size:clamp(1.25rem,1.9vw,1.85rem);line-height:1.3;letter-spacing:-.015em}
-.hero-intro strong{font-family:var(--serif);font-weight:400;font-style:italic;font-size:1.12em;letter-spacing:0}
-.hero-art{position:absolute;right:9vw;top:23vh;width:min(25vw,380px);height:min(31vw,450px);perspective:900px;transform-style:preserve-3d;z-index:1;transition:transform .12s linear}
-.plate{position:absolute;border:1px solid #0004;box-shadow:0 20px 35px #0003}
-.plate1{width:70%;height:70%;left:12%;top:12%;background:var(--green);transform:rotate(-13deg) translateZ(30px)}
-.plate2{width:58%;height:58%;right:2%;bottom:4%;background:var(--red);transform:rotate(11deg) translateZ(60px)}
-.plate3{width:45%;height:45%;left:0;bottom:2%;background:var(--mustard);transform:rotate(7deg) translateZ(90px)}
-.sphere{position:absolute;width:42%;aspect-ratio:1;border-radius:50%;right:20%;top:30%;background:radial-gradient(circle at 34% 28%,#fff9 0 7%,#777 18%,#222 48%,#080808 72%);box-shadow:0 25px 35px #0005;transform:translateZ(120px)}
-.orbit{position:absolute;border:1px solid #1118;border-radius:50%;inset:25% 8%;transform:rotate(28deg) translateZ(140px)}
-.orbit2{inset:18% 17%;transform:rotate(-42deg) translateZ(125px)}
-.hero-cta{position:absolute;right:4vw;bottom:9vh;width:132px;height:132px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--mustard);z-index:6;font:600 .78rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;transition:background .35s,color .35s,transform .35s}
-.hero-cta:hover{background:var(--red);color:#fff;transform:rotate(8deg) scale(1.05)}
-.hero-footer{position:relative;z-index:5;display:flex;justify-content:space-between;border-top:1px solid var(--ink);padding-top:16px;font:500 .78rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
-.color-rule{position:absolute;left:0;bottom:0;width:100%;height:8px;display:flex}
-.color-rule i:nth-child(1){width:72%;background:var(--ink)}.color-rule i:nth-child(2){width:10%;background:var(--green)}.color-rule i:nth-child(3){width:8%;background:var(--red)}.color-rule i:nth-child(4){width:10%;background:var(--mustard)}
+.hero{min-height:100svh;padding:110px 3vw 0;position:relative;overflow:hidden;display:grid;grid-template-columns:1.05fr 1fr;grid-template-rows:auto 1fr auto;column-gap:3vw;border-bottom:var(--rule)}
+.hero-grid{position:absolute;inset:68px 0 0;pointer-events:none;background-image:linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:25% 100%}
+.hero-top{grid-column:1/-1;display:flex;justify-content:space-between;gap:1rem;position:relative;z-index:3}
+.hero-copy{align-self:center;position:relative;z-index:3;padding:4vh 0}
+h1{font-size:clamp(5.2rem,11.5vw,12.5rem);line-height:.84;letter-spacing:-.025em;text-transform:uppercase}
+.mask{display:block;overflow:hidden;padding-bottom:.04em}
+.mask>span{display:block;transform:translateY(105%);animation:rise 1.1s cubic-bezier(.2,.75,.15,1) forwards}
+.mask:nth-child(2)>span{animation-delay:.12s}
+.mask:nth-child(2){padding-left:.5em}
+@keyframes rise{to{transform:none}}
+.hero-role{font:600 clamp(1.05rem,1.3vw,1.25rem)/1.3 var(--sans);margin:2.2rem 0 0;display:flex;align-items:center;gap:1rem}
+.hero-role:before{content:"";width:48px;height:2px;background:var(--ink)}
+.hero-intro{font-size:clamp(1.15rem,1.5vw,1.4rem);line-height:1.45;max-width:520px;margin:1.2rem 0 2.4rem}
+.hero-art{align-self:stretch;min-height:560px;transform-style:preserve-3d;perspective:1000px;transition:transform .15s linear;position:relative;z-index:1}
+.hero-art .c-mountain{width:78%;height:46%;right:-4%;bottom:8%}
+.hero-art .s1{width:44%;height:30%;left:8%;bottom:4%}
+.hero-art .s2{width:30%;height:22%;right:2%;top:16%}
+.hero-art .c-sun{width:120px;height:120px;left:18%;top:8%}
+.hero-art .c-dot{width:64px;height:64px;right:30%;top:4%}
+.hero-art .c-thread{height:44%;left:calc(18% + 59px);top:8%}
+.hero-art .c-frame{width:66%;left:16%;top:26%;transform:rotate(-5deg) translateZ(40px)}
+.hero-art .c-block{width:18%;height:22%;left:2%;top:38%;transform:rotate(8deg)}
+.hero-art .c-leaf{width:120px;height:170px;right:6%;bottom:30%;transform:rotate(18deg)}
+.hero-bottom{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;border-top:var(--rule);padding:16px 0 18px;position:relative;z-index:3;background:var(--paper)}
+.scroll{display:flex;align-items:center;gap:.9rem}
+.scroll b{width:42px;height:42px;border:var(--rule);border-radius:50%;display:grid;place-items:center;font-weight:400;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+.ticker{grid-column:1/-1;margin:0 -3vw;background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;border-top:var(--rule)}
+.ticker div{display:inline-block;padding:.7rem 0;font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.6rem);animation:marquee 34s linear infinite}
+.ticker em{color:var(--mustard)}
+.ticker span{color:var(--red);margin:0 1.2rem}
+@keyframes marquee{to{transform:translateX(-50%)}}
 
-/* titulares de sección */
+/* secciones */
+.section{padding:7rem 3vw 8rem;position:relative;overflow:hidden}
 .dark{background:var(--ink);color:var(--paper)}
-.work h2,.services h2,.process h2,.about h2,.contact h2{font-size:clamp(4rem,9vw,9rem);font-weight:800;letter-spacing:-.04em;line-height:.88;margin:0}
+.green{background:var(--green);color:var(--paper)}
+.sec-head{display:grid;grid-template-columns:1.4fr 1fr;gap:5vw;align-items:end;margin:3.5rem 0 4.5rem}
+.sec-head h2{font-size:clamp(3.6rem,7.4vw,8rem);line-height:.92;letter-spacing:-.02em}
+.sec-head p{font-size:clamp(1.08rem,1.3vw,1.25rem);max-width:460px;margin:0}
+.dark .sec-head p{color:#efeae0c4}
 
 /* trabajo */
-.work{padding:8rem 3vw 10rem}
-.work-head{display:grid;grid-template-columns:2fr 1fr;gap:5vw;align-items:end;margin:4rem 0 6rem}
-.work-head>p{font-size:clamp(1.1rem,1.4vw,1.3rem);line-height:1.5;max-width:440px;margin:0 0 .8rem;color:#f2efe8cc}
-.projects{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:7rem 2vw}
-.project{grid-column:span 6;min-width:0}
-.project-xl{grid-column:span 12}
-.project-media{position:relative;display:block;overflow:hidden;background:#333;aspect-ratio:16/10}
-.project-xl .project-media{aspect-ratio:2/1}
-.project-media img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:saturate(.72) contrast(1.04);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s}
-.project:hover img,.project-media:focus-visible img{transform:scale(1.035);filter:saturate(1) contrast(1.03)}
-.project-no{position:absolute;left:18px;top:16px;font:600 .8rem/1 var(--mono);padding:.5rem .65rem;background:var(--mustard);color:var(--ink)}
-.project:nth-child(3n+2) .project-no{background:var(--red);color:#fff}
-.project:nth-child(3n) .project-no{background:var(--green);color:#fff}
-.project-open{position:absolute;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:var(--paper);color:var(--ink);display:grid;place-items:center;font-size:1.25rem;transform:scale(.82);opacity:0;transition:opacity .3s,transform .3s}
-.project:hover .project-open,.project-media:focus-visible .project-open{opacity:1;transform:none}
-.project-info{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;border-top:1px solid var(--lightline);padding-top:18px;margin-top:18px}
-.project-info small{font:500 .75rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;opacity:.7}
-.project-info h3{font-size:clamp(2rem,3.2vw,3.6rem);font-weight:700;letter-spacing:-.03em;line-height:1;margin:.5rem 0 0}
-.project-info p{color:#f2efe8bf;font-size:1.05rem;line-height:1.55;margin:0}
-.project-info .project-tags{margin-top:.9rem;font:500 .75rem/1.4 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--mustard)}
+.projects{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4.5rem 2vw}
+.project{min-width:0}
+.span-7{grid-column:span 7}.span-5{grid-column:span 5}
+.project-media{display:block;position:relative;border:2px solid var(--paper);overflow:hidden;background:#2a2826;aspect-ratio:4/3;transition:transform .3s,box-shadow .3s}
+.span-7 .project-media{aspect-ratio:16/10}
+.project-media img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.project-media:hover{transform:translate(-6px,-6px);box-shadow:12px 12px 0 var(--mustard)}
+.project:nth-child(3n+2) .project-media:hover{box-shadow:12px 12px 0 var(--red)}
+.project:nth-child(3n) .project-media:hover{box-shadow:12px 12px 0 #3d7a62}
+.project-media:hover img{transform:scale(1.04)}
+.project-no{position:absolute;left:0;top:0;background:var(--paper);color:var(--ink);font:600 .8rem/1 var(--mono);padding:.6rem .75rem;border-right:2px solid var(--paper);border-bottom:2px solid var(--paper)}
+.project-info{display:grid;grid-template-columns:1fr auto;gap:.4rem 1.5rem;align-items:start;padding-top:1.1rem}
+.project-info h3{font-size:clamp(2rem,2.8vw,3rem);line-height:1}
+.project-info .tag{color:#efeae0a6;grid-column:1}
+.project-arrow{grid-row:1/3;grid-column:2;width:52px;height:52px;border:2px solid var(--paper);display:grid;place-items:center;font-size:1.3rem;transition:background .2s,color .2s}
+.project:hover .project-arrow{background:var(--paper);color:var(--ink)}
+.project-info p{grid-column:1/-1;margin:.5rem 0 0;color:#efeae0bf;font-size:1rem;max-width:560px}
+
+/* manifiesto */
+.manifesto{display:grid;grid-template-columns:1.25fr 1fr;gap:4vw;align-items:center;margin-top:3.5rem}
+.manifesto h2{font-size:clamp(4.4rem,10vw,11rem);line-height:.86;letter-spacing:-.03em}
+.manifesto h2 em{color:var(--red)}
+.manifesto-copy{max-width:520px;margin-top:3rem}
+.manifesto-copy p{font-size:1.15rem;margin:0 0 1.2rem}
+.manifesto-copy .quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.7rem,2.2vw,2.2rem);line-height:1.15;border-left:4px solid var(--red);padding-left:1.2rem}
+.manifesto-art{height:620px}
+.manifesto-art .c-sun{width:58%;aspect-ratio:1;height:auto;right:6%;top:6%}
+.manifesto-art .c-mountain{width:92%;height:54%;right:-2%;top:34%}
+.manifesto-art .c-torn{width:46%;height:40%;left:0;bottom:2%;transform:rotate(-4deg)}
+.manifesto-art .c-stone{width:36%;height:26%;right:2%;bottom:0}
+.manifesto-art .c-leaf{width:150px;height:220px;right:30%;bottom:6%;transform:rotate(-14deg)}
+.manifesto-art .c-thread{height:70%;left:24%;top:0;transform:rotate(8deg)}
 
 /* servicios */
-.services{padding:9rem 3vw 10rem;position:relative;overflow:hidden}
-.services-pattern{left:-7vw;top:22rem;width:32vw;height:32vw;color:var(--red);opacity:.075}
-.services-top{display:grid;grid-template-columns:1.5fr .7fr;gap:7vw;margin:4rem 0 6rem;align-items:start;position:relative}
-.services h2{max-width:900px}
-.services-copy{padding-top:1rem}
-.services-copy p{font-size:1.15rem;line-height:1.55;max-width:470px;margin:0 0 1.2rem}
-.services-copy .quote{font-family:var(--serif);font-style:italic;font-size:2rem;line-height:1.15}
-.svc-featured{display:grid;grid-template-columns:5fr 7fr;gap:4vw;align-items:center;background:var(--paper2);border:1px solid var(--ink);padding:3vw;position:relative;margin-bottom:4rem}
-.svc-featured-media{border:1px solid var(--ink);box-shadow:0 28px 48px #0002;transform:rotate(-2deg);background:var(--paper)}
-.svc-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 2rem;border-bottom:1px solid var(--ink);padding-bottom:1rem;margin:0 0 2rem;font:500 .78rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
-.svc-meta span:first-child{font-weight:600}
-.svc-badge{margin-left:auto;background:var(--red);color:var(--paper);padding:.45rem .7rem}
-.svc-featured h3{font-size:clamp(2.6rem,4.6vw,5rem);font-weight:800;letter-spacing:-.035em;line-height:.95;margin:0}
-.svc-featured h3 em,.svc-row strong em{color:var(--red)}
-.svc-need{font:400 .95rem/1.5 var(--mono);color:#0b0b0b9e;margin:1.4rem 0 0}
-.svc-lead{font-size:clamp(1.2rem,1.6vw,1.5rem);line-height:1.35;letter-spacing:-.01em;margin:1.2rem 0 1.6rem;max-width:600px}
-.svc-items{list-style:none;padding:0;margin:0 0 1.6rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 2rem}
-.svc-items li{border-bottom:1px solid var(--line);padding:.7rem 0 .7rem 1.6rem;position:relative;font-size:1.02rem}
-.svc-items li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
-.svc-note{font-size:1.02rem;line-height:1.55;margin:0 0 2rem;max-width:600px}
-.btn{display:inline-flex;align-items:center;gap:2.5rem;background:var(--ink);color:var(--paper);padding:1.15rem 1.5rem;font:600 .8rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;transition:background .3s,transform .3s}
-.btn:hover{background:var(--red);transform:translateY(-3px)}
-.svc-list{border-top:1px solid var(--ink)}
-.svc-row{display:grid;grid-template-columns:70px 110px 1.3fr 1fr auto;gap:2vw;align-items:center;padding:1.6rem 0;border-bottom:1px solid var(--ink);position:relative;transition:background .3s,padding .3s}
-.svc-row:hover{background:var(--paper2);padding-left:1.2rem;padding-right:1.2rem}
-.svc-num{font:600 .8rem/1 var(--mono)}
-.svc-thumb{width:110px;height:110px;object-fit:cover;border:1px solid var(--line)}
-.svc-title small{display:block;font:500 .75rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.7rem;opacity:.7}
-.svc-title strong{display:block;font-family:var(--display);font-size:clamp(1.6rem,2.4vw,2.5rem);font-weight:700;letter-spacing:-.03em;line-height:1.02}
-.svc-desc{font-size:1rem;line-height:1.5;color:#0b0b0bc2}
-.svc-go{font:600 .78rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
-.svc-go b{display:inline-grid;place-items:center;width:42px;height:42px;margin-left:.6rem;border:1px solid var(--ink);border-radius:50%;transition:background .3s,color .3s}
-.svc-row:hover .svc-go b{background:var(--ink);color:var(--paper)}
-.svc-row:nth-child(3n+1) .svc-num{color:var(--red)}.svc-row:nth-child(3n+2) .svc-num{color:var(--green)}.svc-row:nth-child(3n) .svc-num{color:#a77b0c}
+.services{background:var(--paper2)}
+.svc-featured{display:grid;grid-template-columns:5fr 7fr;gap:4vw;align-items:center;border:var(--rule);background:var(--paper);box-shadow:14px 14px 0 var(--ink);padding:3vw;margin-bottom:5rem}
+.svc-featured-media{border:var(--rule);transform:rotate(-2.5deg);box-shadow:var(--shadow)}
+.svc-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.6rem;border-bottom:var(--rule);padding-bottom:1rem;margin:0 0 1.8rem}
+.svc-badge{margin-left:auto;background:var(--ink);color:var(--paper);padding:.5rem .7rem}
+.svc-featured h3{font-size:clamp(3rem,5vw,5.6rem);line-height:.92;letter-spacing:-.02em}
+.svc-featured h3 em,.svc-card h3 em{color:var(--red)}
+.svc-need{font:400 .95rem/1.5 var(--mono);color:#121110a3;margin:1.3rem 0 0}
+.svc-lead{font-size:clamp(1.15rem,1.5vw,1.4rem);line-height:1.4;margin:1.1rem 0 1.5rem;max-width:600px}
+.svc-items{list-style:none;padding:0;margin:0 0 1.6rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:var(--rule)}
+.svc-items li{border-bottom:1px solid var(--line);padding:.75rem 0 .75rem 1.7rem;position:relative;font-size:1rem}
+.svc-items li:nth-child(odd){margin-right:1rem}
+.svc-items li:before{content:"■";position:absolute;left:0;top:.8rem;color:var(--red);font-size:.7rem}
+.svc-note{font-size:1rem;margin:0 0 2rem;max-width:600px}
+.svc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}
+.svc-card{display:grid;grid-template-columns:120px 1fr;gap:1.4rem;align-items:start;border:var(--rule);background:var(--paper);padding:1.4rem;transition:transform .2s,box-shadow .2s}
+.svc-card:hover{transform:translate(-4px,-4px);box-shadow:var(--shadow)}
+.svc-card:last-child{grid-column:1/-1;grid-template-columns:120px 1fr auto}
+.svc-card img{width:120px;height:120px;object-fit:cover;border:var(--rule)}
+.svc-card .tag{display:block;margin-bottom:.7rem;color:#121110b3}
+.svc-card h3{font-size:clamp(1.7rem,2.2vw,2.3rem);line-height:1}
+.svc-card p{font-size:.98rem;margin:.8rem 0 1rem;color:#121110c7}
+.svc-card .link{border-color:var(--ink)}
 
 /* proceso */
-.process{padding:8rem 3vw 9rem;background:var(--green);color:var(--paper);position:relative;overflow:hidden}
-.process .folk-pattern{right:-8vw;top:4rem;width:36vw;height:36vw;color:var(--paper);opacity:.055}
-.process-top{display:grid;grid-template-columns:1fr 1fr;margin:4rem 0 5rem;gap:3rem}
-.process h2{font-size:clamp(4rem,8vw,8rem)}
-.process-note{max-width:440px;align-self:end;font-size:1.2rem;line-height:1.5;margin:0}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #ffffff7a;border-bottom:1px solid #ffffff7a}
-.step{min-height:260px;padding:1.6rem;border-right:1px solid #ffffff7a;position:relative}
-.step:last-child{border-right:0}
-.step span{font:600 .8rem/1 var(--mono);color:var(--mustard)}
-.step h3{font-size:2rem;font-weight:700;letter-spacing:-.03em;margin:3rem 0 1rem}
-.step p{font-size:1.02rem;line-height:1.5;opacity:.82;margin:0}
-.step b{position:absolute;right:18px;bottom:16px;color:var(--mustard);font-size:1.4rem}
+.timeline{position:relative;margin-left:12px;max-width:980px}
+.timeline:before{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px dashed #efeae066}
+.timeline-fill{position:absolute;left:-1px;top:0;width:4px;height:0;background:var(--mustard)}
+.step{display:grid;grid-template-columns:110px 90px 1fr;gap:2rem;align-items:center;padding:1.6rem 0 1.6rem 2.6rem;border-bottom:1px solid #efeae033;position:relative}
+.step:before{content:"";position:absolute;left:-8px;top:50%;width:14px;height:14px;margin-top:-7px;background:var(--green);border:2px solid var(--paper);border-radius:50%}
+.step.on:before{background:var(--mustard);border-color:var(--mustard)}
+.step-circle{width:110px;height:110px;border-radius:50%;border:2px solid var(--paper);display:grid;place-items:center;font-family:var(--serif);font-size:3rem;font-style:italic;background:var(--green2)}
+.step-num{font:600 .8rem/1 var(--mono);color:var(--mustard)}
+.step h3{font-size:clamp(2rem,2.8vw,2.8rem);line-height:1}
+.step p{margin:.4rem 0 0;color:#efeae0cc;font-size:1.02rem}
 
 /* sobre mí */
-.about{padding:9rem 3vw 10rem}
-.about-grid{display:grid;grid-template-columns:5fr 6fr;gap:7vw;margin-top:5rem;align-items:center}
-.about-art{height:620px;position:relative;perspective:800px}
-.paper-card{position:absolute;width:70%;height:78%;left:12%;top:6%;padding:2rem;background:#ded8cc;border:1px solid #0004;box-shadow:0 28px 48px #0003;transform:rotate(-5deg);display:flex;flex-direction:column;justify-content:flex-start;font:500 .8rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em}
-.paper-card:before{content:"";position:absolute;inset:0;opacity:.13;background:repeating-linear-gradient(0deg,transparent 0 9px,#000 9px 10px)}
-.paper-card span,.paper-card strong,.paper-card small{position:relative}
-.paper-card small{font-size:inherit;margin-top:.5rem;opacity:.7}
-.paper-card strong{margin-top:18%}
-.paper-card strong{font-family:var(--serif);font-style:italic;font-size:clamp(3rem,5.4vw,5.6rem);line-height:.9;font-weight:400;text-transform:none;letter-spacing:-.01em}
-.about-red{position:absolute;width:37%;height:42%;right:0;bottom:3%;background:var(--red);transform:rotate(7deg);box-shadow:0 20px 35px #0003}
-.about-yellow{position:absolute;width:25%;aspect-ratio:1;left:0;bottom:0;background:var(--mustard);transform:rotate(-9deg)}
-.about-copy h2{font-size:clamp(3.4rem,6vw,6rem);line-height:.92}
-.about-copy>p{font-size:1.2rem;line-height:1.6;max-width:620px;margin:1.6rem 0 0}
-.about-copy>p.about-lead{font-size:clamp(1.3rem,1.8vw,1.6rem);line-height:1.4;letter-spacing:-.01em;margin-top:2.4rem}
-.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:4rem;border-top:1px solid var(--ink);padding-top:1.4rem}
-.numbers strong{font-family:var(--display);font-size:clamp(2.8rem,5vw,5rem);font-weight:800;letter-spacing:-.04em;line-height:1}
-.numbers span{display:block;font:500 .75rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;margin-top:.6rem}
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:6vw;align-items:center;margin-top:3.5rem}
+.about-art{height:640px}
+.about-art .c-torn{width:72%;height:82%;left:8%;top:6%;transform:rotate(-3deg);padding:2.2rem;display:flex;flex-direction:column;justify-content:space-between;pointer-events:auto}
+.about-art .c-torn strong{font-family:var(--serif);font-weight:400;font-size:clamp(3.4rem,5.6vw,6rem);line-height:.9}
+.about-art .c-torn strong em{color:var(--red)}
+.about-art .c-sun{width:180px;height:180px;right:4%;top:2%}
+.about-art .c-dot{width:120px;height:120px;left:0;bottom:6%}
+.about-art .c-green{width:34%;height:30%;right:0;bottom:0;transform:rotate(6deg)}
+.about-art .c-stone{width:40%;height:22%;right:14%;bottom:18%}
+.about-copy h2{font-size:clamp(3.4rem,6vw,6.4rem);line-height:.92;letter-spacing:-.02em}
+.about-copy h2 em{color:var(--red)}
+.about-copy .lead{font-size:clamp(1.25rem,1.6vw,1.5rem);line-height:1.45;margin:2rem 0 1.2rem}
+.about-copy p{margin:0 0 1rem;max-width:620px}
+.numbers{display:grid;grid-template-columns:repeat(3,1fr);border:var(--rule);margin-top:2.6rem}
+.numbers div{padding:1.4rem 1.2rem;border-right:var(--rule)}
+.numbers div:last-child{border-right:0}
+.numbers strong{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(3rem,5vw,5rem);line-height:1}
+.numbers span{display:block;margin-top:.6rem}
 
-/* frase */
-.statement{background:var(--charcoal);color:var(--paper);padding:8rem 3vw}
-.statement-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:10vw;margin-top:5rem;align-items:center}
-.statement h2{font-size:clamp(4rem,8vw,8rem);font-weight:800;line-height:.88;letter-spacing:-.04em;margin:0}
-.statement blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(1.9rem,3.2vw,3.2rem);line-height:1.18}
-.statement cite{display:block;font:500 .78rem/1 var(--mono);font-style:normal;text-transform:uppercase;letter-spacing:.08em;margin-top:2rem;opacity:.65}
+/* industrias */
+.industries{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.6rem}
+.industry{display:block;position:relative}
+.industry-img{border:2px solid var(--paper);aspect-ratio:4/3;overflow:hidden;background:#2a2826;transition:transform .3s,box-shadow .3s}
+.industry-img img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(1) contrast(1.1);transition:filter .5s,transform .8s}
+.industry:hover .industry-img{transform:translate(-5px,-5px);box-shadow:10px 10px 0 var(--red)}
+.industry:hover img{filter:none;transform:scale(1.05)}
+.industry-name{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #efeae04d;padding:.9rem 0 .7rem}
+.industry-name h3{font-size:1.9rem}
+.industry-name .tag{color:#efeae099}
+.industries-note{margin:3.5rem 0 0;font-family:var(--serif);font-style:italic;font-size:clamp(1.6rem,2.4vw,2.4rem);max-width:820px;line-height:1.2}
 
 /* contacto */
-.contact{padding:9rem 3vw 3rem;position:relative;overflow:hidden;min-height:780px}
-.contact .folk-pattern{right:-10vw;bottom:-8vw;width:40vw;height:40vw;color:var(--green);opacity:.07}
-.contact-grid{display:grid;grid-template-columns:1.5fr .7fr;gap:8vw;margin-top:5rem;position:relative}
-.contact h2{font-size:clamp(4.5rem,10vw,10rem)}
-.contact-side{padding-top:2rem}
-.contact-side p{font-size:1.2rem;line-height:1.55;margin:0}
-.contact-side .btn{margin-top:2rem}
-.contact-data{margin-top:4rem;display:grid;gap:.9rem;font:500 .8rem/1.4 var(--mono);text-transform:uppercase;letter-spacing:.06em}
-.contact-data a{border-bottom:1px solid var(--line);padding-bottom:.9rem;font-family:var(--display);font-size:1.6rem;font-weight:700;letter-spacing:-.02em;text-transform:none}
-.available{display:flex;gap:.55rem;align-items:center}
-.available i{width:8px;height:8px;border-radius:50%;background:var(--mustard)}
-footer{border-top:1px solid var(--ink);margin-top:7rem;padding:1.5rem 0 0;display:grid;grid-template-columns:1fr auto auto;gap:3rem;align-items:center;font:500 .75rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;position:relative}
+.contact{display:grid;grid-template-columns:1.3fr 1fr;gap:5vw;margin-top:3.5rem;align-items:start}
+.contact h2{font-size:clamp(4.6rem,10vw,11rem);line-height:.86;letter-spacing:-.03em}
+.contact h2 em{color:var(--mustard)}
+.contact-copy p{font-size:1.2rem;max-width:500px;margin:2.2rem 0 2.2rem}
+.contact-data{margin-top:3.2rem;border-top:var(--rule);max-width:520px}
+.contact-data div{display:grid;grid-template-columns:150px 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.contact-data dd{margin:0;font-size:1.05rem}
+.contact-data dd a{font-family:var(--serif);font-size:1.8rem;line-height:1;border-bottom:2px solid var(--red)}
+.contact-art{height:640px}
+.contact-art .c-mountain{width:100%;height:58%;right:-8%;top:18%}
+.contact-art .c-block{width:34%;height:30%;left:20%;bottom:4%;transform:rotate(-3deg)}
+.contact-art .c-sun{width:44%;aspect-ratio:1;height:auto;right:0;top:0;border-radius:0;clip-path:polygon(18% 0,100% 0,100% 100%,0 72%)}
+.contact-art .c-leaf{width:170px;height:240px;right:8%;top:6%;transform:rotate(24deg)}
+.contact-art .c-stone{width:38%;height:22%;right:6%;bottom:10%}
+.contact-art .c-thread{height:56%;left:46%;top:30%;transform:rotate(-12deg)}
+footer{border-top:var(--rule);margin-top:6rem;padding-top:1.4rem;display:grid;grid-template-columns:1fr auto auto;gap:3rem;align-items:center}
 .footer-links{display:flex;gap:1.4rem}
 
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal.visible{opacity:1;transform:none}
 .no-js .reveal{opacity:1;transform:none}
 
 @media(max-width:1100px){
- .svc-row{grid-template-columns:50px 90px 1fr auto}
- .svc-desc{display:none}
- .svc-thumb{width:90px;height:90px}
+ .industries{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .svc-grid{grid-template-columns:1fr}
+ .svc-card:last-child{grid-template-columns:120px 1fr}
 }
 @media(max-width:900px){
- header{grid-template-columns:1fr auto auto;gap:1rem}
+ header{grid-template-columns:1fr auto auto;gap:.8rem}
  .menu-btn{display:block}
- .header-meta span:first-child{display:none}
- .nav{position:fixed;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 5vw 2rem;font-family:var(--display);font-size:1.6rem;font-weight:700;letter-spacing:-.02em;text-transform:none;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .3s,transform .3s}
- .nav a{padding:.8rem 0;border-bottom:1px solid var(--line)}
- .nav a:after{display:none}
- .nav .nav-wa{display:block;color:var(--red);border-bottom:0}
+ .status span{display:none}
+ .status{padding:.7rem}
+ .nav{position:fixed;top:68px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:var(--rule);padding:1rem 5vw 2rem;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .3s,transform .3s}
+ .nav a{font:400 2.2rem/1.1 var(--serif);text-transform:none;letter-spacing:0;padding:.7rem 0;border:0;border-bottom:1px solid var(--line)}
+ .nav a:hover,.nav a[aria-current]{background:none;border-color:var(--line);color:var(--red)}
+ .nav .nav-wa{display:block;font:600 .9rem/1 var(--mono);text-transform:uppercase;color:var(--red);border:0;padding-top:1.4rem}
  .nav-open .nav{opacity:1;pointer-events:auto;transform:none}
- .hero{padding-top:100px}
- .hero-eyebrow span:nth-child(2){display:none}
- h1{font-size:clamp(4rem,19vw,8rem);line-height:.84;margin-top:11vh}
- .hero-name-2{margin-left:7vw}
- .hero-intro{width:80vw;margin-left:7vw;margin-top:6vh}
- .hero-art{width:48vw;height:55vw;right:-12vw;top:31vh;opacity:.6}
- .hero-cta{width:100px;height:100px;bottom:10vh;font-size:.72rem}
- .hero-pattern{width:55vw;height:55vw}
- .hero-footer span:last-child{display:none}
- .work-head,.services-top,.process-top,.about-grid,.statement-grid,.contact-grid,.svc-featured{grid-template-columns:1fr}
- .svc-featured{padding:6vw;gap:3rem}
+ .hero{grid-template-columns:1fr;padding-top:96px}
+ .hero-top span:nth-child(2){display:none}
+ .hero-art{min-height:420px;order:3;margin-bottom:1rem}
+ .hero-bottom{order:4}
+ .ticker{order:5}
+ .sec-head,.manifesto,.about,.contact,.svc-featured{grid-template-columns:1fr}
+ .span-7,.span-5{grid-column:span 12}
+ .project-media,.span-7 .project-media{aspect-ratio:16/10}
+ .manifesto-art,.about-art,.contact-art{height:460px}
+ .svc-featured{padding:6vw;gap:3rem;box-shadow:8px 8px 0 var(--ink)}
  .svc-featured-media{max-width:460px}
- .projects{row-gap:5rem}
- .project,.project-xl{grid-column:span 12}
- .project-xl .project-media,.project-media{aspect-ratio:16/10}
- .project-info{grid-template-columns:1fr}
- .steps{grid-template-columns:1fr}
- .step{min-height:auto;padding:1.6rem 0 2rem;border-right:0;border-bottom:1px solid #ffffff7a}
- .step:last-child{border-bottom:0}
- .step h3{margin-top:1.4rem}
- .about-art{height:460px}
- .section-label{grid-template-columns:55px 1fr}
- .section-label span:last-child{display:none}
- .contact{min-height:auto}
+ .step{grid-template-columns:72px 1fr;gap:1.2rem}
+ .step-circle{width:72px;height:72px;font-size:2rem;grid-row:span 2}
+ .step-num{align-self:end}
  footer{grid-template-columns:1fr;gap:1rem}
- .footer-links{flex-wrap:wrap}
 }
 @media(max-width:580px){
- .work,.services,.process,.about,.statement,.contact{padding-left:5vw;padding-right:5vw}
- .hero{padding-left:5vw;padding-right:5vw}
+ .section,.hero{padding-left:5vw;padding-right:5vw}
+ .ticker{margin:0 -5vw}
  header{padding:0 5vw}
+ h1{font-size:clamp(4rem,22vw,6rem)}
+ .mask:nth-child(2){padding-left:.25em}
+ .projects{row-gap:3.5rem}
  .svc-items{grid-template-columns:1fr}
+ .svc-items li:nth-child(odd){margin-right:0}
  .svc-badge{margin-left:0}
- .svc-row{grid-template-columns:72px 1fr;gap:1rem 1.2rem;padding:1.4rem 0}
- .svc-num{display:none}
- .svc-thumb{width:72px;height:72px}
- .svc-go{grid-column:2}
- .svc-row:hover{padding-left:0;padding-right:0}
+ .svc-card,.svc-card:last-child{grid-template-columns:80px 1fr}
+ .svc-card img{width:80px;height:80px}
+ .industries{gap:1rem}
+ .industry-name{flex-direction:column;gap:.3rem}
+ .industry-name h3{font-size:1.5rem}
  .numbers strong{font-size:2.6rem}
- .about-art{height:380px}
- .paper-card{padding:1.4rem}
- .paper-card strong{font-size:2.5rem}
+ .numbers div{padding:1rem .8rem}
+ .contact-data div{grid-template-columns:1fr;gap:.3rem}
+ .manifesto-art,.about-art,.contact-art{height:380px}
+ .about-art .c-torn{padding:1.4rem}
+ .about-art .c-stone{display:none}
+ .about-art .c-torn strong{font-size:2.8rem}
+ .about-art .c-sun{width:110px;height:110px}
+ .about-art .c-dot{width:80px;height:80px}
 }
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
  .reveal{opacity:1;transform:none;transition:none}
- .hero-art{transition:none}
+ .mask>span{animation:none;transform:none}
+ .ticker div,.scroll b{animation:none}
  *{transition-duration:.01ms!important}
 }
 </style>
 </head>
 <body class="no-js">
 <a class="skip" href="#main">Saltar al contenido</a>
-<div class="noise" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="leaf" viewBox="0 0 100 160"><path d="M50 158 C50 120 48 90 50 60" stroke="#0f2c23" stroke-width="3" fill="none"/><path d="M50 4 C88 30 96 82 52 128 C10 92 12 36 50 4Z" fill="#1d4a3a"/><path d="M50 10 C52 50 52 90 51 126" stroke="#0f2c23" stroke-width="2" fill="none"/><path d="M51 40 L72 30 M51 60 L80 50 M51 80 L76 74 M51 100 L66 98 M50 46 L30 36 M50 66 L22 58 M50 88 L26 84" stroke="#0f2c23" stroke-width="1.6" fill="none"/></symbol>
+</svg>
 
 <header>
   <a class="brand" href="#top" aria-label="Ir al inicio">DG<sup>®</sup></a>
   <nav class="nav" id="nav" aria-label="Navegación principal">
-    <a href="#trabajo">Trabajo</a><a href="#servicios">Servicios</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
-    <a class="nav-wa" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">Escribime ↗</a>
+    <a href="#trabajo">Trabajo</a><a href="#manifiesto">Enfoque</a><a href="#servicios">Servicios</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
+    <a class="nav-wa" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">Escribime por WhatsApp ↗</a>
   </nav>
-  <div class="header-meta"><span>Buenos Aires</span><i></i><span>Disponible</span></div>
+  <span class="status"><i></i><span>Disponible</span></span>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 </header>
 
 <main id="main">
 <section class="hero" id="top">
-  <div class="hero-grid"></div><div class="folk-pattern hero-pattern"></div>
-  <div class="hero-eyebrow reveal"><span>Diseño web + estrategia digital</span><span>Web · Ecommerce · Marca</span><span>Portfolio / 2026</span></div>
-  <div class="hero-main reveal">
-    <h1><span>David</span><span class="hero-name-2">Galindo</span></h1>
-    <p class="hero-intro">Diseño sitios web que no solo se ven bien: comunican mejor, generan confianza y <strong>convierten visitas en clientes.</strong></p>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-top tag"><span>[ Portfolio — 2026 ]</span><span>Web · Ecommerce · Marca · Estrategia</span><span>Buenos Aires, AR</span></div>
+  <div class="hero-copy">
+    <h1><span class="mask"><span>David</span></span><span class="mask"><span>Galindo</span></span></h1>
+    <p class="hero-role">Diseño web, ecommerce y estrategia digital</p>
+    <p class="hero-intro">Diseño sitios web que no solo se ven bien: comunican mejor, generan confianza y <em>convierten visitas en clientes.</em></p>
+    <a class="btn" href="#trabajo">Ver proyectos <span>→</span></a>
   </div>
-  <div class="hero-art" id="heroArt" aria-hidden="true"><div class="plate plate1"></div><div class="plate plate2"></div><div class="plate plate3"></div><div class="sphere"></div><div class="orbit"></div><div class="orbit orbit2"></div></div>
-  <a class="hero-cta" href="#trabajo"><span>Ver<br>trabajo<br>↘</span></a>
-  <div class="hero-footer"><span>Trabajo seleccionado / 14</span><span>Argentina → Latam y EE.UU.</span></div>
-  <div class="color-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="hero-art collage" id="heroArt" aria-hidden="true">
+    <div class="c c-sun"></div><div class="c c-thread"></div><div class="c c-dot"></div>
+    <div class="c c-stone s2"></div>
+    <div class="c c-mountain"></div>
+    <div class="c c-block"></div>
+    <div class="c c-frame"><div class="bar"><i></i><i></i><i></i></div><img src="../projects/moon-cheese.jpg" alt="" width="1353" height="933" fetchpriority="high"></div>
+    <div class="c c-leaf"><svg><use href="#leaf"/></svg></div>
+    <div class="c c-stone s1"></div>
+  </div>
+  <div class="hero-bottom tag"><a class="scroll" href="#trabajo"><b aria-hidden="true">↓</b>Scroll</a><span>[ 14 proyectos · 08 servicios ]</span></div>
+  <div class="ticker" aria-hidden="true"><div>Diseño web <span>■</span> <em>Ecommerce</em> <span>■</span> Landing pages <span>■</span> <em>Meta Ads</em> <span>■</span> Mercado Libre <span>■</span> <em>Branding</em> <span>■</span> Diseño web <span>■</span> <em>Ecommerce</em> <span>■</span> Landing pages <span>■</span> <em>Meta Ads</em> <span>■</span> Mercado Libre <span>■</span> <em>Branding</em> <span>■</span> </div></div>
 </section>
 
-<section class="work dark" id="trabajo">
-  <div class="section-label"><span>(01)</span><span>Trabajo seleccionado</span><span>14 proyectos</span></div>
-  <div class="work-head reveal"><h2>Trabajo<br><em>reciente.</em></h2><p>Sistemas visuales y productos digitales pensados desde la marca hasta el último clic.</p></div>
+<section class="section dark" id="trabajo">
+  <div class="label"><span>[ Trabajo seleccionado ]</span><span>01</span></div>
+  <div class="sec-head reveal"><h2>Trabajo <em>seleccionado.</em></h2><p>Una selección de proyectos donde diseño, estrategia y tecnología trabajan juntos para crear marcas con impacto.</p></div>
   <div class="projects">
-      <article class="project project-xl reveal">
-        <a class="project-media" href="https://mooncheese.com/" target="_blank" rel="noreferrer" aria-label="Visitar Moon Cheese">
-          <img src="../projects/moon-cheese.jpg" width="1359" height="933" decoding="async" fetchpriority="high" alt="Captura del sitio Moon Cheese">
-          <span class="project-no">01</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>E-commerce · Food · 6–8 semanas</small><h3>Moon Cheese</h3></div>
-          <div><p>Una experiencia D2C de alto impacto: fotografía de producto, promociones y una identidad visual que convierte el snack en un universo propio.</p><p class="project-tags">Shopify / Dirección visual / Conversión</p></div>
-        </div>
-      </article>
-      <article class="project reveal">
-        <a class="project-media" href="https://clinicavizu.com/" target="_blank" rel="noreferrer" aria-label="Visitar Clínica Vizu">
-          <img src="../projects/clinica-vizu.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio Clínica Vizu">
-          <span class="project-no">02</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>Salud · Servicios · 5–6 semanas</small><h3>Clínica Vizu</h3></div>
-          <div><p>Sitio editorial y sofisticado para una clínica estética, con narrativa humana, video inmersivo y recorridos orientados a reserva.</p><p class="project-tags">UX estratégico / Video hero / Reservas</p></div>
-        </div>
-      </article>
-      <article class="project reveal">
-        <a class="project-media" href="https://drinkolipop.com/" target="_blank" rel="noreferrer" aria-label="Visitar OLIPOP">
-          <img src="../projects/olipop.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio OLIPOP">
-          <span class="project-no">03</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>E-commerce · Beverage · 5–7 semanas</small><h3>OLIPOP</h3></div>
-          <div><p>E-commerce de marca con color, ilustración y storytelling para explicar una propuesta de producto diferente sin perder claridad comercial.</p><p class="project-tags">E-commerce / Storytelling / Motion</p></div>
-        </div>
-      </article>
-      <article class="project project-xl reveal">
-        <a class="project-media" href="https://chefnicolasprieto.com/" target="_blank" rel="noreferrer" aria-label="Visitar Chef Nicolás Prieto">
-          <img src="../projects/chef-nicolas-prieto.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio Chef Nicolás Prieto">
-          <span class="project-no">04</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>Educación · Gastronomía · 4–5 semanas</small><h3>Chef Nicolás Prieto</h3></div>
-          <div><p>Plataforma de formación que ordena cursos, metodología, cronogramas y tienda alrededor de una marca personal sólida.</p><p class="project-tags">Arquitectura UX / Cursos / Marca personal</p></div>
-        </div>
-      </article>
-      <article class="project reveal">
-        <a class="project-media" href="https://voltra.com.ar/" target="_blank" rel="noreferrer" aria-label="Visitar Voltra">
-          <img src="../projects/voltra.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio Voltra">
-          <span class="project-no">05</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>E-commerce · Retail · 4–6 semanas</small><h3>Voltra</h3></div>
-          <div><p>Tienda de alto volumen con promociones visibles, navegación comercial y catálogo preparado para descubrir productos rápidamente.</p><p class="project-tags">Catálogo / Promociones / Mobile UX</p></div>
-        </div>
-      </article>
-      <article class="project reveal">
-        <a class="project-media" href="https://casaenorden.shop" target="_blank" rel="noreferrer" aria-label="Visitar Casa en Orden">
-          <img src="../projects/casa-en-orden.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio Casa en Orden">
-          <span class="project-no">06</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>E-commerce · Hogar · 4–5 semanas</small><h3>Casa en Orden</h3></div>
-          <div><p>Tienda cálida y directa para soluciones de organización, con jerarquía comercial, productos protagonistas y acceso inmediato a WhatsApp.</p><p class="project-tags">Tienda online / Campañas / WhatsApp</p></div>
-        </div>
-      </article>
-      <article class="project project-xl reveal">
-        <a class="project-media" href="https://magicspoon.com/" target="_blank" rel="noreferrer" aria-label="Visitar Magic Spoon">
-          <img src="../projects/magic-spoon.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio Magic Spoon">
-          <span class="project-no">07</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>E-commerce · Food · 5–7 semanas</small><h3>Magic Spoon</h3></div>
-          <div><p>Sistema visual de máxima energía para un portafolio amplio de productos, bundles y suscripciones con foco en conversión.</p><p class="project-tags">D2C / Suscripción / Campañas</p></div>
-        </div>
-      </article>
-      <article class="project reveal">
-        <a class="project-media" href="https://ipatagonic.com/" target="_blank" rel="noreferrer" aria-label="Visitar iPatagonic">
-          <img src="../projects/ipatagonic.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio iPatagonic">
-          <span class="project-no">08</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>Corporativo · Tecnología · 3–4 semanas</small><h3>iPatagonic</h3></div>
-          <div><p>Presencia corporativa bilingüe para consultoría tecnológica, con servicios complejos convertidos en un recorrido simple y confiable.</p><p class="project-tags">Bilingüe / Servicios B2B / Contenido</p></div>
-        </div>
-      </article>
-      <article class="project reveal">
-        <a class="project-media" href="https://nivaxel.site/flash/" target="_blank" rel="noreferrer" aria-label="Visitar Flash Realty">
-          <img src="../projects/nivaxel-flash.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio Flash Realty">
-          <span class="project-no">09</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>Inmobiliaria · Leads · 3–4 semanas</small><h3>Flash Realty</h3></div>
-          <div><p>Landing inmobiliaria orientada a captación: propuesta clara, prueba de experiencia y llamados a la acción de baja fricción.</p><p class="project-tags">Landing page / Generación de leads / WhatsApp</p></div>
-        </div>
-      </article>
-      <article class="project project-xl reveal">
-        <a class="project-media" href="https://nivaxel.site/ferreteriacandelaria/" target="_blank" rel="noreferrer" aria-label="Visitar Ferretería Candelaria">
-          <img src="../projects/ferreteria-candelaria.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio Ferretería Candelaria">
-          <span class="project-no">10</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>Retail · Construcción · 4–5 semanas</small><h3>Ferretería Candelaria</h3></div>
-          <div><p>Portal comercial robusto con catálogo, cotización y un shopper virtual pensado para clientes y contratistas.</p><p class="project-tags">Catálogo / Cotizador / Shopper virtual</p></div>
-        </div>
-      </article>
-      <article class="project reveal">
-        <a class="project-media" href="https://hematologotijuana.com/" target="_blank" rel="noreferrer" aria-label="Visitar Hematólogo Tijuana">
-          <img src="../projects/hematologo-tijuana.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio Hematólogo Tijuana">
-          <span class="project-no">11</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>Salud · Marca personal · 3–4 semanas</small><h3>Hematólogo Tijuana</h3></div>
-          <div><p>Sitio médico que combina autoridad profesional, información clara y un camino directo hacia la consulta.</p><p class="project-tags">Marca personal / Contenido médico / Contacto</p></div>
-        </div>
-      </article>
-      <article class="project reveal">
-        <a class="project-media" href="https://mundotesis.pe/" target="_blank" rel="noreferrer" aria-label="Visitar Mundo Tesis">
-          <img src="../projects/mundo-tesis.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio Mundo Tesis">
-          <span class="project-no">12</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>Educación · Comunidad · 3–4 semanas</small><h3>Mundo Tesis</h3></div>
-          <div><p>Ecosistema académico para cursos, seminarios, talleres y recursos con una navegación escalable.</p><p class="project-tags">Plataforma educativa / Cursos / E-commerce</p></div>
-        </div>
-      </article>
-      <article class="project reveal">
-        <a class="project-media" href="https://www.astroterapeutica.com/" target="_blank" rel="noreferrer" aria-label="Visitar Astroterapéutica">
-          <img src="../projects/astroterapeutica.jpg" width="1333" height="926" decoding="async" loading="lazy" alt="Captura del sitio Astroterapéutica">
-          <span class="project-no">13</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>Educación · Wellness · 4–5 semanas</small><h3>Astroterapéutica</h3></div>
-          <div><p>Escuela online con atmósfera inmersiva, oferta formativa jerarquizada y un lenguaje visual reconocible.</p><p class="project-tags">Academia online / Cursos / Dirección de arte</p></div>
-        </div>
-      </article>
-      <article class="project reveal">
-        <a class="project-media" href="https://www.tallersaberes.com/" target="_blank" rel="noreferrer" aria-label="Visitar Taller Saberes">
-          <img src="../projects/taller-saberes.jpg" width="1326" height="906" decoding="async" loading="lazy" alt="Captura del sitio Taller Saberes">
-          <span class="project-no">14</span><span class="project-open" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-info">
-          <div><small>Educación · Institucional · 2–3 semanas</small><h3>Taller Saberes</h3></div>
-          <div><p>Web institucional para acompañamiento educativo, con información de ingresos, clases y contacto centralizada.</p><p class="project-tags">Sitio institucional / Servicios / Contacto</p></div>
-        </div>
-      </article>
-  </div>
-</section>
-
-<section class="services" id="servicios">
-  <div class="folk-pattern services-pattern"></div>
-  <div class="section-label"><span>(02)</span><span>Servicios</span><span>08 servicios</span></div>
-  <div class="services-top">
-    <h2 class="reveal">¿Qué necesita<br>tu <em>negocio?</em></h2>
-    <div class="services-copy reveal"><p class="quote">“La forma importa. Pero lo que hace que una marca funcione es la intención detrás de cada decisión.”</p><p>No vendo piezas sueltas: detecto el problema y combino diseño, tecnología y marketing para resolverlo.</p></div>
-  </div>
-    <article class="svc-featured reveal" id="servicio-01">
-      <div class="svc-featured-media">
-        <img src="../services/diseno-web.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="Pieza de servicio: diseño web con estrategia para convertir visitas en clientes">
-      </div>
-      <div class="svc-featured-copy">
-        <p class="svc-meta"><span>01</span><span>Diseño web que convierte</span><span class="svc-badge">Servicio principal</span></p>
-        <h3>¿Tu sitio web genera <em>ventas?</em></h3>
-        <p class="svc-need">“Tengo una web, pero no me genera clientes.”</p>
-        <p class="svc-lead">Diseño sitios web pensados no solo para verse bien, sino para comunicar mejor, generar confianza y convertir visitantes en clientes.</p>
-        <ul class="svc-items">
-          <li>Diseño web profesional</li>
-          <li>Experiencia de usuario (UX/UI)</li>
-          <li>Sitios corporativos y comerciales</li>
-          <li>Optimización de estructura y conversión</li>
-          <li>Diseño responsive</li>
-          <li>Integración con WhatsApp y canales de contacto</li>
-          <li>Estrategia digital</li>
-        </ul>
-        <p class="svc-note">Si ya tenés una página, también puedo analizarla para detectar oportunidades de mejora.</p>
-        <a class="btn" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20sobre%20el%20sitio%20web%20de%20mi%20negocio." target="_blank" rel="noreferrer">Revisemos tu sitio <span>→</span></a>
+    <article class="project span-7 reveal" id="p-moon-cheese">
+      <a class="project-media" href="https://mooncheese.com/" target="_blank" rel="noreferrer" aria-label="Visitar Moon Cheese">
+        <img src="../projects/moon-cheese.jpg" width="1359" height="933" loading="lazy" decoding="async" alt="Captura del sitio Moon Cheese">
+        <span class="project-no">01</span>
+      </a>
+      <div class="project-info">
+        <h3>Moon Cheese</h3>
+        <span class="tag">E-commerce · Food · 6–8 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Una experiencia D2C de alto impacto: fotografía de producto, promociones y una identidad visual que convierte el snack en un universo propio.</p>
       </div>
     </article>
-  <div class="svc-list">
-      <a class="svc-row reveal" id="servicio-02" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20las%20ventas%20de%20mi%20tienda%20online." target="_blank" rel="noreferrer">
-        <span class="svc-num">02</span>
-        <img class="svc-thumb" src="../services/ecommerce.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
-        <span class="svc-title"><small>Ecommerce: mejorá tus ventas online</small><strong>¿Tu tienda online podría <em>vender más?</em></strong></span>
-        <span class="svc-desc">Una tienda online no debería ser solo un catálogo de productos. Analizo, diseño y optimizo ecommerce para facilitar la compra, mejorar la experiencia y aumentar las conversiones.</span>
-        <span class="svc-go">Consultar <b>↗</b></span>
+    <article class="project span-5 reveal" id="p-clinica-vizu">
+      <a class="project-media" href="https://clinicavizu.com/" target="_blank" rel="noreferrer" aria-label="Visitar Clínica Vizu">
+        <img src="../projects/clinica-vizu.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Clínica Vizu">
+        <span class="project-no">02</span>
       </a>
-      <a class="svc-row reveal" id="servicio-03" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20necesito%20una%20landing%20page%20para%20una%20campa%C3%B1a." target="_blank" rel="noreferrer">
-        <span class="svc-num">03</span>
-        <img class="svc-thumb" src="../services/landing-pages.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
-        <span class="svc-title"><small>Landing pages para campañas</small><strong>¿Recibís visitas pero <em>no convierten?</em></strong></span>
-        <span class="svc-desc">Diseño landing pages que presentan una oferta con claridad y llevan a una sola acción: comprar, registrarse, pedir información o escribir por WhatsApp.</span>
-        <span class="svc-go">Consultar <b>↗</b></span>
+      <div class="project-info">
+        <h3>Clínica Vizu</h3>
+        <span class="tag">Salud · Servicios · 5–6 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Sitio editorial y sofisticado para una clínica estética, con narrativa humana, video inmersivo y recorridos orientados a reserva.</p>
+      </div>
+    </article>
+    <article class="project span-5 reveal" id="p-olipop">
+      <a class="project-media" href="https://drinkolipop.com/" target="_blank" rel="noreferrer" aria-label="Visitar OLIPOP">
+        <img src="../projects/olipop.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio OLIPOP">
+        <span class="project-no">03</span>
       </a>
-      <a class="svc-row reveal" id="servicio-04" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20los%20resultados%20de%20mi%20publicidad." target="_blank" rel="noreferrer">
-        <span class="svc-num">04</span>
-        <img class="svc-thumb" src="../services/publicidad-digital.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
-        <span class="svc-title"><small>Publicidad digital & Meta Ads</small><strong>¿Invertís en publicidad <em>sin ver resultados?</em></strong></span>
-        <span class="svc-desc">La publicidad funciona mejor cuando estrategia, creatividad y experiencia de compra trabajan juntas. Conecto tus anuncios con una oferta y una experiencia capaces de convertir.</span>
-        <span class="svc-go">Consultar <b>↗</b></span>
+      <div class="project-info">
+        <h3>OLIPOP</h3>
+        <span class="tag">E-commerce · Beverage · 5–7 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>E-commerce de marca con color, ilustración y storytelling para explicar una propuesta de producto diferente sin perder claridad comercial.</p>
+      </div>
+    </article>
+    <article class="project span-7 reveal" id="p-chef-nicolas-prieto">
+      <a class="project-media" href="https://chefnicolasprieto.com/" target="_blank" rel="noreferrer" aria-label="Visitar Chef Nicolás Prieto">
+        <img src="../projects/chef-nicolas-prieto.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Chef Nicolás Prieto">
+        <span class="project-no">04</span>
       </a>
-      <a class="svc-row reveal" id="servicio-05" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20mis%20ventas%20en%20Mercado%20Libre." target="_blank" rel="noreferrer">
-        <span class="svc-num">05</span>
-        <img class="svc-thumb" src="../services/mercado-libre.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
-        <span class="svc-title"><small>Mercado Libre: optimización & publicidad</small><strong>¿Tus publicaciones <em>no están vendiendo?</em></strong></span>
-        <span class="svc-desc">Mejoro la presentación, la visibilidad y la estrategia comercial de tus productos para construir una presencia más competitiva en Mercado Libre.</span>
-        <span class="svc-go">Consultar <b>↗</b></span>
+      <div class="project-info">
+        <h3>Chef Nicolás Prieto</h3>
+        <span class="tag">Educación · Gastronomía · 4–5 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Plataforma de formación que ordena cursos, metodología, cronogramas y tienda alrededor de una marca personal sólida.</p>
+      </div>
+    </article>
+    <article class="project span-7 reveal" id="p-voltra">
+      <a class="project-media" href="https://voltra.com.ar/" target="_blank" rel="noreferrer" aria-label="Visitar Voltra">
+        <img src="../projects/voltra.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Voltra">
+        <span class="project-no">05</span>
       </a>
-      <a class="svc-row reveal" id="servicio-06" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20trabajar%20la%20identidad%20de%20mi%20marca." target="_blank" rel="noreferrer">
-        <span class="svc-num">06</span>
-        <img class="svc-thumb" src="../services/identidad-de-marca.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
-        <span class="svc-title"><small>Branding & diseño de marca</small><strong>¿Tu marca representa <em>lo que vale tu negocio?</em></strong></span>
-        <span class="svc-desc">Desarrollo identidades visuales que conectan la estrategia del negocio con la forma en que la marca se presenta ante sus clientes.</span>
-        <span class="svc-go">Consultar <b>↗</b></span>
+      <div class="project-info">
+        <h3>Voltra</h3>
+        <span class="tag">E-commerce · Retail · 4–6 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Tienda de alto volumen con promociones visibles, navegación comercial y catálogo preparado para descubrir productos rápidamente.</p>
+      </div>
+    </article>
+    <article class="project span-5 reveal" id="p-casa-en-orden">
+      <a class="project-media" href="https://casaenorden.shop" target="_blank" rel="noreferrer" aria-label="Visitar Casa en Orden">
+        <img src="../projects/casa-en-orden.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Casa en Orden">
+        <span class="project-no">06</span>
       </a>
-      <a class="svc-row reveal" id="servicio-07" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20darle%20direcci%C3%B3n%20al%20contenido%20de%20mis%20redes." target="_blank" rel="noreferrer">
-        <span class="svc-num">07</span>
-        <img class="svc-thumb" src="../services/contenido-redes.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
-        <span class="svc-title"><small>Contenido & estrategia para redes</small><strong>¿Publicás contenido <em>sin una estrategia?</em></strong></span>
-        <span class="svc-desc">Desarrollo la estrategia visual y de contenido para comunicar mejor tus productos, servicios y propuesta de valor.</span>
-        <span class="svc-go">Consultar <b>↗</b></span>
+      <div class="project-info">
+        <h3>Casa en Orden</h3>
+        <span class="tag">E-commerce · Hogar · 4–5 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Tienda cálida y directa para soluciones de organización, con jerarquía comercial, productos protagonistas y acceso inmediato a WhatsApp.</p>
+      </div>
+    </article>
+    <article class="project span-5 reveal" id="p-magic-spoon">
+      <a class="project-media" href="https://magicspoon.com/" target="_blank" rel="noreferrer" aria-label="Visitar Magic Spoon">
+        <img src="../projects/magic-spoon.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Magic Spoon">
+        <span class="project-no">07</span>
       </a>
-      <a class="svc-row reveal" id="servicio-08" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20digitalizar%20procesos%20de%20mi%20empresa." target="_blank" rel="noreferrer">
-        <span class="svc-num">08</span>
-        <img class="svc-thumb" src="../services/sistemas-digitales.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
-        <span class="svc-title"><small>Sistemas digitales para empresas</small><strong>¿Tu empresa todavía <em>controla todo a mano?</em></strong></span>
-        <span class="svc-desc">Diseño aplicaciones internas adaptadas a la operación de cada negocio para centralizar la información y facilitar el control.</span>
-        <span class="svc-go">Consultar <b>↗</b></span>
+      <div class="project-info">
+        <h3>Magic Spoon</h3>
+        <span class="tag">E-commerce · Food · 5–7 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Sistema visual de máxima energía para un portafolio amplio de productos, bundles y suscripciones con foco en conversión.</p>
+      </div>
+    </article>
+    <article class="project span-7 reveal" id="p-ipatagonic">
+      <a class="project-media" href="https://ipatagonic.com/" target="_blank" rel="noreferrer" aria-label="Visitar iPatagonic">
+        <img src="../projects/ipatagonic.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio iPatagonic">
+        <span class="project-no">08</span>
       </a>
+      <div class="project-info">
+        <h3>iPatagonic</h3>
+        <span class="tag">Corporativo · Tecnología · 3–4 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Presencia corporativa bilingüe para consultoría tecnológica, con servicios complejos convertidos en un recorrido simple y confiable.</p>
+      </div>
+    </article>
+    <article class="project span-7 reveal" id="p-flash-realty">
+      <a class="project-media" href="https://nivaxel.site/flash/" target="_blank" rel="noreferrer" aria-label="Visitar Flash Realty">
+        <img src="../projects/nivaxel-flash.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Flash Realty">
+        <span class="project-no">09</span>
+      </a>
+      <div class="project-info">
+        <h3>Flash Realty</h3>
+        <span class="tag">Inmobiliaria · Leads · 3–4 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Landing inmobiliaria orientada a captación: propuesta clara, prueba de experiencia y llamados a la acción de baja fricción.</p>
+      </div>
+    </article>
+    <article class="project span-5 reveal" id="p-ferreteria-candelaria">
+      <a class="project-media" href="https://nivaxel.site/ferreteriacandelaria/" target="_blank" rel="noreferrer" aria-label="Visitar Ferretería Candelaria">
+        <img src="../projects/ferreteria-candelaria.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Ferretería Candelaria">
+        <span class="project-no">10</span>
+      </a>
+      <div class="project-info">
+        <h3>Ferretería Candelaria</h3>
+        <span class="tag">Retail · Construcción · 4–5 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Portal comercial robusto con catálogo, cotización y un shopper virtual pensado para clientes y contratistas.</p>
+      </div>
+    </article>
+    <article class="project span-5 reveal" id="p-hematologo-tijuana">
+      <a class="project-media" href="https://hematologotijuana.com/" target="_blank" rel="noreferrer" aria-label="Visitar Hematólogo Tijuana">
+        <img src="../projects/hematologo-tijuana.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Hematólogo Tijuana">
+        <span class="project-no">11</span>
+      </a>
+      <div class="project-info">
+        <h3>Hematólogo Tijuana</h3>
+        <span class="tag">Salud · Marca personal · 3–4 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Sitio médico que combina autoridad profesional, información clara y un camino directo hacia la consulta.</p>
+      </div>
+    </article>
+    <article class="project span-7 reveal" id="p-mundo-tesis">
+      <a class="project-media" href="https://mundotesis.pe/" target="_blank" rel="noreferrer" aria-label="Visitar Mundo Tesis">
+        <img src="../projects/mundo-tesis.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Mundo Tesis">
+        <span class="project-no">12</span>
+      </a>
+      <div class="project-info">
+        <h3>Mundo Tesis</h3>
+        <span class="tag">Educación · Comunidad · 3–4 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Ecosistema académico para cursos, seminarios, talleres y recursos con una navegación escalable.</p>
+      </div>
+    </article>
+    <article class="project span-7 reveal" id="p-astroterapeutica">
+      <a class="project-media" href="https://www.astroterapeutica.com/" target="_blank" rel="noreferrer" aria-label="Visitar Astroterapéutica">
+        <img src="../projects/astroterapeutica.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Astroterapéutica">
+        <span class="project-no">13</span>
+      </a>
+      <div class="project-info">
+        <h3>Astroterapéutica</h3>
+        <span class="tag">Educación · Wellness · 4–5 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Escuela online con atmósfera inmersiva, oferta formativa jerarquizada y un lenguaje visual reconocible.</p>
+      </div>
+    </article>
+    <article class="project span-5 reveal" id="p-taller-saberes">
+      <a class="project-media" href="https://www.tallersaberes.com/" target="_blank" rel="noreferrer" aria-label="Visitar Taller Saberes">
+        <img src="../projects/taller-saberes.jpg" width="1326" height="906" loading="lazy" decoding="async" alt="Captura del sitio Taller Saberes">
+        <span class="project-no">14</span>
+      </a>
+      <div class="project-info">
+        <h3>Taller Saberes</h3>
+        <span class="tag">Educación · Institucional · 2–3 semanas</span>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+        <p>Web institucional para acompañamiento educativo, con información de ingresos, clases y contacto centralizada.</p>
+      </div>
+    </article>
   </div>
 </section>
 
-<section class="process" id="proceso">
-  <div class="folk-pattern"></div>
-  <div class="section-label"><span>(03)</span><span>Proceso</span><span>De la idea al impacto</span></div>
-  <div class="process-top"><h2 class="reveal">De la idea<br>al <em>impacto.</em></h2><p class="process-note reveal">Un proceso simple para ordenar la complejidad y convertir decisiones de diseño en resultados concretos.</p></div>
-  <div class="steps">
-    <article class="step"><span>01</span><h3>Descubrir</h3><p>Objetivos, audiencia y contexto de tu negocio.</p><b aria-hidden="true">→</b></article>
-    <article class="step"><span>02</span><h3>Definir</h3><p>Insights, estrategia y dirección.</p><b aria-hidden="true">→</b></article>
-    <article class="step"><span>03</span><h3>Diseñar</h3><p>Sistema visual y experiencia.</p><b aria-hidden="true">→</b></article>
-    <article class="step"><span>04</span><h3>Construir</h3><p>Desarrollo, pruebas y optimización.</p><b aria-hidden="true">→</b></article>
-    <article class="step"><span>05</span><h3>Crecer</h3><p>Medir, aprender y escalar.</p></article>
-  </div>
-</section>
-
-<section class="about" id="sobre-mi">
-  <div class="section-label"><span>(04)</span><span>Sobre mí</span><span>Diseño + estrategia</span></div>
-  <div class="about-grid">
-    <div class="about-art reveal" aria-hidden="true"><div class="paper-card"><span>DG® / 2026</span><small>Buenos Aires · Argentina</small><strong>Diseño con intención.</strong></div><div class="about-red"></div><div class="about-yellow"></div></div>
-    <div class="about-copy reveal">
-      <h2>Diseño con mirada <em>estratégica.</em></h2>
-      <p class="about-lead">Soy David Galindo, diseñador web y estratega digital. Detecto qué está frenando a un negocio en lo digital y combino diseño, tecnología y marketing para resolverlo.</p>
-      <p>Trabajo entre marca, web, comunicación y marketing. Mi objetivo no es sumar ruido, sino encontrar la idea correcta, darle una forma memorable y hacer que funcione.</p>
-      <div class="numbers"><div><strong>14</strong><span>Proyectos seleccionados</span></div><div><strong>08</strong><span>Servicios</span></div><div><strong>04</strong><span>Países</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="statement dark">
-  <div class="section-label"><span>(05)</span><span>Enfoque</span><span>Principio de trabajo</span></div>
-  <div class="statement-grid"><h2 class="reveal">Menos ruido.<br><em>Más intención.</em></h2><blockquote class="reveal">“Una buena experiencia digital no empieza por los efectos. Empieza por entender qué tiene que sentir, comprender y hacer una persona.”<cite>— Principio de trabajo</cite></blockquote></div>
-</section>
-
-<section class="contact" id="contacto">
-  <div class="folk-pattern"></div>
-  <div class="section-label"><span>(06)</span><span>Contacto</span><span>Disponible para nuevos proyectos</span></div>
-  <div class="contact-grid">
-    <h2 class="reveal">Hagamos algo<br>que <em>funcione.</em></h2>
-    <div class="contact-side reveal">
-      <p>¿Tenés un proyecto en mente? Contame sobre tu negocio y vemos juntos qué necesita.</p>
-      <a class="btn" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">Escribime por WhatsApp <span>→</span></a>
-      <div class="contact-data">
-        <a href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">+54 11 2554 6238</a>
-        <span class="available"><i></i> Disponible</span>
-        <span>Buenos Aires, Argentina</span>
+<section class="section" id="manifiesto">
+  <div class="label"><span>[ Manifiesto ]</span><span>02</span></div>
+  <div class="manifesto">
+    <div class="reveal">
+      <h2>El diseño no es <em>decoración.</em></h2>
+      <div class="manifesto-copy">
+        <p class="quote">“La forma importa. Pero lo que hace que una marca funcione es la intención detrás de cada decisión.”</p>
+        <p>Creo en un diseño con propósito: que conecta, comunica y genera resultados. Combino creatividad, estrategia y tecnología para construir marcas y experiencias digitales que realmente importan.</p>
+        <a class="link" href="#proceso">Conocé mi proceso <span>→</span></a>
       </div>
     </div>
+    <div class="manifesto-art collage reveal" aria-hidden="true">
+      <div class="c c-sun"></div><div class="c c-thread"></div>
+      <div class="c c-mountain"></div>
+      <div class="c c-torn"></div>
+      <div class="c c-stone s2"></div>
+      <div class="c c-leaf"><svg><use href="#leaf"/></svg></div>
+    </div>
   </div>
-  <footer><a class="brand" href="#top" aria-label="Volver al inicio">DG<sup>®</sup></a><span>David Galindo © <span id="year">2026</span></span><div class="footer-links"><a href="#trabajo">Trabajo</a><a href="#servicios">Servicios</a><a href="#sobre-mi">Sobre mí</a></div></footer>
+</section>
+
+<section class="section services" id="servicios">
+  <div class="label"><span>[ Servicios ]</span><span>03</span></div>
+  <div class="sec-head reveal"><h2>Soluciones para marcas <em>con visión.</em></h2><p>No vendo piezas sueltas: detecto el problema y combino diseño, tecnología y marketing para resolverlo.</p></div>
+  <article class="svc-featured reveal" id="servicio-01">
+    <div class="svc-featured-media"><img src="../services/diseno-web.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="Pieza de servicio: diseño web con estrategia para convertir visitas en clientes"></div>
+    <div>
+      <p class="svc-meta tag"><span>01</span><span>Diseño web que convierte</span><span class="svc-badge">Servicio principal</span></p>
+      <h3>¿Tu sitio web genera <em>ventas?</em></h3>
+      <p class="svc-need">“Tengo una web, pero no me genera clientes.”</p>
+      <p class="svc-lead">Diseño sitios web pensados no solo para verse bien, sino para comunicar mejor, generar confianza y convertir visitantes en clientes.</p>
+      <ul class="svc-items">
+        <li>Diseño web profesional</li>
+        <li>Experiencia de usuario (UX/UI)</li>
+        <li>Sitios corporativos y comerciales</li>
+        <li>Optimización de estructura y conversión</li>
+        <li>Diseño responsive</li>
+        <li>Integración con WhatsApp y canales de contacto</li>
+        <li>Estrategia digital</li>
+      </ul>
+      <p class="svc-note">Si ya tenés una página, también puedo analizarla para detectar oportunidades de mejora.</p>
+      <a class="btn" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20sobre%20el%20sitio%20web%20de%20mi%20negocio." target="_blank" rel="noreferrer">Revisemos tu sitio <span>→</span></a>
+    </div>
+  </article>
+  <div class="svc-grid">
+    <a class="svc-card reveal" id="servicio-02" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20las%20ventas%20de%20mi%20tienda%20online." target="_blank" rel="noreferrer">
+      <img src="../services/ecommerce.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
+      <div><span class="tag">02 — Ecommerce: mejorá tus ventas online</span><h3>¿Tu tienda online podría <em>vender más?</em></h3><p>Una tienda online no debería ser solo un catálogo de productos. Analizo, diseño y optimizo ecommerce para facilitar la compra, mejorar la experiencia y aumentar las conversiones.</p><span class="link">Consultar <span>→</span></span></div>
+    </a>
+    <a class="svc-card reveal" id="servicio-03" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20necesito%20una%20landing%20page%20para%20una%20campa%C3%B1a." target="_blank" rel="noreferrer">
+      <img src="../services/landing-pages.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
+      <div><span class="tag">03 — Landing pages para campañas</span><h3>¿Recibís visitas pero <em>no convierten?</em></h3><p>Diseño landing pages que presentan una oferta con claridad y llevan a una sola acción: comprar, registrarse, pedir información o escribir por WhatsApp.</p><span class="link">Consultar <span>→</span></span></div>
+    </a>
+    <a class="svc-card reveal" id="servicio-04" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20los%20resultados%20de%20mi%20publicidad." target="_blank" rel="noreferrer">
+      <img src="../services/publicidad-digital.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
+      <div><span class="tag">04 — Publicidad digital & Meta Ads</span><h3>¿Invertís en publicidad <em>sin ver resultados?</em></h3><p>La publicidad funciona mejor cuando estrategia, creatividad y experiencia de compra trabajan juntas. Conecto tus anuncios con una oferta y una experiencia capaces de convertir.</p><span class="link">Consultar <span>→</span></span></div>
+    </a>
+    <a class="svc-card reveal" id="servicio-05" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20mis%20ventas%20en%20Mercado%20Libre." target="_blank" rel="noreferrer">
+      <img src="../services/mercado-libre.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
+      <div><span class="tag">05 — Mercado Libre: optimización & publicidad</span><h3>¿Tus publicaciones <em>no están vendiendo?</em></h3><p>Mejoro la presentación, la visibilidad y la estrategia comercial de tus productos para construir una presencia más competitiva en Mercado Libre.</p><span class="link">Consultar <span>→</span></span></div>
+    </a>
+    <a class="svc-card reveal" id="servicio-06" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20trabajar%20la%20identidad%20de%20mi%20marca." target="_blank" rel="noreferrer">
+      <img src="../services/identidad-de-marca.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
+      <div><span class="tag">06 — Branding & diseño de marca</span><h3>¿Tu marca representa <em>lo que vale tu negocio?</em></h3><p>Desarrollo identidades visuales que conectan la estrategia del negocio con la forma en que la marca se presenta ante sus clientes.</p><span class="link">Consultar <span>→</span></span></div>
+    </a>
+    <a class="svc-card reveal" id="servicio-07" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20darle%20direcci%C3%B3n%20al%20contenido%20de%20mis%20redes." target="_blank" rel="noreferrer">
+      <img src="../services/contenido-redes.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
+      <div><span class="tag">07 — Contenido & estrategia para redes</span><h3>¿Publicás contenido <em>sin una estrategia?</em></h3><p>Desarrollo la estrategia visual y de contenido para comunicar mejor tus productos, servicios y propuesta de valor.</p><span class="link">Consultar <span>→</span></span></div>
+    </a>
+    <a class="svc-card reveal" id="servicio-08" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20digitalizar%20procesos%20de%20mi%20empresa." target="_blank" rel="noreferrer">
+      <img src="../services/sistemas-digitales.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="">
+      <div><span class="tag">08 — Sistemas digitales para empresas</span><h3>¿Tu empresa todavía <em>controla todo a mano?</em></h3><p>Diseño aplicaciones internas adaptadas a la operación de cada negocio para centralizar la información y facilitar el control.</p><span class="link">Consultar <span>→</span></span></div>
+    </a>
+  </div>
+</section>
+
+<section class="section green" id="proceso">
+  <div class="label"><span>[ Proceso ]</span><span>04</span></div>
+  <div class="sec-head reveal"><h2>Un proceso claro, para <em>resultados reales.</em></h2><p>Un método simple para ordenar la complejidad y convertir decisiones de diseño en resultados concretos.</p></div>
+  <div class="timeline" id="timeline">
+    <div class="timeline-fill" id="timelineFill" aria-hidden="true"></div>
+    <article class="step reveal"><span class="step-circle" aria-hidden="true">i</span><span class="step-num">01</span><div><h3>Descubrir</h3><p>Entendemos tu marca, tus objetivos y tu audiencia.</p></div></article>
+    <article class="step reveal"><span class="step-circle" aria-hidden="true">ii</span><span class="step-num">02</span><div><h3>Definir</h3><p>Estrategia, estructura y planificación.</p></div></article>
+    <article class="step reveal"><span class="step-circle" aria-hidden="true">iii</span><span class="step-num">03</span><div><h3>Diseñar</h3><p>Sistema visual, UX/UI y prototipos.</p></div></article>
+    <article class="step reveal"><span class="step-circle" aria-hidden="true">iv</span><span class="step-num">04</span><div><h3>Construir</h3><p>Desarrollo, pruebas y optimización.</p></div></article>
+    <article class="step reveal"><span class="step-circle" aria-hidden="true">v</span><span class="step-num">05</span><div><h3>Crecer</h3><p>Análisis, contenido y mejora continua.</p></div></article>
+  </div>
+</section>
+
+<section class="section" id="sobre-mi">
+  <div class="label"><span>[ Sobre mí ]</span><span>05</span></div>
+  <div class="about">
+    <div class="about-art collage reveal" aria-hidden="true">
+      <div class="c c-sun"></div>
+      <div class="c c-green"></div>
+      <div class="c c-torn"><span class="tag">DG® / 2026 — Buenos Aires</span><strong>Diseño con <em>intención.</em></strong><span class="tag">[ Diseño + estrategia ]</span></div>
+      <div class="c c-stone s1"></div>
+      <div class="c c-dot"></div>
+    </div>
+    <div class="about-copy reveal">
+      <h2>Diseñador web y <em>estratega digital.</em></h2>
+      <p class="lead">Soy David Galindo, diseñador web y estratega digital. Detecto qué está frenando a un negocio en lo digital y combino diseño, tecnología y marketing para resolverlo.</p>
+      <p>Trabajo entre marca, web, comunicación y marketing. Mi objetivo no es sumar ruido, sino encontrar la idea correcta, darle una forma memorable y hacer que funcione.</p>
+      <div class="numbers"><div><strong>14</strong><span class="tag">Proyectos</span></div><div><strong>08</strong><span class="tag">Industrias</span></div><div><strong>04</strong><span class="tag">Países</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="industrias">
+  <div class="label"><span>[ Industrias ]</span><span>06</span></div>
+  <div class="sec-head reveal"><h2>Marcas de diferentes industrias, <em>con un mismo enfoque.</em></h2><p>Cada rubro tiene su lenguaje. El método es el mismo: entender, ordenar y diseñar para convertir.</p></div>
+  <div class="industries">
+    <a class="industry reveal" href="#p-moon-cheese">
+      <div class="industry-img"><img src="../projects/moon-cheese.jpg" loading="lazy" decoding="async" alt=""></div>
+      <div class="industry-name"><h3>E-commerce</h3><span class="tag">Moon Cheese</span></div>
+    </a>
+    <a class="industry reveal" href="#p-clinica-vizu">
+      <div class="industry-img"><img src="../projects/clinica-vizu.jpg" loading="lazy" decoding="async" alt=""></div>
+      <div class="industry-name"><h3>Salud</h3><span class="tag">Clínica Vizu</span></div>
+    </a>
+    <a class="industry reveal" href="#p-chef-nicolas-prieto">
+      <div class="industry-img"><img src="../projects/chef-nicolas-prieto.jpg" loading="lazy" decoding="async" alt=""></div>
+      <div class="industry-name"><h3>Gastronomía</h3><span class="tag">Chef Nicolás Prieto</span></div>
+    </a>
+    <a class="industry reveal" href="#p-taller-saberes">
+      <div class="industry-img"><img src="../projects/taller-saberes.jpg" loading="lazy" decoding="async" alt=""></div>
+      <div class="industry-name"><h3>Educación</h3><span class="tag">Taller Saberes</span></div>
+    </a>
+    <a class="industry reveal" href="#p-ipatagonic">
+      <div class="industry-img"><img src="../projects/ipatagonic.jpg" loading="lazy" decoding="async" alt=""></div>
+      <div class="industry-name"><h3>Tecnología</h3><span class="tag">iPatagonic</span></div>
+    </a>
+    <a class="industry reveal" href="#p-flash-realty">
+      <div class="industry-img"><img src="../projects/nivaxel-flash.jpg" loading="lazy" decoding="async" alt=""></div>
+      <div class="industry-name"><h3>Inmobiliaria</h3><span class="tag">Flash Realty</span></div>
+    </a>
+    <a class="industry reveal" href="#p-ferreteria-candelaria">
+      <div class="industry-img"><img src="../projects/ferreteria-candelaria.jpg" loading="lazy" decoding="async" alt=""></div>
+      <div class="industry-name"><h3>Retail</h3><span class="tag">Ferretería Candelaria</span></div>
+    </a>
+    <a class="industry reveal" href="#p-hematologo-tijuana">
+      <div class="industry-img"><img src="../projects/hematologo-tijuana.jpg" loading="lazy" decoding="async" alt=""></div>
+      <div class="industry-name"><h3>Marca personal</h3><span class="tag">Hematólogo Tijuana</span></div>
+    </a>
+  </div>
+  <p class="industries-note reveal">Más que industrias, me interesan las personas y las ideas detrás de cada proyecto.</p>
+</section>
+
+<section class="section" id="contacto">
+  <div class="label"><span>[ Contacto ]</span><span>07</span></div>
+  <div class="contact">
+    <div class="contact-copy reveal">
+      <h2>Hagamos algo que <em>funcione.</em></h2>
+      <p>¿Tenés un proyecto en mente o querés llevar tu marca al siguiente nivel? Contame sobre tu negocio y vemos juntos qué necesita.</p>
+      <a class="btn" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">Escribime por WhatsApp <span>→</span></a>
+      <dl class="contact-data">
+        <div><dt class="tag">WhatsApp</dt><dd><a href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">+54 11 2554 6238</a></dd></div>
+        <div><dt class="tag">Ubicación</dt><dd>Buenos Aires, Argentina</dd></div>
+        <div><dt class="tag">Disponibilidad</dt><dd>Proyectos y colaboraciones</dd></div>
+      </dl>
+    </div>
+    <div class="contact-art collage reveal" aria-hidden="true">
+      <div class="c c-sun"></div>
+      <div class="c c-leaf"><svg><use href="#leaf"/></svg></div>
+      <div class="c c-mountain"></div>
+      <div class="c c-thread"></div>
+      <div class="c c-block"></div>
+      <div class="c c-stone s1"></div>
+    </div>
+  </div>
+  <footer class="tag"><a class="brand" href="#top" aria-label="Volver al inicio">DG<sup>®</sup></a><span>David Galindo © <span id="year">2026</span></span><div class="footer-links"><a href="#trabajo">Trabajo</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></div></footer>
 </section>
 </main>
 
@@ -585,29 +717,38 @@ footer{border-top:1px solid var(--ink);margin-top:7rem;padding:1.5rem 0 0;displa
 (function(){
   document.body.classList.remove('no-js');
   var year=document.getElementById('year'); if(year) year.textContent=new Date().getFullYear();
-
-  var heroArt=document.getElementById('heroArt');
   var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(heroArt && !reduced){
+
+  var art=document.getElementById('heroArt');
+  if(art && !reduced){
     window.addEventListener('mousemove',function(e){
       if(innerWidth<900) return;
-      var x=(e.clientX/innerWidth-.5)*10, y=(e.clientY/innerHeight-.5)*-10;
-      heroArt.style.transform='rotateY('+x+'deg) rotateX('+y+'deg)';
+      var x=(e.clientX/innerWidth-.5)*8, y=(e.clientY/innerHeight-.5)*-8;
+      art.style.transform='rotateY('+x+'deg) rotateX('+y+'deg)';
     });
-    document.addEventListener('mouseleave',function(){heroArt.style.transform='rotateY(0deg) rotateX(0deg)';});
   }
 
   if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12});
     document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-
     var links={};
     document.querySelectorAll('.nav a[href^="#"]').forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
-    var spy=new IntersectionObserver(function(entries){entries.forEach(function(e){var a=links[e.target.id]; if(!a) return; if(e.isIntersecting) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current');});},{rootMargin:'-45% 0px -50% 0px'});
+    var spy=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id]; if(!a) return; if(e.isIntersecting) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current');});},{rootMargin:'-45% 0px -50% 0px'});
     Object.keys(links).forEach(function(id){var s=document.getElementById(id); if(s) spy.observe(s);});
   } else {
     document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});
   }
+
+  // progreso del proceso al hacer scroll
+  var tl=document.getElementById('timeline'), fill=document.getElementById('timelineFill'), steps=tl?tl.querySelectorAll('.step'):[];
+  function progress(){
+    if(!tl) return;
+    var r=tl.getBoundingClientRect(), mid=innerHeight*.6;
+    var p=Math.max(0,Math.min(1,(mid-r.top)/r.height));
+    fill.style.height=(p*100)+'%';
+    steps.forEach(function(s){var sr=s.getBoundingClientRect(); s.classList.toggle('on',sr.top+sr.height/2<mid);});
+  }
+  window.addEventListener('scroll',progress,{passive:true}); progress();
 
   var btn=document.querySelector('.menu-btn'), nav=document.getElementById('nav');
   function setNav(open){document.body.classList.toggle('nav-open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');}
