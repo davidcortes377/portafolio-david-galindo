@@ -195,7 +195,7 @@ h1{font-size:clamp(5rem,11.4vw,12.4rem);line-height:.86;letter-spacing:-.025em;t
 .services-head p{color:var(--muted);max-width:38ch}
 .feature{display:grid;grid-template-columns:5fr 6fr;gap:clamp(2rem,5vw,5rem);align-items:center;border:var(--rule);background:var(--paper);padding:clamp(1.6rem,3.4vw,3.4rem);box-shadow:12px 12px 0 var(--green)}
 .feature .media{aspect-ratio:auto;background:none;overflow:visible}
-.feature .media img{height:auto;object-fit:contain;filter:drop-shadow(0 24px 40px rgba(18,17,16,.16))}
+.feature .media img{height:auto;object-fit:contain;filter:drop-shadow(0 24px 40px rgba(18,17,16,.16));transform:translate3d(0,var(--dy,0),0)}
 .feature-tag{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;align-items:center;color:var(--muted)}
 .feature-tag b{font-weight:500;color:var(--paper);background:var(--green);padding:.45rem .65rem}
 .feature h3{font-size:clamp(2.6rem,4.4vw,4.8rem);line-height:.95;letter-spacing:-.015em;margin-top:1.6rem}
@@ -233,7 +233,6 @@ h1{font-size:clamp(5rem,11.4vw,12.4rem);line-height:.86;letter-spacing:-.025em;t
 .step{min-height:46vh;display:flex;flex-direction:column;justify-content:center;border-top:1px solid rgba(241,236,226,.2);opacity:.32;transition:opacity .5s var(--ease)}
 .step.active{opacity:1}
 .step .num{color:#f1ece2b3}
-.process-guard{width:112px;margin-top:3rem;color:var(--red)}
 .step h3{font-size:clamp(2.6rem,4.4vw,4.4rem);line-height:1;margin-top:1rem}
 .step p{color:#f1ece2cc;max-width:36ch;margin-top:1rem}
 
@@ -242,9 +241,9 @@ h1{font-size:clamp(5rem,11.4vw,12.4rem);line-height:.86;letter-spacing:-.025em;t
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;margin-top:clamp(4rem,8vw,7rem)}
 .collage{position:relative;height:clamp(460px,52vw,680px)}
 .collage>*{position:absolute}
-.col-pattern{left:0;bottom:4%;width:30%;aspect-ratio:1;background:url("./texturas/damasco-verde.jpg") center/cover}
-.col-red{right:2%;top:0;width:36%;height:44%;background:var(--red)}
-.col-photo{left:14%;top:6%;width:62%;margin:0;box-shadow:var(--soft);transform:rotate(-2deg);background:var(--paper)}
+.col-pattern{left:0;bottom:4%;width:30%;aspect-ratio:1;background:url("./texturas/damasco-verde.jpg") center/cover;transform:translate3d(0,var(--dy,0),0)}
+.col-red{right:2%;top:0;width:36%;height:44%;background:var(--red);transform:translate3d(0,var(--dy,0),0)}
+.col-photo{left:14%;top:6%;width:62%;margin:0;box-shadow:var(--soft);transform:translate3d(0,var(--dy,0),0) rotate(-2deg);background:var(--paper)}
 .col-photo img{aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
 .col-photo figcaption{position:absolute;right:0;bottom:-2.4rem;color:var(--muted)}
 .about-copy h2{font-size:clamp(3.2rem,5.8vw,6.2rem);line-height:.94;letter-spacing:-.02em}
@@ -278,7 +277,7 @@ h1{font-size:clamp(5rem,11.4vw,12.4rem);line-height:.86;letter-spacing:-.025em;t
 .contact{padding:var(--section) 0 0}
 .contact-head{display:grid;grid-template-columns:1fr auto;gap:4vw;align-items:end;margin-top:clamp(5rem,10vw,9rem)}
 .contact h2{font-size:clamp(4.4rem,11vw,11.6rem);line-height:.86;letter-spacing:-.03em}
-.contact-portrait{width:clamp(160px,17vw,250px);margin:0;transform:rotate(2deg);box-shadow:var(--soft)}
+.contact-portrait{width:clamp(160px,17vw,250px);margin:0;transform:translate3d(0,var(--dy,0),0) rotate(2deg);box-shadow:var(--soft)}
 .contact-portrait img{aspect-ratio:4/5;object-fit:cover;object-position:50% 25%}
 .contact h2 em{color:var(--red)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;margin-top:clamp(4rem,7vw,6rem);align-items:start}
@@ -300,13 +299,40 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
 .cursor.show{opacity:1;transform:scale(1)}
 
 /* hero: coreografía de entrada */
-.js .hero .mask>span{transform:translateY(105%);animation:rise 1.1s var(--ease) forwards}
-.js .hero .mask:nth-child(2)>span{animation-delay:.1s}
+.js .hero .mask .ch{transform:translateY(112%);animation:rise 1.1s var(--ease) forwards;animation-delay:calc(var(--l) * 110ms + var(--c) * 38ms)}
 .js .hero .seq{opacity:0;transform:translateY(12px);animation:fade .7s var(--ease) forwards;animation-delay:calc(.55s + var(--i) * 90ms)}
 .js .hero-visual{opacity:0;animation:fadeOnly 1.2s var(--ease) .35s forwards}
 @keyframes rise{to{transform:none}}
 @keyframes fade{to{opacity:1;transform:none}}
 @keyframes fadeOnly{to{opacity:1}}
+
+/* ---------- capa editorial: progreso, texto vertical, cinta, titulares por palabra ---------- */
+.progress{position:fixed;left:0;right:0;top:0;height:2px;z-index:120;background:var(--red);transform:scaleX(0);transform-origin:left;pointer-events:none}
+.vtext{position:absolute;right:calc(var(--gutter) * .3);top:50%;writing-mode:vertical-rl;transform:translateY(-50%);color:var(--muted);letter-spacing:.22em;white-space:nowrap}
+h1 .ch{display:inline-block}
+.hero-shot figcaption{position:absolute;right:0;top:-1.9rem;color:var(--muted)}
+.marquee{overflow:hidden;white-space:nowrap;border-top:var(--hair);border-bottom:var(--hair);padding:1.5rem 0}
+.marquee-track{display:inline-flex;align-items:center;gap:2.6rem;padding-right:2.6rem;animation:marq 60s linear infinite;will-change:transform}
+.marquee-track span{font:italic 400 clamp(1.8rem,3.2vw,3.2rem)/1 var(--serif)}
+.marquee-track i{width:7px;height:7px;background:var(--red);flex:none}
+@media (hover:hover) and (pointer:fine){.marquee:hover .marquee-track{animation-play-state:paused}}
+@keyframes marq{to{transform:translateX(-50%)}}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.2em 0 .12em;margin:-.2em 0 -.12em}
+.wi{display:inline-block}
+.js [data-split] .wi{transform:translateY(108%);transition:transform 1.05s var(--ease);transition-delay:calc(var(--wi) * 45ms)}
+.js [data-split].in .wi{transform:none}
+.sec-top{border-top:0;position:relative}
+.sec-top:before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:currentColor;opacity:.22;transform-origin:left}
+.js .sec-top:before{transform:scaleX(0);transition:transform 1.4s var(--ease-io)}
+.js .sec-top.in:before{transform:scaleX(1)}
+.numbers strong{font-variant-numeric:tabular-nums}
+.process-orn{width:112px;height:300px;margin-top:3rem;background:url("./texturas/ornamento-marfil.webp") top center/112px auto repeat-y}
+.js .process-orn{clip-path:inset(0 0 100% 0);transition:clip-path 2s var(--ease-io)}
+.js .process-orn.in{clip-path:inset(0 0 0 0)}
+.signature{font:400 clamp(4.4rem,16.5vw,18.5rem)/.82 var(--serif);letter-spacing:-.035em;white-space:nowrap;overflow:hidden;padding:.08em 0 .02em;margin:0 0 clamp(2rem,4vw,3rem)}
+.signature em{color:var(--red)}
+.clock{font-variant-numeric:tabular-nums}
+@media (hover:hover) and (pointer:fine){.project:hover .project-head h3{font-style:italic}}
 
 @media (max-width:1000px){
   .svc{grid-template-columns:3rem 1fr 48px}
@@ -318,6 +344,7 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   .header-in{grid-template-columns:1fr auto}
   .status{display:none}
   .menu-btn{display:block}
+  .vtext{display:none}
   .nav{position:fixed;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);padding:1rem var(--gutter) 2.4rem;border-bottom:var(--hair);opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .25s var(--ease),transform .25s var(--ease)}
   .nav a{font:400 2.2rem/1.1 var(--serif);text-transform:none;letter-spacing:0;border-bottom:var(--hair);padding:.6rem 0}
   .nav a:after{display:none}
@@ -349,6 +376,11 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   .contact-portrait{width:180px;justify-self:end}
 }
 @media (prefers-reduced-motion:reduce){
+  .js .hero .mask .ch,.js [data-split] .wi{animation:none;transform:none;transition:none}
+  .marquee-track{animation:none}
+  .js .sec-top:before{transform:none;transition:none}
+  .js .process-orn{clip-path:none;opacity:0;transition:opacity .4s ease}
+  .js .process-orn.in{opacity:1}
   html{scroll-behavior:auto}
   .js .hero .mask>span,.js .hero .seq,.js .hero-visual{animation:fadeOnly .4s ease forwards;transform:none}
   .js .reveal{transform:none;transition:opacity .4s ease}
@@ -363,6 +395,7 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
 <body>
 <script>document.documentElement.classList.add('js')</script>
 <a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 <div class="cursor" id="cursor" aria-hidden="true">VER ↗</div>
 <div class="preview" id="preview" aria-hidden="true"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div>
 
@@ -384,7 +417,7 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   <div class="wrap">
     <div class="hero-copy">
       <p class="label seq" style="--i:0"><b>(00)</b> Portfolio — 2026</p>
-      <h1><span class="mask"><span>David</span></span><span class="mask"><span>Galindo</span></span></h1>
+      <h1 aria-label="David Galindo"><span class="mask" aria-hidden="true"><span><span class="ch" style="--l:0;--c:0">D</span><span class="ch" style="--l:0;--c:1">a</span><span class="ch" style="--l:0;--c:2">v</span><span class="ch" style="--l:0;--c:3">i</span><span class="ch" style="--l:0;--c:4">d</span></span></span><span class="mask" aria-hidden="true"><span><span class="ch" style="--l:1;--c:0">G</span><span class="ch" style="--l:1;--c:1">a</span><span class="ch" style="--l:1;--c:2">l</span><span class="ch" style="--l:1;--c:3">i</span><span class="ch" style="--l:1;--c:4">n</span><span class="ch" style="--l:1;--c:5">d</span><span class="ch" style="--l:1;--c:6">o</span></span></span></h1>
       <p class="hero-role meta seq" style="--i:1">Diseñador web / Estratega digital</p>
       <p class="hero-text seq" style="--i:2">Diseño sitios web que comunican mejor, generan confianza y <em>convierten visitas en clientes.</em></p>
       <div class="hero-actions seq" style="--i:3">
@@ -398,22 +431,26 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
         <figure class="hero-shot" style="margin:0">
           <div class="chrome"><i></i><i></i><i></i></div>
           <div class="media"><img src="./projects/moon-cheese.jpg" alt="" fetchpriority="high" style="height:100%;object-fit:cover;object-position:top"></div>
+          <figcaption class="meta">Fig. 00 — Moon Cheese</figcaption>
         </figure>
         <div class="hero-sun"></div>
         <div class="hero-line"></div>
       </div>
       <div class="hero-guard guard"></div>
     </div>
-    <div class="hero-foot meta seq" style="--i:4"><a href="#trabajo"><span aria-hidden="true">↓</span> Trabajo seleccionado</a><span>Buenos Aires — Latam y EE.UU.</span></div>
+    <div class="hero-foot meta seq" style="--i:4"><a href="#trabajo"><span aria-hidden="true">↓</span> Trabajo seleccionado</a><span>Buenos Aires <span class="clock" id="clock">—</span> · Latam y EE.UU.</span></div>
+    <span class="vtext meta" aria-hidden="true">Portfolio — 2026 — Diseño web — Buenos Aires</span>
   </div>
 </section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Moon Cheese</span><i></i><span>Clínica Vizu</span><i></i><span>OLIPOP</span><i></i><span>Chef Nicolás Prieto</span><i></i><span>Voltra</span><i></i><span>Casa en Orden</span><i></i><span>Magic Spoon</span><i></i><span>iPatagonic</span><i></i><span>Flash Realty</span><i></i><span>Ferretería Candelaria</span><i></i><span>Hematólogo Tijuana</span><i></i><span>Mundo Tesis</span><i></i><span>Astroterapéutica</span><i></i><span>Taller Saberes</span><i></i><span>Moon Cheese</span><i></i><span>Clínica Vizu</span><i></i><span>OLIPOP</span><i></i><span>Chef Nicolás Prieto</span><i></i><span>Voltra</span><i></i><span>Casa en Orden</span><i></i><span>Magic Spoon</span><i></i><span>iPatagonic</span><i></i><span>Flash Realty</span><i></i><span>Ferretería Candelaria</span><i></i><span>Hematólogo Tijuana</span><i></i><span>Mundo Tesis</span><i></i><span>Astroterapéutica</span><i></i><span>Taller Saberes</span><i></i></div></div>
 
 <!-- TRABAJO · oscuro -->
 <section class="work on-dark" id="trabajo">
   <div class="wrap">
     <div class="sec-top label"><span><b>(01)</b> Trabajo seleccionado</span><span>06 / 14</span></div>
     <div class="work-title">
-      <h2 class="reveal">Trabajo <em>seleccionado.</em></h2>
+      <h2 data-split>Trabajo <em>seleccionado.</em></h2>
       <p class="reveal" style="--i:1">Sitios, tiendas y sistemas visuales donde la marca y la conversión se diseñan juntas.</p>
     </div>
     <div class="projects">
@@ -463,20 +500,20 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
     <details class="all-projects">
       <summary><span>Ver los 14 proyectos</span><span class="meta">Índice <b aria-hidden="true">→</b></span></summary>
       <div class="index">
-        <a class="index-row" href="https://mooncheese.com/" target="_blank" rel="noreferrer"><span class="num">01</span><strong>Moon Cheese</strong><span class="meta">E-commerce · Food</span><span class="meta">Shopify / Dirección visual</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://clinicavizu.com/" target="_blank" rel="noreferrer"><span class="num">02</span><strong>Clínica Vizu</strong><span class="meta">Salud · Servicios</span><span class="meta">UX estratégico / Video hero</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://drinkolipop.com/" target="_blank" rel="noreferrer"><span class="num">03</span><strong>OLIPOP</strong><span class="meta">E-commerce · Beverage</span><span class="meta">E-commerce / Storytelling</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://chefnicolasprieto.com/" target="_blank" rel="noreferrer"><span class="num">04</span><strong>Chef Nicolás Prieto</strong><span class="meta">Educación · Gastronomía</span><span class="meta">Arquitectura UX / Cursos</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://voltra.com.ar/" target="_blank" rel="noreferrer"><span class="num">05</span><strong>Voltra</strong><span class="meta">E-commerce · Retail</span><span class="meta">Catálogo / Promociones</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://casaenorden.shop" target="_blank" rel="noreferrer"><span class="num">06</span><strong>Casa en Orden</strong><span class="meta">E-commerce · Hogar</span><span class="meta">Tienda online / Campañas</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://magicspoon.com/" target="_blank" rel="noreferrer"><span class="num">07</span><strong>Magic Spoon</strong><span class="meta">E-commerce · Food</span><span class="meta">D2C / Suscripción</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://ipatagonic.com/" target="_blank" rel="noreferrer"><span class="num">08</span><strong>iPatagonic</strong><span class="meta">Corporativo · Tecnología</span><span class="meta">Bilingüe / Servicios B2B</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://nivaxel.site/flash/" target="_blank" rel="noreferrer"><span class="num">09</span><strong>Flash Realty</strong><span class="meta">Inmobiliaria · Leads</span><span class="meta">Landing page / Generación de leads</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://nivaxel.site/ferreteriacandelaria/" target="_blank" rel="noreferrer"><span class="num">10</span><strong>Ferretería Candelaria</strong><span class="meta">Retail · Construcción</span><span class="meta">Catálogo / Cotizador</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://hematologotijuana.com/" target="_blank" rel="noreferrer"><span class="num">11</span><strong>Hematólogo Tijuana</strong><span class="meta">Salud · Marca personal</span><span class="meta">Marca personal / Contenido médico</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://mundotesis.pe/" target="_blank" rel="noreferrer"><span class="num">12</span><strong>Mundo Tesis</strong><span class="meta">Educación · Comunidad</span><span class="meta">Plataforma educativa / Cursos</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://www.astroterapeutica.com/" target="_blank" rel="noreferrer"><span class="num">13</span><strong>Astroterapéutica</strong><span class="meta">Educación · Wellness</span><span class="meta">Academia online / Cursos</span><span aria-hidden="true">↗</span></a>
-        <a class="index-row" href="https://www.tallersaberes.com/" target="_blank" rel="noreferrer"><span class="num">14</span><strong>Taller Saberes</strong><span class="meta">Educación · Institucional</span><span class="meta">Sitio institucional / Servicios</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/moon-cheese.jpg" href="https://mooncheese.com/" target="_blank" rel="noreferrer"><span class="num">01</span><strong>Moon Cheese</strong><span class="meta">E-commerce · Food</span><span class="meta">Shopify / Dirección visual</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/clinica-vizu.jpg" href="https://clinicavizu.com/" target="_blank" rel="noreferrer"><span class="num">02</span><strong>Clínica Vizu</strong><span class="meta">Salud · Servicios</span><span class="meta">UX estratégico / Video hero</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/olipop.jpg" href="https://drinkolipop.com/" target="_blank" rel="noreferrer"><span class="num">03</span><strong>OLIPOP</strong><span class="meta">E-commerce · Beverage</span><span class="meta">E-commerce / Storytelling</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/chef-nicolas-prieto.jpg" href="https://chefnicolasprieto.com/" target="_blank" rel="noreferrer"><span class="num">04</span><strong>Chef Nicolás Prieto</strong><span class="meta">Educación · Gastronomía</span><span class="meta">Arquitectura UX / Cursos</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/voltra.jpg" href="https://voltra.com.ar/" target="_blank" rel="noreferrer"><span class="num">05</span><strong>Voltra</strong><span class="meta">E-commerce · Retail</span><span class="meta">Catálogo / Promociones</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/casa-en-orden.jpg" href="https://casaenorden.shop" target="_blank" rel="noreferrer"><span class="num">06</span><strong>Casa en Orden</strong><span class="meta">E-commerce · Hogar</span><span class="meta">Tienda online / Campañas</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/magic-spoon.jpg" href="https://magicspoon.com/" target="_blank" rel="noreferrer"><span class="num">07</span><strong>Magic Spoon</strong><span class="meta">E-commerce · Food</span><span class="meta">D2C / Suscripción</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/ipatagonic.jpg" href="https://ipatagonic.com/" target="_blank" rel="noreferrer"><span class="num">08</span><strong>iPatagonic</strong><span class="meta">Corporativo · Tecnología</span><span class="meta">Bilingüe / Servicios B2B</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/nivaxel-flash.jpg" href="https://nivaxel.site/flash/" target="_blank" rel="noreferrer"><span class="num">09</span><strong>Flash Realty</strong><span class="meta">Inmobiliaria · Leads</span><span class="meta">Landing page / Generación de leads</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/ferreteria-candelaria.jpg" href="https://nivaxel.site/ferreteriacandelaria/" target="_blank" rel="noreferrer"><span class="num">10</span><strong>Ferretería Candelaria</strong><span class="meta">Retail · Construcción</span><span class="meta">Catálogo / Cotizador</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/hematologo-tijuana.jpg" href="https://hematologotijuana.com/" target="_blank" rel="noreferrer"><span class="num">11</span><strong>Hematólogo Tijuana</strong><span class="meta">Salud · Marca personal</span><span class="meta">Marca personal / Contenido médico</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/mundo-tesis.jpg" href="https://mundotesis.pe/" target="_blank" rel="noreferrer"><span class="num">12</span><strong>Mundo Tesis</strong><span class="meta">Educación · Comunidad</span><span class="meta">Plataforma educativa / Cursos</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/astroterapeutica.jpg" href="https://www.astroterapeutica.com/" target="_blank" rel="noreferrer"><span class="num">13</span><strong>Astroterapéutica</strong><span class="meta">Educación · Wellness</span><span class="meta">Academia online / Cursos</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" data-img="./projects/taller-saberes.jpg" href="https://www.tallersaberes.com/" target="_blank" rel="noreferrer"><span class="num">14</span><strong>Taller Saberes</strong><span class="meta">Educación · Institucional</span><span class="meta">Sitio institucional / Servicios</span><span aria-hidden="true">↗</span></a>
       </div>
     </details>
   </div>
@@ -486,7 +523,7 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
 <section class="philosophy" id="enfoque">
   <div class="wrap">
     <div class="sec-top label"><span><b>(02)</b> Filosofía</span><span>Diseño con intención</span></div>
-    <h2 class="reveal">El diseño<br>no es<br><em>decoración.</em></h2>
+    <h2 data-split>El diseño<br>no es<br><em>decoración.</em></h2>
     <div class="philosophy-body">
       <p class="quote reveal">La forma importa. Pero lo que hace que una marca funcione es la intención detrás de cada decisión.</p>
       <div class="philosophy-text reveal" style="--i:1">
@@ -503,7 +540,7 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   <div class="wrap">
     <div class="sec-top label"><span><b>(03)</b> Servicios</span><span>09 servicios</span></div>
     <div class="services-head">
-      <h2 class="reveal">¿Qué necesita <em>tu negocio?</em></h2>
+      <h2 data-split>¿Qué necesita <em>tu negocio?</em></h2>
       <p class="reveal" style="--i:1">No vendo piezas sueltas: detecto el problema y combino diseño, tecnología y marketing para resolverlo.</p>
     </div>
     <article class="feature reveal" id="servicio-01">
@@ -592,9 +629,9 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
     <div class="sec-top label"><span><b>(04)</b> Proceso</span><span>Cinco pasos</span></div>
     <div class="process-grid">
       <div class="process-side">
-        <h2>De la idea<br>al <em>impacto.</em></h2>
+        <h2 data-split>De la idea<br>al <em>impacto.</em></h2>
         <div class="process-count meta"><span id="stepNow">01</span><div class="process-bar"><i id="stepBar"></i></div><span>05</span></div>
-        <div class="process-guard guard" aria-hidden="true"></div>
+        <div class="process-orn" aria-hidden="true"></div>
       </div>
       <ol class="steps" id="steps">
         <li class="step active"><span class="num">01</span><h3>Descubrir</h3><p>Entiendo tu negocio, tus objetivos y a quién le hablás.</p></li>
@@ -613,12 +650,12 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
     <div class="sec-top label"><span><b>(05)</b> Sobre mí</span><span>Buenos Aires, Argentina</span></div>
     <div class="about-grid">
       <div class="collage reveal" role="img" aria-label="Retrato de David Galindo en blanco y negro">
-        <div class="col-red"></div>
-        <div class="col-pattern"></div>
-        <figure class="col-photo"><img src="./retratos/david-palmeras-bn.jpg" width="1000" height="1250" loading="lazy" decoding="async" alt=""><figcaption class="meta">DG® / 2026</figcaption></figure>
+        <div class="col-red" data-depth=".14"></div>
+        <div class="col-pattern" data-depth="-.1"></div>
+        <figure class="col-photo" data-depth=".05"><img src="./retratos/david-palmeras-bn.jpg" width="1000" height="1250" loading="lazy" decoding="async" alt=""><figcaption class="meta">DG® / 2026</figcaption></figure>
       </div>
       <div class="about-copy">
-        <h2 class="reveal">Diseñador web y <em>estratega digital.</em></h2>
+        <h2 data-split>Diseñador web y <em>estratega digital.</em></h2>
         <p class="lead reveal" style="--i:1">Soy David Galindo, diseñador web y estratega digital. Detecto qué está frenando a un negocio en lo digital y combino diseño, tecnología y marketing para resolverlo.</p>
         <p class="more reveal" style="--i:2">Trabajo entre marca, web, comunicación y marketing. Busco la idea correcta, le doy una forma memorable y me aseguro de que funcione.</p>
         <a class="link reveal" style="--i:3" href="#contacto">Trabajemos juntos <span>→</span></a>
@@ -632,9 +669,9 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   <div class="wrap">
     <div class="sec-top label"><span><b>(06)</b> Experiencia</span><span>Rubros y alcance</span></div>
     <div class="numbers">
-      <div class="reveal"><strong>14</strong><span class="meta">Proyectos seleccionados</span></div>
-      <div class="reveal" style="--i:1"><strong>08</strong><span class="meta">Industrias</span></div>
-      <div class="reveal" style="--i:2"><strong>04</strong><span class="meta">Países</span></div>
+      <div class="reveal"><strong data-n="14">14</strong><span class="meta">Proyectos seleccionados</span></div>
+      <div class="reveal" style="--i:1"><strong data-n="8">08</strong><span class="meta">Industrias</span></div>
+      <div class="reveal" style="--i:2"><strong data-n="4">04</strong><span class="meta">Países</span></div>
     </div>
     <div class="industries">
       <span class="meta">Industrias</span>
@@ -658,8 +695,8 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   <div class="wrap">
     <div class="sec-top label"><span><b>(07)</b> Contacto</span><span>Disponible para nuevos proyectos</span></div>
     <div class="contact-head">
-      <h2 class="reveal">Hagamos algo<br>que <em>funcione.</em></h2>
-      <figure class="contact-portrait reveal" style="--i:1"><img src="./retratos/david-cactus-bn.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="Retrato de David Galindo en blanco y negro"></figure>
+      <h2 data-split>Hagamos algo<br>que <em>funcione.</em></h2>
+      <figure class="contact-portrait reveal" style="--i:1" data-depth=".08"><img src="./retratos/david-cactus-bn.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="Retrato de David Galindo en blanco y negro"></figure>
     </div>
     <div class="contact-grid">
       <div class="reveal">
@@ -674,7 +711,7 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
     </div>
   </div>
   <footer>
-    <div class="wrap"><div class="footer-guard guard" aria-hidden="true"></div></div>
+    <div class="wrap"><p class="signature" data-split aria-hidden="true">David <em>Galindo</em></p><div class="footer-guard guard" aria-hidden="true"></div></div>
     <div class="wrap footer-in meta">
       <span>David Galindo © <span id="year">2026</span></span>
       <nav aria-label="Pie de página"><a href="#trabajo">Trabajo</a><a href="#servicios">Servicios</a><a href="#top">Volver arriba ↑</a></nav>
@@ -697,7 +734,42 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { rootMargin: '0px 0px -10% 0px' });
-  document.querySelectorAll('.reveal, .reveal-media').forEach(function(el){ io.observe(el); });
+  // titulares: se parten en palabras (respetando <em> y <br>) para subir con máscara
+  var wi = 0;
+  function split(node){
+    [].slice.call(node.childNodes).forEach(function(ch){
+      if (ch.nodeType === 3){
+        var parts = ch.textContent.split(/(\s+)/), frag = document.createDocumentFragment();
+        parts.forEach(function(t){
+          if (!t) return;
+          if (/^\s+$/.test(t)){ frag.appendChild(document.createTextNode(' ')); return; }
+          var w = document.createElement('span'), i = document.createElement('span');
+          w.className = 'w'; i.className = 'wi'; i.style.setProperty('--wi', wi++); i.textContent = t;
+          w.appendChild(i); frag.appendChild(w);
+        });
+        node.replaceChild(frag, ch);
+      } else if (ch.nodeType === 1 && ch.tagName !== 'BR'){ split(ch); }
+    });
+  }
+  document.querySelectorAll('[data-split]').forEach(function(el){ wi = 0; split(el); });
+  document.querySelectorAll('.reveal, .reveal-media, [data-split], .sec-top, .process-orn').forEach(function(el){ io.observe(el); });
+
+  // cifras que cuentan desde 0 (una sola vez)
+  var counted = false, numsBox = document.querySelector('.numbers');
+  if (numsBox) new IntersectionObserver(function(es, obs){
+    if (!es[0].isIntersecting || counted) return; counted = true; obs.disconnect();
+    if (reduced) return;
+    numsBox.querySelectorAll('[data-n]').forEach(function(el){
+      var end = +el.getAttribute('data-n'), t0 = performance.now(), dur = 1300;
+      (function tick(t){ var k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+        el.textContent = String(Math.round(end * e)).padStart(2, '0'); if (k < 1) requestAnimationFrame(tick); })(t0);
+    });
+  }, { threshold: .4 }).observe(numsBox);
+
+  // reloj de Buenos Aires
+  var clock = document.getElementById('clock');
+  function tickClock(){ try { clock.textContent = new Date().toLocaleTimeString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires', hour: '2-digit', minute: '2-digit', hour12: false }); } catch (e) {} }
+  if (clock){ tickClock(); setInterval(tickClock, 20000); }
 
   // nav activo
   var links = {};
@@ -712,11 +784,21 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   var par = [].slice.call(document.querySelectorAll('[data-parallax] .media-in'));
   var steps = [].slice.call(document.querySelectorAll('.step'));
   var stepNow = document.getElementById('stepNow'), stepBar = document.getElementById('stepBar');
+  var depth = [].slice.call(document.querySelectorAll('[data-depth], .feature .media img'));
+  var progress = document.getElementById('progress');
   var ticking = false;
   function frame(){
     ticking = false;
     onScrollHeader();
     var vh = innerHeight;
+    var max = document.documentElement.scrollHeight - vh;
+    progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, scrollY / max) : 0).toFixed(4) + ')';
+    if (!reduced) depth.forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > vh + 200) return;
+      var k = parseFloat(el.getAttribute('data-depth') || '.05');
+      el.style.setProperty('--dy', ((r.top + r.height / 2 - vh / 2) * -k).toFixed(1) + 'px');
+    });
     if (!reduced) par.forEach(function(el){
       var r = el.parentNode.getBoundingClientRect();
       if (r.bottom < 0 || r.top > vh) return;
@@ -764,7 +846,7 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
       a.addEventListener('mouseenter', function(){ cursor.classList.add('show'); });
       a.addEventListener('mouseleave', function(){ cursor.classList.remove('show'); });
     });
-    document.querySelectorAll('.industry, .svc[data-img]').forEach(function(li){
+    document.querySelectorAll('.industry, .svc[data-img], .index-row[data-img]').forEach(function(li){
       li.addEventListener('mouseenter', function(){ pimg.src = li.getAttribute('data-img'); preview.classList.toggle('mock', li.classList.contains('svc')); preview.classList.add('show'); });
       li.addEventListener('mouseleave', function(){ preview.classList.remove('show'); });
     });
