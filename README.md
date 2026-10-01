@@ -78,11 +78,8 @@ problema del cliente (“¿Tu sitio web genera ventas?”), no como lista de tar
 
 - **01 Diseño web** es el servicio principal: bloque oscuro destacado y botón
   “Revisemos tu sitio”.
-- **02–06** muestran su pieza de `services/` (1000×1000 px, JPG).
-- **07 Redes** y **08 Sistemas digitales** todavía no tienen pieza y se muestran
-  como tarjetas de texto. Para sumarles imagen, convertí el `<article
-  class="service-card">` en `service-row`, agregá el bloque `service-visual`
-  (copiá uno existente) y la clave `sN.alt`, y movelo fuera de `.service-more`.
+- **02–08** muestran su pieza de `services/` (1000×1000 px, JPG) y alternan
+  el lado de la imagen.
 
 Cada servicio (`id="servicio-0N"`) tiene sus textos en las claves `sN.*` del
 `DICT`: `cat` (nombre), `need` (la frase del cliente), `title`, `lead`,
