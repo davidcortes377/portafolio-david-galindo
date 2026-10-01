@@ -4,9 +4,10 @@ Versión estática lista para publicar en GitHub Pages.
 
 > **Estructura actual (v3, editorial):** el sitio principal es `index.html`, un
 > solo archivo con su CSS y JS. Usa las fuentes de `fonts/` (Instrument Serif,
-> Inter e IBM Plex Mono), las capturas de `projects/` y la pieza
-> `services/diseno-web.jpg`. Paleta: claros, negro `#121110`, rojo `#8e1f1a` y
-> verde inglés `#14392d`.
+> Inter e IBM Plex Mono), las capturas de `projects/`, los mockups de servicios
+> de `mockups/` (WebP con transparencia, 01–09), los retratos en blanco y negro
+> de `retratos/` y el patrón damasco de `texturas/`. Paleta: claros, negro
+> `#121110`, rojo `#8e1f1a` y verde inglés `#14392d`.
 >
 > El sitio anterior (bilingüe ES/EN) quedó archivado en `version-anterior/`
 > y sigue online en `…/portafolio-david-galindo/version-anterior/`. Las

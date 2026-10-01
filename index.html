@@ -83,9 +83,6 @@ section[id]{scroll-margin-top:72px}
   linear-gradient(225deg,currentColor 25%,transparent 25%) -7px 0/14px 14px,
   linear-gradient(315deg,currentColor 25%,transparent 25%) 0 0/14px 14px,
   linear-gradient(45deg,currentColor 25%,transparent 25%) 0 0/14px 14px}
-.weave{background:
-  linear-gradient(45deg,transparent 44%,currentColor 44% 47%,transparent 47% 53%,currentColor 53% 56%,transparent 56%),
-  linear-gradient(-45deg,transparent 44%,currentColor 44% 47%,transparent 47% 53%,currentColor 53% 56%,transparent 56%);background-size:28px 28px}
 
 /* header casi invisible */
 header{position:fixed;inset:0 0 auto;z-index:100;transition:background .3s var(--ease),border-color .3s var(--ease);border-bottom:1px solid transparent}
@@ -197,7 +194,8 @@ h1{font-size:clamp(5rem,11.4vw,12.4rem);line-height:.86;letter-spacing:-.025em;t
 .services-head h2 em{color:var(--red)}
 .services-head p{color:var(--muted);max-width:38ch}
 .feature{display:grid;grid-template-columns:5fr 6fr;gap:clamp(2rem,5vw,5rem);align-items:center;border:var(--rule);background:var(--paper);padding:clamp(1.6rem,3.4vw,3.4rem);box-shadow:12px 12px 0 var(--green)}
-.feature .media{aspect-ratio:1}
+.feature .media{aspect-ratio:auto;background:none;overflow:visible}
+.feature .media img{height:auto;object-fit:contain;filter:drop-shadow(0 24px 40px rgba(18,17,16,.16))}
 .feature-tag{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;align-items:center;color:var(--muted)}
 .feature-tag b{font-weight:500;color:var(--paper);background:var(--green);padding:.45rem .65rem}
 .feature h3{font-size:clamp(2.6rem,4.4vw,4.8rem);line-height:.95;letter-spacing:-.015em;margin-top:1.6rem}
@@ -214,6 +212,7 @@ h1{font-size:clamp(5rem,11.4vw,12.4rem);line-height:.86;letter-spacing:-.025em;t
 .svc h3 em{color:var(--red)}
 .svc .meta{color:var(--muted);display:block;margin-bottom:.8rem}
 .svc p{color:var(--muted);max-width:44ch;padding-top:.4rem}
+.svc-img{display:none}
 .svc-go{width:48px;height:48px;border:var(--hair);border-radius:50%;display:grid;place-items:center;transition:background .25s var(--ease),color .25s var(--ease)}
 @media (hover:hover) and (pointer:fine){
   .svc:hover h3{transform:translateX(8px)}
@@ -243,12 +242,11 @@ h1{font-size:clamp(5rem,11.4vw,12.4rem);line-height:.86;letter-spacing:-.025em;t
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;margin-top:clamp(4rem,8vw,7rem)}
 .collage{position:relative;height:clamp(460px,52vw,680px)}
 .collage>*{position:absolute}
-.col-weave{right:0;bottom:2%;width:30%;height:28%;color:var(--green)}
-.col-red{right:6%;top:0;width:34%;height:46%;background:var(--red)}
-.col-card{left:12%;top:10%;width:66%;height:76%;padding:clamp(1.4rem,2.6vw,2.4rem);background:var(--paper-2);box-shadow:var(--soft);transform:rotate(-3deg);display:flex;flex-direction:column;justify-content:space-between;clip-path:polygon(0 2%,12% 0,26% 2%,40% 0,55% 2%,70% 0,85% 2%,100% 0,100% 98%,86% 100%,70% 98%,55% 100%,40% 98%,25% 100%,10% 98%,0 100%)}
-.col-card strong{font:400 clamp(3rem,5.6vw,6rem)/.92 var(--serif)}
-.col-card strong em{color:var(--red)}
-.col-card .meta{color:var(--muted)}
+.col-pattern{left:0;bottom:4%;width:30%;aspect-ratio:1;background:url("./texturas/damasco-verde.jpg") center/cover}
+.col-red{right:2%;top:0;width:36%;height:44%;background:var(--red)}
+.col-photo{left:14%;top:6%;width:62%;margin:0;box-shadow:var(--soft);transform:rotate(-2deg);background:var(--paper)}
+.col-photo img{aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+.col-photo figcaption{position:absolute;right:0;bottom:-2.4rem;color:var(--muted)}
 .about-copy h2{font-size:clamp(3.2rem,5.8vw,6.2rem);line-height:.94;letter-spacing:-.02em}
 .about-copy h2 em{color:var(--red)}
 .about-copy .lead{font-size:clamp(1.2rem,1.5vw,1.4rem);line-height:1.5;margin-top:2.4rem;max-width:40ch}
@@ -270,13 +268,18 @@ h1{font-size:clamp(5rem,11.4vw,12.4rem);line-height:.86;letter-spacing:-.025em;t
 .preview{position:fixed;left:0;top:0;width:280px;aspect-ratio:4/3;pointer-events:none;z-index:150;opacity:0;transform:translate(-50%,-50%) scale(.94);transition:opacity .25s var(--ease),transform .25s var(--ease);box-shadow:var(--soft);overflow:hidden}
 .preview img{width:100%;height:100%;object-fit:cover;object-position:top}
 .preview.show{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.preview.mock{width:420px;aspect-ratio:3/2;box-shadow:none;overflow:visible}
+.preview.mock img{object-fit:contain;filter:drop-shadow(0 24px 40px rgba(18,17,16,.22))}
 .industry{color:#f1ece2a6}
 @media (hover:hover) and (pointer:fine){.industry:hover{color:var(--paper)}}
 .experience-note{margin-top:clamp(5rem,9vw,8rem);font:italic 400 clamp(1.6rem,2.4vw,2.4rem)/1.25 var(--serif);max-width:30ch;color:#f1ece2d9}
 
 /* ---------- CONTACTO ---------- */
 .contact{padding:var(--section) 0 0}
-.contact h2{font-size:clamp(4.4rem,11vw,11.6rem);line-height:.86;letter-spacing:-.03em;margin-top:clamp(5rem,10vw,9rem)}
+.contact-head{display:grid;grid-template-columns:1fr auto;gap:4vw;align-items:end;margin-top:clamp(5rem,10vw,9rem)}
+.contact h2{font-size:clamp(4.4rem,11vw,11.6rem);line-height:.86;letter-spacing:-.03em}
+.contact-portrait{width:clamp(160px,17vw,250px);margin:0;transform:rotate(2deg);box-shadow:var(--soft)}
+.contact-portrait img{aspect-ratio:4/5;object-fit:cover;object-position:50% 25%}
 .contact h2 em{color:var(--red)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;margin-top:clamp(4rem,7vw,6rem);align-items:start}
 .contact-grid p{font-size:clamp(1.15rem,1.4vw,1.3rem);max-width:34ch}
@@ -309,6 +312,7 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   .svc{grid-template-columns:3rem 1fr 48px}
   .svc p{grid-column:2}
   .svc-go{grid-row:1;grid-column:3}
+  .svc-img{display:block;grid-column:2;max-width:420px;margin-top:.4rem}
 }
 @media (max-width:900px){
   .header-in{grid-template-columns:1fr auto}
@@ -341,6 +345,8 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   .contact-data div{grid-template-columns:1fr;gap:.2rem}
   .footer-in{flex-direction:column;align-items:flex-start;gap:.6rem}
   .industry{font-size:2.3rem}
+  .contact-head{grid-template-columns:1fr}
+  .contact-portrait{width:180px;justify-self:end}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -495,13 +501,13 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
 <!-- SERVICIOS · claro -->
 <section class="services" id="servicios">
   <div class="wrap">
-    <div class="sec-top label"><span><b>(03)</b> Servicios</span><span>08 servicios</span></div>
+    <div class="sec-top label"><span><b>(03)</b> Servicios</span><span>09 servicios</span></div>
     <div class="services-head">
       <h2 class="reveal">¿Qué necesita <em>tu negocio?</em></h2>
       <p class="reveal" style="--i:1">No vendo piezas sueltas: detecto el problema y combino diseño, tecnología y marketing para resolverlo.</p>
     </div>
     <article class="feature reveal" id="servicio-01">
-      <div class="media"><img src="./services/diseno-web.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="Pieza de servicio: diseño web con estrategia para convertir visitas en clientes"></div>
+      <div class="media"><img src="./mockups/01-diseno-web.webp" width="1400" height="907" loading="lazy" decoding="async" alt="Mockup de un sitio web editorial en laptop con tarjetas de proyectos"></div>
       <div>
         <p class="feature-tag meta"><span>01 — Diseño web que convierte</span><b>Servicio principal</b></p>
         <h3>¿Tu sitio web genera <em>ventas?</em></h3>
@@ -520,46 +526,60 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
       </div>
     </article>
     <div class="svc-list">
-      <a class="svc reveal" id="servicio-02" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20las%20ventas%20de%20mi%20tienda%20online." target="_blank" rel="noreferrer">
+      <a class="svc reveal" id="servicio-02" data-img="./mockups/02-ecommerce.webp" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20las%20ventas%20de%20mi%20tienda%20online." target="_blank" rel="noreferrer">
         <span class="num">02</span>
         <div><span class="meta">Ecommerce: mejorá tus ventas online</span><h3>¿Tu tienda online podría <em>vender más?</em></h3></div>
         <p>Una tienda online no debería ser solo un catálogo de productos. Analizo, diseño y optimizo ecommerce para facilitar la compra, mejorar la experiencia y aumentar las conversiones.</p>
+        <img class="svc-img" src="./mockups/02-ecommerce.webp" loading="lazy" decoding="async" alt="">
         <span class="svc-go" aria-hidden="true">↗</span>
       </a>
-      <a class="svc reveal" id="servicio-03" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20necesito%20una%20landing%20page%20para%20una%20campa%C3%B1a." target="_blank" rel="noreferrer">
+      <a class="svc reveal" id="servicio-03" data-img="./mockups/03-landing-pages.webp" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20necesito%20una%20landing%20page%20para%20una%20campa%C3%B1a." target="_blank" rel="noreferrer">
         <span class="num">03</span>
         <div><span class="meta">Landing pages para campañas</span><h3>¿Recibís visitas pero <em>no convierten?</em></h3></div>
         <p>Diseño landing pages que presentan una oferta con claridad y llevan a una sola acción: comprar, registrarse, pedir información o escribir por WhatsApp.</p>
+        <img class="svc-img" src="./mockups/03-landing-pages.webp" loading="lazy" decoding="async" alt="">
         <span class="svc-go" aria-hidden="true">↗</span>
       </a>
-      <a class="svc reveal" id="servicio-04" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20los%20resultados%20de%20mi%20publicidad." target="_blank" rel="noreferrer">
+      <a class="svc reveal" id="servicio-04" data-img="./mockups/04-publicidad-digital.webp" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20los%20resultados%20de%20mi%20publicidad." target="_blank" rel="noreferrer">
         <span class="num">04</span>
         <div><span class="meta">Publicidad digital & Meta Ads</span><h3>¿Invertís en publicidad <em>sin ver resultados?</em></h3></div>
         <p>La publicidad funciona mejor cuando estrategia, creatividad y experiencia de compra trabajan juntas. Conecto tus anuncios con una oferta y una experiencia capaces de convertir.</p>
+        <img class="svc-img" src="./mockups/04-publicidad-digital.webp" loading="lazy" decoding="async" alt="">
         <span class="svc-go" aria-hidden="true">↗</span>
       </a>
-      <a class="svc reveal" id="servicio-05" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20mis%20ventas%20en%20Mercado%20Libre." target="_blank" rel="noreferrer">
+      <a class="svc reveal" id="servicio-05" data-img="./mockups/05-mercado-libre.webp" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20mis%20ventas%20en%20Mercado%20Libre." target="_blank" rel="noreferrer">
         <span class="num">05</span>
         <div><span class="meta">Mercado Libre: optimización & publicidad</span><h3>¿Tus publicaciones <em>no están vendiendo?</em></h3></div>
         <p>Mejoro la presentación, la visibilidad y la estrategia comercial de tus productos para construir una presencia más competitiva en Mercado Libre.</p>
+        <img class="svc-img" src="./mockups/05-mercado-libre.webp" loading="lazy" decoding="async" alt="">
         <span class="svc-go" aria-hidden="true">↗</span>
       </a>
-      <a class="svc reveal" id="servicio-06" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20trabajar%20la%20identidad%20de%20mi%20marca." target="_blank" rel="noreferrer">
+      <a class="svc reveal" id="servicio-06" data-img="./mockups/06-identidad-de-marca.webp" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20trabajar%20la%20identidad%20de%20mi%20marca." target="_blank" rel="noreferrer">
         <span class="num">06</span>
         <div><span class="meta">Branding & diseño de marca</span><h3>¿Tu marca representa <em>lo que vale tu negocio?</em></h3></div>
         <p>Desarrollo identidades visuales que conectan la estrategia del negocio con la forma en que la marca se presenta ante sus clientes.</p>
+        <img class="svc-img" src="./mockups/06-identidad-de-marca.webp" loading="lazy" decoding="async" alt="">
         <span class="svc-go" aria-hidden="true">↗</span>
       </a>
-      <a class="svc reveal" id="servicio-07" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20darle%20direcci%C3%B3n%20al%20contenido%20de%20mis%20redes." target="_blank" rel="noreferrer">
+      <a class="svc reveal" id="servicio-07" data-img="./mockups/07-contenido-redes.webp" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20darle%20direcci%C3%B3n%20al%20contenido%20de%20mis%20redes." target="_blank" rel="noreferrer">
         <span class="num">07</span>
         <div><span class="meta">Contenido & estrategia para redes</span><h3>¿Publicás contenido <em>sin una estrategia?</em></h3></div>
         <p>Desarrollo la estrategia visual y de contenido para comunicar mejor tus productos, servicios y propuesta de valor.</p>
+        <img class="svc-img" src="./mockups/07-contenido-redes.webp" loading="lazy" decoding="async" alt="">
         <span class="svc-go" aria-hidden="true">↗</span>
       </a>
-      <a class="svc reveal" id="servicio-08" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20digitalizar%20procesos%20de%20mi%20empresa." target="_blank" rel="noreferrer">
+      <a class="svc reveal" id="servicio-08" data-img="./mockups/08-analisis-optimizacion.webp" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20analizar%20qu%C3%A9%20est%C3%A1%20frenando%20las%20ventas%20de%20mi%20negocio." target="_blank" rel="noreferrer">
         <span class="num">08</span>
+        <div><span class="meta">Análisis & optimización</span><h3>¿Sabés qué está <em>frenando tus ventas?</em></h3></div>
+        <p>Analizo cómo se comportan tus visitantes, tus campañas y tu contenido para detectar qué mejorar primero y medir el impacto de cada cambio.</p>
+        <img class="svc-img" src="./mockups/08-analisis-optimizacion.webp" loading="lazy" decoding="async" alt="">
+        <span class="svc-go" aria-hidden="true">↗</span>
+      </a>
+      <a class="svc reveal" id="servicio-09" data-img="./mockups/09-sistemas-digitales.webp" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20digitalizar%20procesos%20de%20mi%20empresa." target="_blank" rel="noreferrer">
+        <span class="num">09</span>
         <div><span class="meta">Sistemas digitales para empresas</span><h3>¿Tu empresa todavía <em>controla todo a mano?</em></h3></div>
         <p>Diseño aplicaciones internas adaptadas a la operación de cada negocio para centralizar la información y facilitar el control.</p>
+        <img class="svc-img" src="./mockups/09-sistemas-digitales.webp" loading="lazy" decoding="async" alt="">
         <span class="svc-go" aria-hidden="true">↗</span>
       </a>
     </div>
@@ -592,10 +612,10 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
   <div class="wrap">
     <div class="sec-top label"><span><b>(05)</b> Sobre mí</span><span>Buenos Aires, Argentina</span></div>
     <div class="about-grid">
-      <div class="collage reveal" aria-hidden="true">
-        <div class="col-weave weave"></div>
+      <div class="collage reveal" role="img" aria-label="Retrato de David Galindo en blanco y negro">
         <div class="col-red"></div>
-        <div class="col-card"><span class="meta">DG® / 2026</span><strong>Diseño con <em>intención.</em></strong><span class="meta">Diseño + estrategia</span></div>
+        <div class="col-pattern"></div>
+        <figure class="col-photo"><img src="./retratos/david-palmeras-bn.jpg" width="1000" height="1250" loading="lazy" decoding="async" alt=""><figcaption class="meta">DG® / 2026</figcaption></figure>
       </div>
       <div class="about-copy">
         <h2 class="reveal">Diseñador web y <em>estratega digital.</em></h2>
@@ -637,7 +657,10 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
 <section class="contact" id="contacto">
   <div class="wrap">
     <div class="sec-top label"><span><b>(07)</b> Contacto</span><span>Disponible para nuevos proyectos</span></div>
-    <h2 class="reveal">Hagamos algo<br>que <em>funcione.</em></h2>
+    <div class="contact-head">
+      <h2 class="reveal">Hagamos algo<br>que <em>funcione.</em></h2>
+      <figure class="contact-portrait reveal" style="--i:1"><img src="./retratos/david-cactus-bn.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="Retrato de David Galindo en blanco y negro"></figure>
+    </div>
     <div class="contact-grid">
       <div class="reveal">
         <p>¿Tenés un proyecto en mente? Contame qué hace tu negocio y qué te gustaría mejorar. Te respondo con una propuesta concreta.</p>
@@ -741,8 +764,8 @@ footer{margin-top:clamp(6rem,10vw,9rem)}
       a.addEventListener('mouseenter', function(){ cursor.classList.add('show'); });
       a.addEventListener('mouseleave', function(){ cursor.classList.remove('show'); });
     });
-    document.querySelectorAll('.industry').forEach(function(li){
-      li.addEventListener('mouseenter', function(){ pimg.src = li.getAttribute('data-img'); preview.classList.add('show'); });
+    document.querySelectorAll('.industry, .svc[data-img]').forEach(function(li){
+      li.addEventListener('mouseenter', function(){ pimg.src = li.getAttribute('data-img'); preview.classList.toggle('mock', li.classList.contains('svc')); preview.classList.add('show'); });
       li.addEventListener('mouseleave', function(){ preview.classList.remove('show'); });
     });
   }
