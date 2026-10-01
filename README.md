@@ -86,3 +86,16 @@ Cada servicio (`id="servicio-0N"`) tiene sus textos en las claves `sN.*` del
 `i1…iN` (lo que incluye), `note`, `wa` (mensaje de WhatsApp). “Se combina con”
 enlaza a los servicios relacionados para armar el recorrido
 problema → servicio → servicios complementarios → conversación.
+
+## Tipografía
+
+Las fuentes están alojadas en `fonts/` (solo el subconjunto latino, que incluye
+ñ y tildes) y se declaran con `@font-face` al inicio de `styles.css`:
+
+| Variable CSS | Fuente | Uso |
+| --- | --- | --- |
+| `--font-display` | Inter Tight (400–900) | Titulares, ticker, monograma |
+| `--font-sans` | Inter (400–700) | Párrafos, listas, menú |
+| `--font-mono` | IBM Plex Mono (400–600) | Etiquetas, numeración, botones |
+
+Las tres tienen licencia SIL Open Font License. Ningún texto baja de 12 px.
