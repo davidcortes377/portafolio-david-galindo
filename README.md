@@ -75,7 +75,7 @@ actualizar los atributos `width` y `height` de su `<img>`.
 
 La sección `#servicios` muestra las piezas de `services/` (1000×1000 px, JPG).
 Cada servicio es un `<article class="service-row">` con sus textos en las claves
-`sN.*` del `DICT` (`s1` = Diseño web … `s5` = Mercado Libre). El botón de cada
+`sN.*` del `DICT` (`s1` = Diseño web … `s6` = Identidad de marca). El botón de cada
 uno abre WhatsApp con el mensaje de su clave `sN.wa`. Para sumar un servicio,
 copiá un `<article>`, cambiá `sN` por el número siguiente, agregá las claves en
-ambos idiomas y actualizá `svc.eyebrow` (“Servicios / 05”).
+ambos idiomas y actualizá `svc.eyebrow` (“Servicios / 06”).
