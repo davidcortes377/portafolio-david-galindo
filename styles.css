@@ -49,6 +49,31 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+section[id],
+footer[id] {
+  scroll-margin-top: 74px;
+}
+
+.skip-link {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Courier New", monospace;
+  font-size: 0.7rem;
+  left: 3vw;
+  letter-spacing: 0.08em;
+  padding: 0.8rem 1.1rem;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  transform: translateY(-120%);
+  transition: transform 0.2s ease;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  transform: translateY(12px);
+}
+
 .site-header {
   align-items: center;
   background: rgba(244, 242, 236, 0.86);
@@ -103,7 +128,8 @@ button:focus-visible {
   width: 100%;
 }
 
-.site-header nav a:hover::after {
+.site-header nav a:hover::after,
+.site-header nav a[aria-current]::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -445,12 +471,14 @@ body.nav-open .nav-toggle span:nth-child(3) {
     filter 0.5s ease;
 }
 
-.project-visual:hover img {
+.project-visual:hover img,
+.project-visual:focus-visible img {
   filter: saturate(1.15);
   transform: scale(1.04);
 }
 
-.project-visual:hover::after {
+.project-visual:hover::after,
+.project-visual:focus-visible::after {
   opacity: 1;
 }
 
@@ -475,13 +503,17 @@ body.nav-open .nav-toggle span:nth-child(3) {
   z-index: 2;
 }
 
-.project-visual:hover .visit-pill {
+.project-visual:hover .visit-pill,
+.project-visual:focus-visible .visit-pill {
   opacity: 1;
   transform: translateY(0);
 }
 
 .project-number {
+  background: rgba(17, 17, 17, 0.72);
+  border-radius: 999px;
   color: white;
+  padding: 0.3rem 0.55rem;
   font-family: "Courier New", monospace;
   font-size: 0.72rem;
   position: absolute;
@@ -551,6 +583,262 @@ body.nav-open .nav-toggle span:nth-child(3) {
   letter-spacing: 0.05em;
   padding: 0.48rem 0.72rem;
   text-transform: uppercase;
+}
+
+.services-section {
+  border-top: 1px solid var(--ink);
+  padding: 9rem 3vw 10rem;
+}
+
+.service-list-wrap {
+  display: grid;
+  gap: 7rem;
+}
+
+.service-row {
+  align-items: center;
+  display: grid;
+  gap: 2rem 5vw;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.service-visual {
+  background: #e9e6de;
+  border: 1px solid var(--ink);
+  grid-column: 1 / span 5;
+  overflow: hidden;
+}
+
+.service-visual img {
+  aspect-ratio: 1;
+  height: auto;
+  transition: transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.service-row:hover .service-visual img {
+  transform: scale(1.03);
+}
+
+.service-copy {
+  grid-column: 6 / span 7;
+}
+
+.service-row:nth-child(even) .service-visual {
+  grid-column: 8 / span 5;
+  grid-row: 1;
+}
+
+.service-row:nth-child(even) .service-copy {
+  grid-column: 1 / span 7;
+  grid-row: 1;
+}
+
+.service-meta {
+  border-bottom: 1px solid var(--ink);
+  display: flex;
+  font-family: "Courier New", monospace;
+  font-size: 0.68rem;
+  gap: 2.4rem;
+  letter-spacing: 0.14em;
+  margin: 0 0 2.2rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.service-meta span:first-child {
+  font-weight: 700;
+}
+
+.service-copy h3 {
+  font-size: clamp(2.3rem, 4vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.service-copy mark {
+  background: var(--acid);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: inherit;
+  padding: 0 0.08em;
+}
+
+.service-need {
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  margin: 1.6rem 0 0;
+  opacity: 0.7;
+}
+
+.service-lead {
+  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  margin: 1.4rem 0 2rem;
+  max-width: 560px;
+}
+
+.service-label {
+  font-family: "Courier New", monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+}
+
+.service-note {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin: -0.8rem 0 2rem;
+  max-width: 560px;
+}
+
+.service-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2rem;
+}
+
+.service-related {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Courier New", monospace;
+  font-size: 0.62rem;
+  gap: 0.45rem;
+  letter-spacing: 0.06em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.service-related span {
+  margin-right: 0.3rem;
+  opacity: 0.6;
+}
+
+.service-related a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.42rem 0.7rem;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.service-related a:hover {
+  background: var(--acid);
+  border-color: var(--ink);
+}
+
+.service-badge {
+  background: var(--acid);
+  border-radius: 999px;
+  color: var(--ink);
+  margin-left: auto;
+  padding: 0.3rem 0.7rem;
+}
+
+.service-row.is-featured {
+  background: var(--ink);
+  color: var(--paper);
+  margin: 0 -3vw;
+  padding: 5rem 3vw;
+}
+
+.is-featured .service-visual {
+  border-color: var(--paper);
+  grid-column: 1 / span 6;
+}
+
+.is-featured .service-copy {
+  grid-column: 7 / span 6;
+}
+
+.is-featured .service-meta {
+  border-color: rgba(244, 242, 236, 0.4);
+}
+
+.is-featured .service-copy h3 {
+  font-size: clamp(2.8rem, 5vw, 5.4rem);
+}
+
+.is-featured .service-copy mark {
+  color: var(--ink);
+}
+
+.is-featured .service-list li,
+.is-featured .service-related a {
+  border-color: rgba(244, 242, 236, 0.25);
+}
+
+.is-featured .service-list li::before {
+  color: var(--acid);
+}
+
+.is-featured .service-related a:hover {
+  border-color: var(--acid);
+  color: var(--ink);
+}
+
+
+
+
+
+.is-featured .service-cta {
+  color: var(--ink);
+}
+
+.is-featured .service-cta:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.service-list {
+  display: grid;
+  gap: 0.15rem 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0 0 2.4rem;
+  padding: 0;
+}
+
+.service-list li {
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+  padding: 0.7rem 0 0.7rem 1.8rem;
+  position: relative;
+}
+
+.service-list li::before {
+  content: "✓";
+  font-weight: 700;
+  left: 0;
+  position: absolute;
+}
+
+.service-cta {
+  align-items: center;
+  background: var(--acid);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  display: inline-flex;
+  font-family: "Courier New", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  gap: 1.1rem;
+  letter-spacing: 0.08em;
+  padding: 1rem 1.4rem;
+  text-transform: uppercase;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.service-cta:hover {
+  background: var(--ink);
+  color: var(--acid);
+  transform: translateY(-2px);
 }
 
 .profile {
@@ -720,6 +1008,17 @@ footer h2 span {
   text-transform: uppercase;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 @keyframes pulse {
   0%,
   100% {
@@ -852,6 +1151,33 @@ footer h2 span {
     grid-column: span 12;
   }
 
+  .service-row,
+  .service-row:nth-child(even) {
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .service-visual,
+  .service-copy,
+  .service-row:nth-child(even) .service-visual,
+  .service-row:nth-child(even) .service-copy {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .service-visual {
+    max-width: 560px;
+  }
+
+  .is-featured .service-visual,
+  .is-featured .service-copy {
+    grid-column: 1 / -1;
+  }
+
+  .service-row.is-featured {
+    padding: 3.5rem 3vw;
+  }
+
   .profile {
     gap: 5rem;
     grid-template-columns: 1fr;
@@ -886,6 +1212,11 @@ footer h2 span {
 
   .site-header nav {
     top: 64px;
+  }
+
+  section[id],
+  footer[id] {
+    scroll-margin-top: 64px;
   }
 
   .site-header nav a {
@@ -954,6 +1285,32 @@ footer h2 span {
     text-align: left;
   }
 
+  .services-section {
+    padding: 6rem 5vw 7rem;
+  }
+
+  .service-row.is-featured {
+    margin: 0 -5vw;
+    padding: 3rem 5vw;
+  }
+
+  .service-badge {
+    margin-left: 0;
+  }
+
+  .service-meta {
+    flex-wrap: wrap;
+    gap: 0.6rem 1.6rem;
+  }
+
+  .service-list-wrap {
+    gap: 5.5rem;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
   .profile {
     padding: 6rem 5vw;
   }
@@ -1001,9 +1358,12 @@ footer h2 span {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
