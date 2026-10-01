@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f1ece2">
+<title>David Galindo — Diseño web & Estrategia digital</title>
+<meta name="description" content="David Galindo, diseñador web y estratega digital. Sitios, ecommerce y landing pages pensados para convertir visitas en clientes.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="David Galindo — Diseño web & Estrategia digital">
+<meta property="og:description" content="Sitios, ecommerce y landing pages pensados para convertir visitas en clientes.">
+<meta property="og:image" content="https://davidcortes377.github.io/portafolio-david-galindo/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23121110'/%3E%3Ctext x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23f1ece2'%3EDG%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="./fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 700;font-display:swap;src:url("./fonts/inter-variable.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url("./fonts/ibm-plex-mono-400.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url("./fonts/ibm-plex-mono-500.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url("./fonts/instrument-serif-regular.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url("./fonts/instrument-serif-italic.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+:root{
+  --ink:#121110;--ink-soft:#2a2724;--paper:#f1ece2;--paper-2:#e8e1d3;--muted:#5f5a52;
+  --green:#14392d;--red:#8e1f1a;--mustard:#d39b22;
+  --hair:1px solid rgba(18,17,16,.16);--rule:1px solid var(--ink);
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Inter","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono","Courier New",monospace;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --ease-io:cubic-bezier(.77,0,.175,1);
+  --soft:0 22px 50px rgba(18,17,16,.14);
+  --gutter:clamp(20px,4vw,64px);
+  --section:clamp(7rem,14vw,13rem);
+  --noise:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");
+  --stone:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.035 .09' numOctaves='5' seed='7'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='1.8' intercept='-.4'/%3E%3CfeFuncG type='linear' slope='1.8' intercept='-.4'/%3E%3CfeFuncB type='linear' slope='1.8' intercept='-.4'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body.nav-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+em{font-family:var(--serif);font-style:italic;font-weight:400}
+::selection{background:var(--ink);color:var(--paper)}
+:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.skip{position:fixed;left:var(--gutter);top:0;z-index:300;background:var(--ink);color:var(--paper);font:500 .8rem/1 var(--mono);text-transform:uppercase;padding:1rem 1.2rem;transform:translateY(-120%);transition:transform .2s var(--ease)}
+.skip:focus{transform:translateY(12px)}
+.grain{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:.06;mix-blend-mode:multiply;background-image:var(--noise)}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--gutter)}
+section[id]{scroll-margin-top:72px}
+
+/* microtipografía: mono solo para metadata, números y navegación */
+.meta{font:500 .78rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.num{font:500 .78rem/1 var(--mono);letter-spacing:.04em}
+.label{display:flex;gap:1rem;align-items:baseline;font:500 .78rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.label b{font-weight:500;color:var(--ink)}
+.on-dark .label,.on-green .label{color:#f1ece2a6}
+.on-dark .label b,.on-green .label b{color:var(--paper)}
+
+/* acciones */
+.btn{display:inline-flex;align-items:center;gap:1.4rem;min-height:52px;padding:0 1.5rem;background:var(--ink);color:var(--paper);font:500 .8rem/1 var(--mono);text-transform:uppercase;letter-spacing:.07em;transition:background .25s var(--ease),transform .16s var(--ease)}
+.btn span{transition:transform .25s var(--ease)}
+.btn:active{transform:scale(.97)}
+.link{position:relative;display:inline-flex;align-items:center;gap:.7rem;min-height:44px;font:500 .8rem/1 var(--mono);text-transform:uppercase;letter-spacing:.07em}
+.link:after{content:"";position:absolute;left:0;right:0;bottom:10px;height:1px;background:currentColor;transform-origin:left;transition:transform .35s var(--ease)}
+.on-dark .btn{background:var(--paper);color:var(--ink)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--red);color:var(--paper)}
+  .btn:hover span{transform:translateX(4px)}
+  .link:hover:after{transform:scaleX(0);transform-origin:right}
+}
+
+/* patrón folklórico (guarda) — solo 4 apariciones */
+.guard{height:14px;background:
+  linear-gradient(135deg,currentColor 25%,transparent 25%) -7px 0/14px 14px,
+  linear-gradient(225deg,currentColor 25%,transparent 25%) -7px 0/14px 14px,
+  linear-gradient(315deg,currentColor 25%,transparent 25%) 0 0/14px 14px,
+  linear-gradient(45deg,currentColor 25%,transparent 25%) 0 0/14px 14px}
+.weave{background:
+  linear-gradient(45deg,transparent 44%,currentColor 44% 47%,transparent 47% 53%,currentColor 53% 56%,transparent 56%),
+  linear-gradient(-45deg,transparent 44%,currentColor 44% 47%,transparent 47% 53%,currentColor 53% 56%,transparent 56%);background-size:28px 28px}
+
+/* header casi invisible */
+header{position:fixed;inset:0 0 auto;z-index:100;transition:background .3s var(--ease),border-color .3s var(--ease);border-bottom:1px solid transparent}
+header.scrolled{background:rgba(241,236,226,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:rgba(18,17,16,.1)}
+.header-in{height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.brand{font:400 1.75rem/1 var(--serif);letter-spacing:-.01em;justify-self:start;min-height:44px;display:flex;align-items:center}
+.brand sup{font:500 .62rem/1 var(--mono);margin-left:2px;align-self:flex-start;margin-top:10px}
+.nav{display:flex;gap:2.2rem}
+.nav a{position:relative;display:flex;align-items:center;min-height:44px;font:500 .78rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.nav a:after{content:"";position:absolute;left:0;right:0;bottom:12px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav a[aria-current]:after{transform:scaleX(1);transform-origin:left}
+@media (hover:hover) and (pointer:fine){.nav a:hover:after{transform:scaleX(1);transform-origin:left}}
+.nav .nav-wa{display:none}
+.status{justify-self:end;display:flex;align-items:center;gap:.6rem;color:var(--muted)}
+.status i{width:7px;height:7px;border-radius:50%;background:#2f8a4a}
+.menu-btn{display:none;width:48px;height:48px;border:0;background:none;padding:0;cursor:pointer;position:relative;justify-self:end}
+.menu-btn span{position:absolute;left:12px;right:12px;height:1.5px;background:var(--ink);transition:transform .3s var(--ease),opacity .2s}
+.menu-btn span:nth-child(1){transform:translateY(-5px)}.menu-btn span:nth-child(2){transform:translateY(5px)}
+.nav-open .menu-btn span:nth-child(1){transform:rotate(45deg)}
+.nav-open .menu-btn span:nth-child(2){transform:rotate(-45deg)}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100svh;padding:clamp(120px,16vh,170px) 0 3rem;position:relative;display:flex;flex-direction:column}
+.hero .wrap{width:100%;flex:1;display:grid;grid-template-columns:1.1fr .9fr;grid-template-rows:1fr auto;column-gap:5vw}
+.hero-copy{align-self:center}
+h1{font-size:clamp(5rem,11.4vw,12.4rem);line-height:.86;letter-spacing:-.025em;text-transform:uppercase}
+.mask{display:block;overflow:hidden;padding-bottom:.05em}
+.mask>span{display:block}
+.hero-role{margin-top:2.6rem;color:var(--muted)}
+.hero-text{font-size:clamp(1.15rem,1.45vw,1.35rem);line-height:1.5;max-width:30ch;margin-top:1.4rem}
+.hero-text em,.about-copy .lead em{font-size:1.14em;line-height:1}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1.4rem 2.2rem;margin-top:2.6rem}
+.hero-visual{position:relative;align-self:center;height:min(68vh,640px);perspective:1100px}
+.hero-stage{position:absolute;inset:0;transform-style:preserve-3d}
+.hero-plate{position:absolute;right:0;bottom:6%;width:62%;height:64%;background:var(--green);transform:translateZ(-40px)}
+.hero-sun{position:absolute;left:6%;top:4%;width:clamp(90px,9vw,140px);aspect-ratio:1;border-radius:50%;background:var(--mustard);transform:translateZ(60px)}
+.hero-line{position:absolute;left:30%;top:-4%;width:1px;height:62%;background:var(--red);transform:translateZ(80px)}
+.hero-shot{position:absolute;left:8%;right:10%;top:18%;transform:translateZ(30px) rotate(-3deg);box-shadow:var(--soft);background:var(--paper)}
+.hero-shot .chrome{height:24px;display:flex;align-items:center;gap:6px;padding:0 10px;border-bottom:var(--hair);background:var(--paper)}
+.hero-shot .chrome i{width:7px;height:7px;border-radius:50%;background:rgba(18,17,16,.22)}
+.hero-shot .media{aspect-ratio:16/10}
+.hero-shot img{filter:grayscale(1) contrast(1.05)}
+.hero-guard{position:absolute;left:0;bottom:-2.2rem;width:120px;color:var(--ink);opacity:.8}
+.hero-foot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;border-top:var(--hair);padding-top:1.2rem;margin-top:3rem;color:var(--muted)}
+.hero-foot a{display:flex;align-items:center;gap:.8rem;min-height:44px}
+
+/* ---------- MEDIA: reveal + parallax + hover ---------- */
+.media{position:relative;display:block;overflow:hidden;background:#d9d1c1}
+.media-in{position:absolute;inset:-5% 0;will-change:transform}
+.media img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .9s var(--ease)}
+.js .reveal-media .media{clip-path:inset(100% 0 0 0);transition:clip-path 1.2s var(--ease-io)}
+.js .reveal-media .media-in img{transform:scale(1.08);transition:transform 1.6s var(--ease)}
+.js .reveal-media.in .media{clip-path:inset(0 0 0 0)}
+.js .reveal-media.in .media-in img{transform:scale(1)}
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:calc(var(--i,0) * 70ms)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- TRABAJO (oscuro) ---------- */
+.on-dark{background:var(--ink);color:var(--paper)}
+.on-dark .hair{border-color:rgba(241,236,226,.18)}
+.work{padding:var(--section) 0}
+.sec-top{display:flex;justify-content:space-between;align-items:baseline;border-top:var(--hair);padding-top:1.2rem}
+.on-dark .sec-top{border-color:rgba(241,236,226,.2)}
+.work-title{display:grid;grid-template-columns:1.5fr 1fr;gap:4vw;align-items:end;margin:clamp(4rem,8vw,7rem) 0 clamp(5rem,9vw,8rem)}
+.work-title h2{font-size:clamp(3.6rem,8vw,8.4rem);line-height:.9;letter-spacing:-.02em}
+.work-title p{color:#f1ece2b3;max-width:36ch}
+.projects{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.4vw,40px);row-gap:clamp(6rem,11vw,10rem)}
+.project{min-width:0}
+.project.full{grid-column:1/-1}
+.project.half{grid-column:span 6}
+.project.half.low{margin-top:clamp(4rem,9vw,9rem)}
+.project .media{aspect-ratio:4/3}
+.project.full .media{aspect-ratio:21/10}
+.project-head{display:grid;grid-template-columns:auto 1fr auto;gap:1.4rem;align-items:baseline;padding-top:1.4rem}
+.project-head h3{font-size:clamp(2rem,3.4vw,3.6rem);line-height:1;transition:transform .45s var(--ease)}
+.project-head .meta{color:#f1ece28c}
+.project-sub{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;margin-top:.7rem;padding-left:calc(2ch + 1.4rem);color:#f1ece28c}
+.project-go{display:grid;place-items:center;width:48px;height:48px;border:1px solid rgba(241,236,226,.35);border-radius:50%;font-size:1.05rem;transition:background .25s var(--ease),color .25s var(--ease)}
+@media (hover:hover) and (pointer:fine){
+  .project a.media:hover img{transform:scale(1.025)}
+  .project:hover .project-head h3{transform:translateX(8px)}
+  .project:hover .project-go{background:var(--paper);color:var(--ink)}
+}
+.all-projects{margin-top:clamp(6rem,10vw,9rem);border-top:1px solid rgba(241,236,226,.2)}
+.all-projects summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:88px;font:400 clamp(1.8rem,3vw,2.8rem)/1 var(--serif)}
+.all-projects summary::-webkit-details-marker{display:none}
+.all-projects summary .meta{color:#f1ece28c}
+.all-projects summary b{font-weight:400;display:inline-block;transition:transform .35s var(--ease)}
+.all-projects[open] summary b{transform:rotate(90deg)}
+.index-row{display:grid;grid-template-columns:3.5rem 1.3fr 1fr 1fr 2rem;gap:1.2rem;align-items:baseline;padding:1.15rem 0;border-top:1px solid rgba(241,236,226,.14);transition:color .25s var(--ease),padding .35s var(--ease)}
+.index-row .num,.index-row .meta{color:#f1ece28c}
+.index-row strong{font:400 1.6rem/1.1 var(--serif)}
+@media (hover:hover) and (pointer:fine){.index-row:hover{color:var(--mustard)}.index-row:hover .num{color:var(--mustard)}}
+
+/* ---------- FILOSOFÍA (silencio) ---------- */
+.philosophy{padding:var(--section) 0 calc(var(--section) * .8);position:relative;overflow:hidden}
+.philosophy h2{font-size:clamp(4.6rem,13vw,14rem);line-height:.84;letter-spacing:-.03em;text-transform:uppercase;margin:clamp(6rem,14vw,12rem) 0 0}
+.philosophy h2 em{text-transform:none;color:var(--red)}
+.philosophy-body{display:grid;grid-template-columns:1fr 1fr;gap:4vw;margin-top:clamp(7rem,14vw,12rem);align-items:end}
+.philosophy-body .quote{font:italic 400 clamp(1.7rem,2.4vw,2.4rem)/1.2 var(--serif);max-width:24ch}
+.philosophy-body p+p{margin-top:1.2rem}
+.philosophy-text{max-width:44ch}
+.mountain{position:absolute;right:var(--gutter);bottom:0;width:clamp(180px,22vw,320px);aspect-ratio:1.6;background:linear-gradient(180deg,#f6f3ec 0 16%,#bdb5a7 30%,#6c665d 60%,#2b2824),var(--stone);background-blend-mode:multiply;background-size:cover,240px;clip-path:polygon(0 100%,16% 60%,26% 70%,44% 18%,52% 28%,60% 0,72% 34%,82% 26%,100% 100%);opacity:.9}
+
+/* ---------- SERVICIOS ---------- */
+.services{padding:calc(var(--section) * .5) 0 var(--section)}
+.services-head{display:grid;grid-template-columns:1.5fr 1fr;gap:4vw;align-items:end;margin:clamp(4rem,8vw,7rem) 0 clamp(4rem,7vw,6rem)}
+.services-head h2{font-size:clamp(3.4rem,7vw,7.4rem);line-height:.92;letter-spacing:-.02em}
+.services-head h2 em{color:var(--red)}
+.services-head p{color:var(--muted);max-width:38ch}
+.feature{display:grid;grid-template-columns:5fr 6fr;gap:clamp(2rem,5vw,5rem);align-items:center;border:var(--rule);background:var(--paper);padding:clamp(1.6rem,3.4vw,3.4rem);box-shadow:12px 12px 0 var(--green)}
+.feature .media{aspect-ratio:1}
+.feature-tag{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;align-items:center;color:var(--muted)}
+.feature-tag b{font-weight:500;color:var(--paper);background:var(--green);padding:.45rem .65rem}
+.feature h3{font-size:clamp(2.6rem,4.4vw,4.8rem);line-height:.95;letter-spacing:-.015em;margin-top:1.6rem}
+.feature h3 em{color:var(--red)}
+.feature .need{font:400 .95rem/1.5 var(--mono);color:var(--muted);margin-top:1.2rem}
+.feature .lead{font-size:clamp(1.1rem,1.3vw,1.25rem);max-width:46ch;margin-top:1rem}
+.feature ul{list-style:none;padding:0;margin:1.8rem 0;columns:2;column-gap:2rem}
+.feature li{break-inside:avoid;padding:.55rem 0;border-top:var(--hair);font-size:.98rem}
+.feature-actions{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center}
+.svc-list{margin-top:clamp(5rem,9vw,8rem);border-top:var(--rule)}
+.svc{display:grid;grid-template-columns:4rem 1.4fr 1fr 48px;gap:1.6rem;align-items:start;padding:2rem 0;border-bottom:var(--hair)}
+.svc .num{padding-top:.7rem;color:var(--muted)}
+.svc h3{font-size:clamp(1.8rem,2.6vw,2.6rem);line-height:1.05;transition:transform .45s var(--ease)}
+.svc h3 em{color:var(--red)}
+.svc .meta{color:var(--muted);display:block;margin-bottom:.8rem}
+.svc p{color:var(--muted);max-width:44ch;padding-top:.4rem}
+.svc-go{width:48px;height:48px;border:var(--hair);border-radius:50%;display:grid;place-items:center;transition:background .25s var(--ease),color .25s var(--ease)}
+@media (hover:hover) and (pointer:fine){
+  .svc:hover h3{transform:translateX(8px)}
+  .svc:hover .svc-go{background:var(--ink);color:var(--paper)}
+}
+
+/* ---------- PROCESO (verde, sticky) ---------- */
+.on-green{background:var(--green);color:var(--paper);position:relative;overflow:clip}
+.process{padding:var(--section) 0}
+.process-bg{position:absolute;inset:0;color:var(--paper);opacity:.035;pointer-events:none}
+.process-grid{display:grid;grid-template-columns:5fr 6fr;gap:6vw;margin-top:clamp(4rem,8vw,7rem);position:relative}
+.process-side{position:sticky;top:18vh;align-self:start}
+.process-side h2{font-size:clamp(3.6rem,7.4vw,7.8rem);line-height:.9;letter-spacing:-.02em;text-transform:uppercase}
+.process-side h2 em{text-transform:none;color:var(--mustard)}
+.process-count{display:flex;align-items:center;gap:1.2rem;margin-top:3rem;color:#f1ece2a6}
+.process-bar{position:relative;width:160px;height:1px;background:rgba(241,236,226,.25);overflow:hidden}
+.process-bar i{position:absolute;inset:0;background:var(--mustard);transform:scaleX(0);transform-origin:left}
+.steps{list-style:none;margin:0;padding:0}
+.step{min-height:46vh;display:flex;flex-direction:column;justify-content:center;border-top:1px solid rgba(241,236,226,.2);opacity:.32;transition:opacity .5s var(--ease)}
+.step.active{opacity:1}
+.step .num{color:var(--mustard)}
+.step h3{font-size:clamp(2.6rem,4.4vw,4.4rem);line-height:1;margin-top:1rem}
+.step p{color:#f1ece2cc;max-width:36ch;margin-top:1rem}
+
+/* ---------- SOBRE MÍ (collage fuerte) ---------- */
+.about{padding:var(--section) 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;margin-top:clamp(4rem,8vw,7rem)}
+.collage{position:relative;height:clamp(460px,52vw,680px)}
+.collage>*{position:absolute}
+.col-weave{left:0;top:6%;width:62%;height:72%;color:var(--ink);opacity:.14}
+.col-red{right:6%;top:0;width:34%;height:46%;background:var(--red)}
+.col-sun{left:2%;bottom:4%;width:clamp(90px,10vw,140px);aspect-ratio:1;border-radius:50%;background:var(--mustard)}
+.col-card{left:12%;top:10%;width:66%;height:76%;padding:clamp(1.4rem,2.6vw,2.4rem);background:var(--paper-2);background-image:var(--noise);box-shadow:var(--soft);transform:rotate(-3deg);display:flex;flex-direction:column;justify-content:space-between;clip-path:polygon(0 2%,12% 0,26% 2%,40% 0,55% 2%,70% 0,85% 2%,100% 0,100% 98%,86% 100%,70% 98%,55% 100%,40% 98%,25% 100%,10% 98%,0 100%)}
+.col-card strong{font:400 clamp(3rem,5.6vw,6rem)/.92 var(--serif)}
+.col-card strong em{color:var(--red)}
+.col-card .meta{color:var(--muted)}
+.col-stone{right:4%;bottom:10%;width:32%;height:22%;background:linear-gradient(160deg,#a39d91,#3f3b35),var(--stone);background-blend-mode:multiply;background-size:cover,240px;clip-path:polygon(4% 22%,30% 0,76% 6%,100% 34%,94% 86%,58% 100%,12% 92%,0 54%);box-shadow:var(--soft)}
+.about-copy h2{font-size:clamp(3.2rem,5.8vw,6.2rem);line-height:.94;letter-spacing:-.02em}
+.about-copy h2 em{color:var(--red)}
+.about-copy .lead{font-size:clamp(1.2rem,1.5vw,1.4rem);line-height:1.5;margin-top:2.4rem;max-width:40ch}
+.about-copy p.more{color:var(--muted);margin-top:1.2rem;max-width:46ch}
+.about-copy .link{margin-top:2rem}
+
+/* ---------- EXPERIENCIA (oscuro) ---------- */
+.experience{padding:var(--section) 0}
+.numbers{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(4rem,8vw,7rem);border-top:1px solid rgba(241,236,226,.2)}
+.numbers div{padding:2rem 0 0}
+.numbers strong{display:block;font:400 clamp(4.4rem,9vw,9rem)/.9 var(--serif)}
+.numbers .meta{color:#f1ece28c;margin-top:.8rem;display:block}
+.industries{margin-top:clamp(6rem,10vw,9rem)}
+.industries>.meta{color:#f1ece28c}
+.industry-list{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-wrap:wrap;gap:.2rem 0}
+.industry{display:flex;align-items:baseline;gap:.6rem;font:400 clamp(2.4rem,5.4vw,5.6rem)/1.08 var(--serif);padding-right:.5em;cursor:default;transition:color .3s var(--ease)}
+.industry small{font:500 .74rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:#f1ece28c;transform:translateY(-1.6em)}
+.industry:not(:last-child):after{content:"/";color:rgba(241,236,226,.25);margin-left:.4em}
+.preview{position:fixed;left:0;top:0;width:280px;aspect-ratio:4/3;pointer-events:none;z-index:150;opacity:0;transform:translate(-50%,-50%) scale(.94);transition:opacity .25s var(--ease),transform .25s var(--ease);box-shadow:var(--soft);overflow:hidden}
+.preview img{width:100%;height:100%;object-fit:cover;object-position:top}
+.preview.show{opacity:1;transform:translate(-50%,-50%) scale(1)}
+@media (hover:hover) and (pointer:fine){.industry:hover{color:var(--mustard)}}
+.experience-note{margin-top:clamp(5rem,9vw,8rem);font:italic 400 clamp(1.6rem,2.4vw,2.4rem)/1.25 var(--serif);max-width:30ch;color:#f1ece2d9}
+
+/* ---------- CONTACTO ---------- */
+.contact{padding:var(--section) 0 0}
+.contact h2{font-size:clamp(4.4rem,11vw,11.6rem);line-height:.86;letter-spacing:-.03em;margin-top:clamp(5rem,10vw,9rem)}
+.contact h2 em{color:var(--red)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;margin-top:clamp(4rem,7vw,6rem);align-items:start}
+.contact-grid p{font-size:clamp(1.15rem,1.4vw,1.3rem);max-width:34ch}
+.contact-grid .btn{margin-top:2.2rem}
+.contact-data{margin:0;border-top:var(--rule)}
+.contact-data div{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:1.15rem 0;border-bottom:var(--hair);align-items:baseline}
+.contact-data dt{color:var(--muted)}
+.contact-data dd{margin:0}
+.contact-data dd a{font:400 1.7rem/1.1 var(--serif);display:inline-flex;min-height:44px;align-items:center}
+footer{margin-top:clamp(6rem,10vw,9rem)}
+.footer-guard{color:var(--ink);opacity:.85}
+.footer-in{display:flex;justify-content:space-between;align-items:center;gap:2rem;padding:1.4rem 0 2rem;color:var(--muted)}
+.footer-in nav{display:flex;gap:1.8rem}
+.footer-in nav a{min-height:44px;display:flex;align-items:center}
+
+/* cursor contextual sobre proyectos */
+.cursor{position:fixed;left:0;top:0;z-index:160;pointer-events:none;width:92px;height:92px;margin:-46px 0 0 -46px;border-radius:50%;background:var(--paper);color:var(--ink);display:grid;place-items:center;font:500 .74rem/1 var(--mono);letter-spacing:.08em;opacity:0;transform:scale(.6);transition:opacity .2s var(--ease),transform .25s var(--ease)}
+.cursor.show{opacity:1;transform:scale(1)}
+
+/* hero: coreografía de entrada */
+.js .hero .mask>span{transform:translateY(105%);animation:rise 1.1s var(--ease) forwards}
+.js .hero .mask:nth-child(2)>span{animation-delay:.1s}
+.js .hero .seq{opacity:0;transform:translateY(12px);animation:fade .7s var(--ease) forwards;animation-delay:calc(.55s + var(--i) * 90ms)}
+.js .hero-visual{opacity:0;animation:fadeOnly 1.2s var(--ease) .35s forwards}
+@keyframes rise{to{transform:none}}
+@keyframes fade{to{opacity:1;transform:none}}
+@keyframes fadeOnly{to{opacity:1}}
+
+@media (max-width:1000px){
+  .svc{grid-template-columns:3rem 1fr 48px}
+  .svc p{grid-column:2}
+  .svc-go{grid-row:1;grid-column:3}
+}
+@media (max-width:900px){
+  .header-in{grid-template-columns:1fr auto}
+  .status{display:none}
+  .menu-btn{display:block}
+  .nav{position:fixed;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);padding:1rem var(--gutter) 2.4rem;border-bottom:var(--hair);opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .25s var(--ease),transform .25s var(--ease)}
+  .nav a{font:400 2.2rem/1.1 var(--serif);text-transform:none;letter-spacing:0;border-bottom:var(--hair);padding:.6rem 0}
+  .nav a:after{display:none}
+  .nav .nav-wa{display:flex;font:500 .85rem/1 var(--mono);text-transform:uppercase;border:0;color:var(--red);padding-top:1.4rem}
+  .nav-open .nav{opacity:1;pointer-events:auto;transform:none}
+  .nav-open header{background:var(--paper)}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-visual{height:420px;margin-top:4rem}
+  .work-title,.services-head,.philosophy-body,.feature,.process-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .project.half{grid-column:1/-1}
+  .project.half.low{margin-top:0}
+  .project.full .media{aspect-ratio:16/10}
+  .process-side{position:static}
+  .step{min-height:auto;padding:2.4rem 0;opacity:1}
+  .index-row{grid-template-columns:2.6rem 1fr 2rem}
+  .index-row .meta{display:none}
+  .mountain{position:relative;right:auto;margin:4rem 0 0 auto;display:block}
+}
+@media (max-width:580px){
+  h1{font-size:clamp(3.8rem,21vw,6rem)}
+  .hero-foot span:last-child{display:none}
+  .feature{box-shadow:8px 8px 0 var(--green)}
+  .feature ul{columns:1}
+  .numbers{grid-template-columns:1fr;gap:1.4rem}
+  .contact-data div{grid-template-columns:1fr;gap:.2rem}
+  .footer-in{flex-direction:column;align-items:flex-start;gap:.6rem}
+  .industry{font-size:2.3rem}
+  .col-stone{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .hero .mask>span,.js .hero .seq,.js .hero-visual{animation:fadeOnly .4s ease forwards;transform:none}
+  .js .reveal{transform:none;transition:opacity .4s ease}
+  .js .reveal-media .media{clip-path:none;opacity:0;transition:opacity .4s ease}
+  .js .reveal-media.in .media{opacity:1}
+  .js .reveal-media .media-in img{transform:none;transition:none}
+  .project-head h3,.svc h3{transition:none}
+  .step{transition:opacity .2s ease}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true">VER ↗</div>
+<div class="preview" id="preview" aria-hidden="true"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div>
+
+<header id="header">
+  <div class="wrap header-in">
+    <a class="brand" href="#top" aria-label="Ir al inicio">DG<sup>®</sup></a>
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#trabajo">Trabajo</a><a href="#servicios">Servicios</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
+      <a class="nav-wa" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">Escribime por WhatsApp ↗</a>
+    </nav>
+    <span class="status meta"><i></i>Disponible</span>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO · claro -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="label seq" style="--i:0"><b>(00)</b> Portfolio — 2026</p>
+      <h1><span class="mask"><span>David</span></span><span class="mask"><span>Galindo</span></span></h1>
+      <p class="hero-role meta seq" style="--i:1">Diseñador web / Estratega digital</p>
+      <p class="hero-text seq" style="--i:2">Diseño sitios web que comunican mejor, generan confianza y <em>convierten visitas en clientes.</em></p>
+      <div class="hero-actions seq" style="--i:3">
+        <a class="btn" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">Hablemos <span>→</span></a>
+        <a class="link" href="#trabajo">Ver proyectos <span>↓</span></a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-stage" id="heroStage">
+        <div class="hero-plate"></div>
+        <figure class="hero-shot" style="margin:0">
+          <div class="chrome"><i></i><i></i><i></i></div>
+          <div class="media"><img src="../projects/moon-cheese.jpg" alt="" fetchpriority="high" style="height:100%;object-fit:cover;object-position:top"></div>
+        </figure>
+        <div class="hero-sun"></div>
+        <div class="hero-line"></div>
+      </div>
+      <div class="hero-guard guard"></div>
+    </div>
+    <div class="hero-foot meta seq" style="--i:4"><a href="#trabajo"><span aria-hidden="true">↓</span> Trabajo seleccionado</a><span>Buenos Aires — Latam y EE.UU.</span></div>
+  </div>
+</section>
+
+<!-- TRABAJO · oscuro -->
+<section class="work on-dark" id="trabajo">
+  <div class="wrap">
+    <div class="sec-top label"><span><b>(01)</b> Trabajo seleccionado</span><span>06 / 14</span></div>
+    <div class="work-title">
+      <h2 class="reveal">Trabajo <em>seleccionado.</em></h2>
+      <p class="reveal" style="--i:1">Sitios, tiendas y sistemas visuales donde la marca y la conversión se diseñan juntas.</p>
+    </div>
+    <div class="projects">
+      <article class="project full reveal-media" data-parallax id="p-moon-cheese">
+        <a class="media" href="https://mooncheese.com/" target="_blank" rel="noreferrer" aria-label="Visitar el sitio de Moon Cheese">
+          <div class="media-in"><img src="../projects/moon-cheese.jpg" width="1359" height="933" loading="lazy" decoding="async" alt="Captura del sitio Moon Cheese"></div>
+        </a>
+        <div class="project-head"><span class="num">01</span><h3>Moon Cheese</h3><a class="project-go" href="https://mooncheese.com/" target="_blank" rel="noreferrer" aria-label="Abrir Moon Cheese en una pestaña nueva">↗</a></div>
+        <div class="project-sub meta"><span>E-commerce · Food</span><span>Shopify / Dirección visual / Conversión</span></div>
+      </article>
+      <article class="project half reveal-media" data-parallax id="p-clinica-vizu">
+        <a class="media" href="https://clinicavizu.com/" target="_blank" rel="noreferrer" aria-label="Visitar el sitio de Clínica Vizu">
+          <div class="media-in"><img src="../projects/clinica-vizu.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Clínica Vizu"></div>
+        </a>
+        <div class="project-head"><span class="num">02</span><h3>Clínica Vizu</h3><a class="project-go" href="https://clinicavizu.com/" target="_blank" rel="noreferrer" aria-label="Abrir Clínica Vizu en una pestaña nueva">↗</a></div>
+        <div class="project-sub meta"><span>Salud · Servicios</span><span>UX estratégico / Video hero / Reservas</span></div>
+      </article>
+      <article class="project half low reveal-media" data-parallax id="p-olipop">
+        <a class="media" href="https://drinkolipop.com/" target="_blank" rel="noreferrer" aria-label="Visitar el sitio de OLIPOP">
+          <div class="media-in"><img src="../projects/olipop.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio OLIPOP"></div>
+        </a>
+        <div class="project-head"><span class="num">03</span><h3>OLIPOP</h3><a class="project-go" href="https://drinkolipop.com/" target="_blank" rel="noreferrer" aria-label="Abrir OLIPOP en una pestaña nueva">↗</a></div>
+        <div class="project-sub meta"><span>E-commerce · Beverage</span><span>E-commerce / Storytelling / Motion</span></div>
+      </article>
+      <article class="project full reveal-media" data-parallax id="p-magic-spoon">
+        <a class="media" href="https://magicspoon.com/" target="_blank" rel="noreferrer" aria-label="Visitar el sitio de Magic Spoon">
+          <div class="media-in"><img src="../projects/magic-spoon.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Magic Spoon"></div>
+        </a>
+        <div class="project-head"><span class="num">04</span><h3>Magic Spoon</h3><a class="project-go" href="https://magicspoon.com/" target="_blank" rel="noreferrer" aria-label="Abrir Magic Spoon en una pestaña nueva">↗</a></div>
+        <div class="project-sub meta"><span>E-commerce · Food</span><span>D2C / Suscripción / Campañas</span></div>
+      </article>
+      <article class="project half reveal-media" data-parallax id="p-chef-nicolas-prieto">
+        <a class="media" href="https://chefnicolasprieto.com/" target="_blank" rel="noreferrer" aria-label="Visitar el sitio de Chef Nicolás Prieto">
+          <div class="media-in"><img src="../projects/chef-nicolas-prieto.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Chef Nicolás Prieto"></div>
+        </a>
+        <div class="project-head"><span class="num">05</span><h3>Chef Nicolás Prieto</h3><a class="project-go" href="https://chefnicolasprieto.com/" target="_blank" rel="noreferrer" aria-label="Abrir Chef Nicolás Prieto en una pestaña nueva">↗</a></div>
+        <div class="project-sub meta"><span>Educación · Gastronomía</span><span>Arquitectura UX / Cursos / Marca personal</span></div>
+      </article>
+      <article class="project half low reveal-media" data-parallax id="p-voltra">
+        <a class="media" href="https://voltra.com.ar/" target="_blank" rel="noreferrer" aria-label="Visitar el sitio de Voltra">
+          <div class="media-in"><img src="../projects/voltra.jpg" width="1333" height="926" loading="lazy" decoding="async" alt="Captura del sitio Voltra"></div>
+        </a>
+        <div class="project-head"><span class="num">06</span><h3>Voltra</h3><a class="project-go" href="https://voltra.com.ar/" target="_blank" rel="noreferrer" aria-label="Abrir Voltra en una pestaña nueva">↗</a></div>
+        <div class="project-sub meta"><span>E-commerce · Retail</span><span>Catálogo / Promociones / Mobile UX</span></div>
+      </article>
+    </div>
+    <details class="all-projects">
+      <summary><span>Ver los 14 proyectos</span><span class="meta">Índice <b aria-hidden="true">→</b></span></summary>
+      <div class="index">
+        <a class="index-row" href="https://mooncheese.com/" target="_blank" rel="noreferrer"><span class="num">01</span><strong>Moon Cheese</strong><span class="meta">E-commerce · Food</span><span class="meta">Shopify / Dirección visual</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://clinicavizu.com/" target="_blank" rel="noreferrer"><span class="num">02</span><strong>Clínica Vizu</strong><span class="meta">Salud · Servicios</span><span class="meta">UX estratégico / Video hero</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://drinkolipop.com/" target="_blank" rel="noreferrer"><span class="num">03</span><strong>OLIPOP</strong><span class="meta">E-commerce · Beverage</span><span class="meta">E-commerce / Storytelling</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://chefnicolasprieto.com/" target="_blank" rel="noreferrer"><span class="num">04</span><strong>Chef Nicolás Prieto</strong><span class="meta">Educación · Gastronomía</span><span class="meta">Arquitectura UX / Cursos</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://voltra.com.ar/" target="_blank" rel="noreferrer"><span class="num">05</span><strong>Voltra</strong><span class="meta">E-commerce · Retail</span><span class="meta">Catálogo / Promociones</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://casaenorden.shop" target="_blank" rel="noreferrer"><span class="num">06</span><strong>Casa en Orden</strong><span class="meta">E-commerce · Hogar</span><span class="meta">Tienda online / Campañas</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://magicspoon.com/" target="_blank" rel="noreferrer"><span class="num">07</span><strong>Magic Spoon</strong><span class="meta">E-commerce · Food</span><span class="meta">D2C / Suscripción</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://ipatagonic.com/" target="_blank" rel="noreferrer"><span class="num">08</span><strong>iPatagonic</strong><span class="meta">Corporativo · Tecnología</span><span class="meta">Bilingüe / Servicios B2B</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://nivaxel.site/flash/" target="_blank" rel="noreferrer"><span class="num">09</span><strong>Flash Realty</strong><span class="meta">Inmobiliaria · Leads</span><span class="meta">Landing page / Generación de leads</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://nivaxel.site/ferreteriacandelaria/" target="_blank" rel="noreferrer"><span class="num">10</span><strong>Ferretería Candelaria</strong><span class="meta">Retail · Construcción</span><span class="meta">Catálogo / Cotizador</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://hematologotijuana.com/" target="_blank" rel="noreferrer"><span class="num">11</span><strong>Hematólogo Tijuana</strong><span class="meta">Salud · Marca personal</span><span class="meta">Marca personal / Contenido médico</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://mundotesis.pe/" target="_blank" rel="noreferrer"><span class="num">12</span><strong>Mundo Tesis</strong><span class="meta">Educación · Comunidad</span><span class="meta">Plataforma educativa / Cursos</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://www.astroterapeutica.com/" target="_blank" rel="noreferrer"><span class="num">13</span><strong>Astroterapéutica</strong><span class="meta">Educación · Wellness</span><span class="meta">Academia online / Cursos</span><span aria-hidden="true">↗</span></a>
+        <a class="index-row" href="https://www.tallersaberes.com/" target="_blank" rel="noreferrer"><span class="num">14</span><strong>Taller Saberes</strong><span class="meta">Educación · Institucional</span><span class="meta">Sitio institucional / Servicios</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- FILOSOFÍA · claro, silencio -->
+<section class="philosophy" id="enfoque">
+  <div class="wrap">
+    <div class="sec-top label"><span><b>(02)</b> Filosofía</span><span>Diseño con intención</span></div>
+    <h2 class="reveal">El diseño<br>no es<br><em>decoración.</em></h2>
+    <div class="philosophy-body">
+      <p class="quote reveal">La forma importa. Pero lo que hace que una marca funcione es la intención detrás de cada decisión.</p>
+      <div class="philosophy-text reveal" style="--i:1">
+        <p>Antes de diseñar, entiendo qué tiene que lograr tu sitio: que te encuentren, que te entiendan y que te escriban.</p>
+        <p>Después le doy forma con lo justo. Lo que no ayuda a eso, sobra.</p>
+      </div>
+    </div>
+  </div>
+  <div class="mountain" aria-hidden="true"></div>
+</section>
+
+<!-- SERVICIOS · claro -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <div class="sec-top label"><span><b>(03)</b> Servicios</span><span>08 servicios</span></div>
+    <div class="services-head">
+      <h2 class="reveal">¿Qué necesita <em>tu negocio?</em></h2>
+      <p class="reveal" style="--i:1">No vendo piezas sueltas: detecto el problema y combino diseño, tecnología y marketing para resolverlo.</p>
+    </div>
+    <article class="feature reveal" id="servicio-01">
+      <div class="media"><img src="../services/diseno-web.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="Pieza de servicio: diseño web con estrategia para convertir visitas en clientes"></div>
+      <div>
+        <p class="feature-tag meta"><span>01 — Diseño web que convierte</span><b>Servicio principal</b></p>
+        <h3>¿Tu sitio web genera <em>ventas?</em></h3>
+        <p class="need">“Tengo una web, pero no me genera clientes.”</p>
+        <p class="lead">Diseño sitios web pensados no solo para verse bien, sino para comunicar mejor, generar confianza y convertir visitantes en clientes.</p>
+        <ul>
+          <li>Diseño web profesional</li>
+          <li>Experiencia de usuario (UX/UI)</li>
+          <li>Sitios corporativos y comerciales</li>
+          <li>Optimización de estructura y conversión</li>
+          <li>Diseño responsive</li>
+          <li>Integración con WhatsApp y canales de contacto</li>
+          <li>Estrategia digital</li>
+        </ul>
+        <div class="feature-actions"><a class="btn" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20sobre%20el%20sitio%20web%20de%20mi%20negocio." target="_blank" rel="noreferrer">Revisemos tu sitio <span>→</span></a><span class="meta" style="color:var(--muted)">Si ya tenés web, la analizo</span></div>
+      </div>
+    </article>
+    <div class="svc-list">
+      <a class="svc reveal" id="servicio-02" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20las%20ventas%20de%20mi%20tienda%20online." target="_blank" rel="noreferrer">
+        <span class="num">02</span>
+        <div><span class="meta">Ecommerce: mejorá tus ventas online</span><h3>¿Tu tienda online podría <em>vender más?</em></h3></div>
+        <p>Una tienda online no debería ser solo un catálogo de productos. Analizo, diseño y optimizo ecommerce para facilitar la compra, mejorar la experiencia y aumentar las conversiones.</p>
+        <span class="svc-go" aria-hidden="true">↗</span>
+      </a>
+      <a class="svc reveal" id="servicio-03" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20necesito%20una%20landing%20page%20para%20una%20campa%C3%B1a." target="_blank" rel="noreferrer">
+        <span class="num">03</span>
+        <div><span class="meta">Landing pages para campañas</span><h3>¿Recibís visitas pero <em>no convierten?</em></h3></div>
+        <p>Diseño landing pages que presentan una oferta con claridad y llevan a una sola acción: comprar, registrarse, pedir información o escribir por WhatsApp.</p>
+        <span class="svc-go" aria-hidden="true">↗</span>
+      </a>
+      <a class="svc reveal" id="servicio-04" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20los%20resultados%20de%20mi%20publicidad." target="_blank" rel="noreferrer">
+        <span class="num">04</span>
+        <div><span class="meta">Publicidad digital & Meta Ads</span><h3>¿Invertís en publicidad <em>sin ver resultados?</em></h3></div>
+        <p>La publicidad funciona mejor cuando estrategia, creatividad y experiencia de compra trabajan juntas. Conecto tus anuncios con una oferta y una experiencia capaces de convertir.</p>
+        <span class="svc-go" aria-hidden="true">↗</span>
+      </a>
+      <a class="svc reveal" id="servicio-05" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20mejorar%20mis%20ventas%20en%20Mercado%20Libre." target="_blank" rel="noreferrer">
+        <span class="num">05</span>
+        <div><span class="meta">Mercado Libre: optimización & publicidad</span><h3>¿Tus publicaciones <em>no están vendiendo?</em></h3></div>
+        <p>Mejoro la presentación, la visibilidad y la estrategia comercial de tus productos para construir una presencia más competitiva en Mercado Libre.</p>
+        <span class="svc-go" aria-hidden="true">↗</span>
+      </a>
+      <a class="svc reveal" id="servicio-06" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20trabajar%20la%20identidad%20de%20mi%20marca." target="_blank" rel="noreferrer">
+        <span class="num">06</span>
+        <div><span class="meta">Branding & diseño de marca</span><h3>¿Tu marca representa <em>lo que vale tu negocio?</em></h3></div>
+        <p>Desarrollo identidades visuales que conectan la estrategia del negocio con la forma en que la marca se presenta ante sus clientes.</p>
+        <span class="svc-go" aria-hidden="true">↗</span>
+      </a>
+      <a class="svc reveal" id="servicio-07" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20darle%20direcci%C3%B3n%20al%20contenido%20de%20mis%20redes." target="_blank" rel="noreferrer">
+        <span class="num">07</span>
+        <div><span class="meta">Contenido & estrategia para redes</span><h3>¿Publicás contenido <em>sin una estrategia?</em></h3></div>
+        <p>Desarrollo la estrategia visual y de contenido para comunicar mejor tus productos, servicios y propuesta de valor.</p>
+        <span class="svc-go" aria-hidden="true">↗</span>
+      </a>
+      <a class="svc reveal" id="servicio-08" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20digitalizar%20procesos%20de%20mi%20empresa." target="_blank" rel="noreferrer">
+        <span class="num">08</span>
+        <div><span class="meta">Sistemas digitales para empresas</span><h3>¿Tu empresa todavía <em>controla todo a mano?</em></h3></div>
+        <p>Diseño aplicaciones internas adaptadas a la operación de cada negocio para centralizar la información y facilitar el control.</p>
+        <span class="svc-go" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO · verde -->
+<section class="process on-green" id="proceso">
+  <div class="process-bg weave" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-top label"><span><b>(04)</b> Proceso</span><span>Cinco pasos</span></div>
+    <div class="process-grid">
+      <div class="process-side">
+        <h2>De la idea<br>al <em>impacto.</em></h2>
+        <div class="process-count meta"><span id="stepNow">01</span><div class="process-bar"><i id="stepBar"></i></div><span>05</span></div>
+      </div>
+      <ol class="steps" id="steps">
+        <li class="step active"><span class="num">01</span><h3>Descubrir</h3><p>Entiendo tu negocio, tus objetivos y a quién le hablás.</p></li>
+        <li class="step"><span class="num">02</span><h3>Definir</h3><p>Ordeno la estrategia, la estructura y lo que tiene que pasar en cada página.</p></li>
+        <li class="step"><span class="num">03</span><h3>Diseñar</h3><p>Sistema visual, UX/UI y prototipos que podés recorrer antes de construir.</p></li>
+        <li class="step"><span class="num">04</span><h3>Construir</h3><p>Desarrollo, pruebas en cada dispositivo y optimización de velocidad.</p></li>
+        <li class="step"><span class="num">05</span><h3>Crecer</h3><p>Medimos, aprendemos y ajustamos lo que no está convirtiendo.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ · claro, collage -->
+<section class="about" id="sobre-mi">
+  <div class="wrap">
+    <div class="sec-top label"><span><b>(05)</b> Sobre mí</span><span>Buenos Aires, Argentina</span></div>
+    <div class="about-grid">
+      <div class="collage reveal" aria-hidden="true">
+        <div class="col-weave weave"></div>
+        <div class="col-red"></div>
+        <div class="col-card"><span class="meta">DG® / 2026</span><strong>Diseño con <em>intención.</em></strong><span class="meta">Diseño + estrategia</span></div>
+        <div class="col-stone"></div>
+        <div class="col-sun"></div>
+      </div>
+      <div class="about-copy">
+        <h2 class="reveal">Diseñador web y <em>estratega digital.</em></h2>
+        <p class="lead reveal" style="--i:1">Soy David Galindo, diseñador web y estratega digital. Detecto qué está frenando a un negocio en lo digital y combino diseño, tecnología y marketing para resolverlo.</p>
+        <p class="more reveal" style="--i:2">Trabajo entre marca, web, comunicación y marketing. Busco la idea correcta, le doy una forma memorable y me aseguro de que funcione.</p>
+        <a class="link reveal" style="--i:3" href="#contacto">Trabajemos juntos <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCIA · oscuro -->
+<section class="experience on-dark" id="experiencia">
+  <div class="wrap">
+    <div class="sec-top label"><span><b>(06)</b> Experiencia</span><span>Rubros y alcance</span></div>
+    <div class="numbers">
+      <div class="reveal"><strong>14</strong><span class="meta">Proyectos seleccionados</span></div>
+      <div class="reveal" style="--i:1"><strong>08</strong><span class="meta">Industrias</span></div>
+      <div class="reveal" style="--i:2"><strong>04</strong><span class="meta">Países</span></div>
+    </div>
+    <div class="industries">
+      <span class="meta">Industrias</span>
+      <ul class="industry-list">
+        <li class="industry" data-img="../projects/moon-cheese.jpg">E-commerce<small>Moon Cheese</small></li>
+        <li class="industry" data-img="../projects/clinica-vizu.jpg">Salud<small>Clínica Vizu</small></li>
+        <li class="industry" data-img="../projects/chef-nicolas-prieto.jpg">Gastronomía<small>Chef Nicolás Prieto</small></li>
+        <li class="industry" data-img="../projects/taller-saberes.jpg">Educación<small>Taller Saberes</small></li>
+        <li class="industry" data-img="../projects/ipatagonic.jpg">Tecnología<small>iPatagonic</small></li>
+        <li class="industry" data-img="../projects/nivaxel-flash.jpg">Inmobiliaria<small>Flash Realty</small></li>
+        <li class="industry" data-img="../projects/ferreteria-candelaria.jpg">Retail<small>Ferretería Candelaria</small></li>
+        <li class="industry" data-img="../projects/hematologo-tijuana.jpg">Marca personal<small>Hematólogo Tijuana</small></li>
+      </ul>
+    </div>
+    <p class="experience-note reveal">Más que industrias, me interesan las personas y las ideas detrás de cada proyecto.</p>
+  </div>
+</section>
+
+<!-- CONTACTO · claro -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="sec-top label"><span><b>(07)</b> Contacto</span><span>Disponible para nuevos proyectos</span></div>
+    <h2 class="reveal">Hagamos algo<br>que <em>funcione.</em></h2>
+    <div class="contact-grid">
+      <div class="reveal">
+        <p>¿Tenés un proyecto en mente? Contame qué hace tu negocio y qué te gustaría mejorar. Te respondo con una propuesta concreta.</p>
+        <a class="btn" href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">Escribime por WhatsApp <span>→</span></a>
+      </div>
+      <dl class="contact-data reveal" style="--i:1">
+        <div><dt class="meta">WhatsApp</dt><dd><a href="https://wa.me/541125546238?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20quiero%20contarte%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">+54 11 2554 6238</a></dd></div>
+        <div><dt class="meta">Ubicación</dt><dd>Buenos Aires, Argentina</dd></div>
+        <div><dt class="meta">Disponibilidad</dt><dd>Proyectos y colaboraciones</dd></div>
+      </dl>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-guard guard" aria-hidden="true"></div>
+    <div class="wrap footer-in meta">
+      <span>David Galindo © <span id="year">2026</span></span>
+      <nav aria-label="Pie de página"><a href="#trabajo">Trabajo</a><a href="#servicios">Servicios</a><a href="#top">Volver arriba ↑</a></nav>
+    </div>
+  </footer>
+</section>
+</main>
+
+<script>
+(function(){
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var year = document.getElementById('year'); if (year) year.textContent = new Date().getFullYear();
+
+  // header: aparece al hacer scroll
+  var header = document.getElementById('header');
+  function onScrollHeader(){ header.classList.toggle('scrolled', scrollY > 40); }
+
+  // A + B: reveals (texto e imágenes) al entrar al viewport
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal, .reveal-media').forEach(function(el){ io.observe(el); });
+
+  // nav activo
+  var links = {};
+  document.querySelectorAll('.nav a[href^="#"]').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ var a = links[e.target.id]; if (!a) return;
+      if (e.isIntersecting) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  Object.keys(links).forEach(function(id){ var s = document.getElementById(id); if (s) spy.observe(s); });
+
+  // C: parallax sutil (4%) solo en fotos principales · D: proceso sticky
+  var par = [].slice.call(document.querySelectorAll('[data-parallax] .media-in'));
+  var steps = [].slice.call(document.querySelectorAll('.step'));
+  var stepNow = document.getElementById('stepNow'), stepBar = document.getElementById('stepBar');
+  var ticking = false;
+  function frame(){
+    ticking = false;
+    onScrollHeader();
+    var vh = innerHeight;
+    if (!reduced) par.forEach(function(el){
+      var r = el.parentNode.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      var p = (r.top + r.height / 2 - vh / 2) / vh;
+      el.style.transform = 'translate3d(0,' + (p * -4).toFixed(2) + '%,0)';
+    });
+    if (steps.length && innerWidth > 900){
+      var active = 0;
+      steps.forEach(function(s, i){ if (s.getBoundingClientRect().top < vh * .55) active = i; });
+      steps.forEach(function(s, i){ s.classList.toggle('active', i === active); });
+      stepNow.textContent = '0' + (active + 1);
+      stepBar.style.transform = 'scaleX(' + ((active + 1) / steps.length) + ')';
+    }
+  }
+  addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+  addEventListener('resize', frame); frame();
+
+  // Hero 3D (único momento 3D): inclinación suavizada, no atada directo al mouse
+  var stage = document.getElementById('heroStage');
+  if (stage && fine && !reduced){
+    var tx = 0, ty = 0, cx = 0, cy = 0, running = false;
+    function tilt(){
+      cx += (tx - cx) * .08; cy += (ty - cy) * .08;
+      stage.style.transform = 'rotateY(' + cx.toFixed(2) + 'deg) rotateX(' + cy.toFixed(2) + 'deg)';
+      if (Math.abs(tx - cx) > .01 || Math.abs(ty - cy) > .01) requestAnimationFrame(tilt); else running = false;
+    }
+    addEventListener('mousemove', function(e){
+      tx = (e.clientX / innerWidth - .5) * 9; ty = (e.clientY / innerHeight - .5) * -7;
+      if (!running){ running = true; requestAnimationFrame(tilt); }
+    });
+  }
+
+  // D: cursor "VER ↗" sobre proyectos y vista previa sobre industrias (solo mouse)
+  if (fine){
+    var cursor = document.getElementById('cursor'), preview = document.getElementById('preview'), pimg = preview.querySelector('img');
+    var mx = 0, my = 0, px = 0, py = 0, loop = false;
+    function follow(){
+      px += (mx - px) * .2; py += (my - py) * .2;
+      cursor.style.left = px + 'px'; cursor.style.top = py + 'px';
+      preview.style.left = px + 'px'; preview.style.top = (py - 20) + 'px';
+      if (Math.abs(mx - px) > .3 || Math.abs(my - py) > .3) requestAnimationFrame(follow); else loop = false;
+    }
+    addEventListener('mousemove', function(e){ mx = e.clientX; my = e.clientY; if (!loop){ loop = true; requestAnimationFrame(follow); } });
+    document.querySelectorAll('.project a.media').forEach(function(a){
+      a.addEventListener('mouseenter', function(){ cursor.classList.add('show'); });
+      a.addEventListener('mouseleave', function(){ cursor.classList.remove('show'); });
+    });
+    document.querySelectorAll('.industry').forEach(function(li){
+      li.addEventListener('mouseenter', function(){ pimg.src = li.getAttribute('data-img'); preview.classList.add('show'); });
+      li.addEventListener('mouseleave', function(){ preview.classList.remove('show'); });
+    });
+  }
+
+  // menú móvil
+  var btn = document.querySelector('.menu-btn'), nav = document.getElementById('nav');
+  function setNav(open){ document.body.classList.toggle('nav-open', open); btn.setAttribute('aria-expanded', open); btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú'); }
+  btn.addEventListener('click', function(){ setNav(!document.body.classList.contains('nav-open')); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setNav(false); }); });
+  addEventListener('keydown', function(e){ if (e.key === 'Escape') setNav(false); });
+})();
+</script>
+</body>
+</html>
