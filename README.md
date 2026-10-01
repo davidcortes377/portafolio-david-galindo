@@ -73,9 +73,19 @@ actualizar los atributos `width` y `height` de su `<img>`.
 
 ## Servicios
 
-La sección `#servicios` muestra las piezas de `services/` (1000×1000 px, JPG).
-Cada servicio es un `<article class="service-row">` con sus textos en las claves
-`sN.*` del `DICT` (`s1` = Diseño web … `s6` = Identidad de marca). El botón de cada
-uno abre WhatsApp con el mensaje de su clave `sN.wa`. Para sumar un servicio,
-copiá un `<article>`, cambiá `sN` por el número siguiente, agregá las claves en
-ambos idiomas y actualizá `svc.eyebrow` (“Servicios / 06”).
+La sección `#servicios` es un catálogo de 8 servicios planteados desde el
+problema del cliente (“¿Tu sitio web genera ventas?”), no como lista de tareas.
+
+- **01 Diseño web** es el servicio principal: bloque oscuro destacado y botón
+  “Revisemos tu sitio”.
+- **02–06** muestran su pieza de `services/` (1000×1000 px, JPG).
+- **07 Redes** y **08 Sistemas digitales** todavía no tienen pieza y se muestran
+  como tarjetas de texto. Para sumarles imagen, convertí el `<article
+  class="service-card">` en `service-row`, agregá el bloque `service-visual`
+  (copiá uno existente) y la clave `sN.alt`, y movelo fuera de `.service-more`.
+
+Cada servicio (`id="servicio-0N"`) tiene sus textos en las claves `sN.*` del
+`DICT`: `cat` (nombre), `need` (la frase del cliente), `title`, `lead`,
+`i1…iN` (lo que incluye), `note`, `wa` (mensaje de WhatsApp). “Se combina con”
+enlaza a los servicios relacionados para armar el recorrido
+problema → servicio → servicios complementarios → conversación.

@@ -666,12 +666,149 @@ body.nav-open .nav-toggle span:nth-child(3) {
   padding: 0 0.08em;
 }
 
+.service-need {
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  margin: 1.6rem 0 0;
+  opacity: 0.7;
+}
+
 .service-lead {
   font-size: clamp(1.1rem, 1.6vw, 1.5rem);
   letter-spacing: -0.03em;
   line-height: 1.25;
-  margin: 2rem 0 1.6rem;
-  max-width: 520px;
+  margin: 1.4rem 0 2rem;
+  max-width: 560px;
+}
+
+.service-label {
+  font-family: "Courier New", monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+}
+
+.service-note {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin: -0.8rem 0 2rem;
+  max-width: 560px;
+}
+
+.service-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2rem;
+}
+
+.service-related {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Courier New", monospace;
+  font-size: 0.62rem;
+  gap: 0.45rem;
+  letter-spacing: 0.06em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.service-related span {
+  margin-right: 0.3rem;
+  opacity: 0.6;
+}
+
+.service-related a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.42rem 0.7rem;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.service-related a:hover {
+  background: var(--acid);
+  border-color: var(--ink);
+}
+
+.service-badge {
+  background: var(--acid);
+  border-radius: 999px;
+  color: var(--ink);
+  margin-left: auto;
+  padding: 0.3rem 0.7rem;
+}
+
+.service-row.is-featured {
+  background: var(--ink);
+  color: var(--paper);
+  margin: 0 -3vw;
+  padding: 5rem 3vw;
+}
+
+.is-featured .service-visual {
+  border-color: var(--paper);
+  grid-column: 1 / span 6;
+}
+
+.is-featured .service-copy {
+  grid-column: 7 / span 6;
+}
+
+.is-featured .service-meta {
+  border-color: rgba(244, 242, 236, 0.4);
+}
+
+.is-featured .service-copy h3 {
+  font-size: clamp(2.8rem, 5vw, 5.4rem);
+}
+
+.is-featured .service-copy mark {
+  color: var(--ink);
+}
+
+.is-featured .service-list li,
+.is-featured .service-related a {
+  border-color: rgba(244, 242, 236, 0.25);
+}
+
+.is-featured .service-list li::before {
+  color: var(--acid);
+}
+
+.is-featured .service-related a:hover {
+  border-color: var(--acid);
+  color: var(--ink);
+}
+
+.service-more {
+  display: grid;
+  gap: 3rem 4vw;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-card {
+  border-top: 1px solid var(--ink);
+  padding-top: 1px;
+}
+
+.service-card .service-meta {
+  border-bottom: 0;
+}
+
+.service-card .service-copy h3 {
+  font-size: clamp(2rem, 3vw, 3.1rem);
+}
+
+.is-featured .service-cta {
+  color: var(--ink);
+}
+
+.is-featured .service-cta:hover {
+  background: var(--paper);
+  color: var(--ink);
 }
 
 .service-list {
@@ -691,7 +828,8 @@ body.nav-open .nav-toggle span:nth-child(3) {
 }
 
 .service-list li::before {
-  content: "→";
+  content: "✓";
+  font-weight: 700;
   left: 0;
   position: absolute;
 }
@@ -1046,6 +1184,19 @@ footer h2 span {
     max-width: 560px;
   }
 
+  .is-featured .service-visual,
+  .is-featured .service-copy {
+    grid-column: 1 / -1;
+  }
+
+  .service-row.is-featured {
+    padding: 3.5rem 3vw;
+  }
+
+  .service-more {
+    grid-template-columns: 1fr;
+  }
+
   .profile {
     gap: 5rem;
     grid-template-columns: 1fr;
@@ -1155,6 +1306,20 @@ footer h2 span {
 
   .services-section {
     padding: 6rem 5vw 7rem;
+  }
+
+  .service-row.is-featured {
+    margin: 0 -5vw;
+    padding: 3rem 5vw;
+  }
+
+  .service-badge {
+    margin-left: 0;
+  }
+
+  .service-meta {
+    flex-wrap: wrap;
+    gap: 0.6rem 1.6rem;
   }
 
   .service-list-wrap {
