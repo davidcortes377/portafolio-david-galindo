@@ -49,6 +49,31 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+section[id],
+footer[id] {
+  scroll-margin-top: 74px;
+}
+
+.skip-link {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Courier New", monospace;
+  font-size: 0.7rem;
+  left: 3vw;
+  letter-spacing: 0.08em;
+  padding: 0.8rem 1.1rem;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  transform: translateY(-120%);
+  transition: transform 0.2s ease;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  transform: translateY(12px);
+}
+
 .site-header {
   align-items: center;
   background: rgba(244, 242, 236, 0.86);
@@ -103,7 +128,8 @@ button:focus-visible {
   width: 100%;
 }
 
-.site-header nav a:hover::after {
+.site-header nav a:hover::after,
+.site-header nav a[aria-current]::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -445,12 +471,14 @@ body.nav-open .nav-toggle span:nth-child(3) {
     filter 0.5s ease;
 }
 
-.project-visual:hover img {
+.project-visual:hover img,
+.project-visual:focus-visible img {
   filter: saturate(1.15);
   transform: scale(1.04);
 }
 
-.project-visual:hover::after {
+.project-visual:hover::after,
+.project-visual:focus-visible::after {
   opacity: 1;
 }
 
@@ -475,13 +503,17 @@ body.nav-open .nav-toggle span:nth-child(3) {
   z-index: 2;
 }
 
-.project-visual:hover .visit-pill {
+.project-visual:hover .visit-pill,
+.project-visual:focus-visible .visit-pill {
   opacity: 1;
   transform: translateY(0);
 }
 
 .project-number {
+  background: rgba(17, 17, 17, 0.72);
+  border-radius: 999px;
   color: white;
+  padding: 0.3rem 0.55rem;
   font-family: "Courier New", monospace;
   font-size: 0.72rem;
   position: absolute;
@@ -720,6 +752,17 @@ footer h2 span {
   text-transform: uppercase;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 @keyframes pulse {
   0%,
   100% {
@@ -888,6 +931,11 @@ footer h2 span {
     top: 64px;
   }
 
+  section[id],
+  footer[id] {
+    scroll-margin-top: 64px;
+  }
+
   .site-header nav a {
     font-size: 1.15rem;
   }
@@ -1001,9 +1049,12 @@ footer h2 span {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

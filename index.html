@@ -24,79 +24,129 @@
       hreflang="x-default"
       href="https://davidcortes377.github.io/portafolio-david-galindo/"
     />
+    <link
+      rel="canonical"
+      href="https://davidcortes377.github.io/portafolio-david-galindo/"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='800' font-size='30' letter-spacing='-2' fill='%23d7ff38'%3EDG%3C/text%3E%3C/svg%3E"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="David Galindo" />
+    <meta property="og:title" content="David Galindo — Diseño & Marketing" />
+    <meta
+      property="og:description"
+      content="Diseño web, identidad y estrategia digital. 14 proyectos seleccionados de e-commerce, salud, educación y servicios."
+    />
+    <meta
+      property="og:url"
+      content="https://davidcortes377.github.io/portafolio-david-galindo/"
+    />
+    <meta
+      property="og:image"
+      content="https://davidcortes377.github.io/portafolio-david-galindo/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David Galindo",
+        "jobTitle": "Diseñador web y especialista en marketing",
+        "url": "https://davidcortes377.github.io/portafolio-david-galindo/",
+        "knowsAbout": [
+          "Diseño web",
+          "E-commerce",
+          "Identidad visual",
+          "Estrategia digital"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "WhatsApp",
+          "url": "https://wa.me/541125546238"
+        }
+      }
+    </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main>
-      <header class="site-header">
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
+    <header class="site-header">
+      <a
+        class="monogram"
+        href="#inicio"
+        data-i18n-aria="nav.homeAria"
+        aria-label="Ir al inicio"
+      >
+        DG<span>®</span>
+      </a>
+      <nav
+        id="site-nav"
+        data-i18n-aria="nav.mainAria"
+        aria-label="Navegación principal"
+      >
+        <a href="#proyectos" data-i18n="nav.work">Proyectos</a>
+        <a href="#perfil" data-i18n="nav.profile">Perfil</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
         <a
-          class="monogram"
-          href="#inicio"
-          data-i18n-aria="nav.homeAria"
-          aria-label="Ir al inicio"
+          class="nav-contact"
+          href="https://wa.me/541125546238"
+          data-wa
+          target="_blank"
+          rel="noreferrer"
+          ><span data-i18n="nav.cta">Escribime</span><span>↗</span></a
         >
-          DG<span>®</span>
-        </a>
-        <nav
-          id="site-nav"
-          data-i18n-aria="nav.mainAria"
-          aria-label="Navegación principal"
+      </nav>
+      <div class="header-right">
+        <span class="availability"
+          ><i></i><span data-i18n="header.available">Disponible</span></span
         >
-          <a href="#proyectos" data-i18n="nav.work">Proyectos</a>
-          <a href="#perfil" data-i18n="nav.profile">Perfil</a>
-          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
-          <a
-            class="nav-contact"
-            href="https://wa.me/541125546238"
-            target="_blank"
-            rel="noreferrer"
-            ><span data-i18n="nav.cta">Escribime</span><span>↗</span></a
+        <div
+          class="lang-switch"
+          role="group"
+          data-i18n-aria="lang.groupAria"
+          aria-label="Seleccionar idioma"
+        >
+          <button
+            class="lang-btn"
+            type="button"
+            data-lang="es"
+            aria-pressed="true"
+            lang="es"
           >
-        </nav>
-        <div class="header-right">
-          <span class="availability"
-            ><i></i><span data-i18n="header.available">Disponible</span></span
+            ES
+          </button>
+          <button
+            class="lang-btn"
+            type="button"
+            data-lang="en"
+            aria-pressed="false"
+            lang="en"
           >
-          <div
-            class="lang-switch"
-            role="group"
-            data-i18n-aria="lang.groupAria"
-            aria-label="Seleccionar idioma"
-          >
-            <button
-              class="lang-btn"
-              type="button"
-              data-lang="es"
-              aria-pressed="true"
-              lang="es"
-            >
-              ES
-            </button>
-            <button
-              class="lang-btn"
-              type="button"
-              data-lang="en"
-              aria-pressed="false"
-              lang="en"
-            >
-              EN
-            </button>
-          </div>
+            EN
+          </button>
         </div>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-          aria-label="Abrir menú"
-        >
-          <span></span><span></span><span></span>
-        </button>
-      </header>
+      </div>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
 
+    <main id="main">
       <section class="hero" id="inicio">
-        <div class="hero-orb orb-one"></div>
-        <div class="hero-orb orb-two"></div>
+        <div class="hero-orb orb-one" aria-hidden="true"></div>
+        <div class="hero-orb orb-two" aria-hidden="true"></div>
         <p class="eyebrow" data-i18n="hero.eyebrow">
           Diseño digital + estrategia de marca
         </p>
@@ -155,6 +205,10 @@
             >
               <img
                 src="./projects/moon-cheese.jpg"
+                width="1359"
+                height="933"
+                decoding="async"
+                fetchpriority="high"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Moon Cheese"
               />
@@ -202,6 +256,9 @@
             >
               <img
                 src="./projects/clinica-vizu.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Clínica Vizu"
                 loading="lazy"
@@ -250,6 +307,9 @@
             >
               <img
                 src="./projects/olipop.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio OLIPOP"
                 loading="lazy"
@@ -301,6 +361,9 @@
             >
               <img
                 src="./projects/chef-nicolas-prieto.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Chef Nicolás Prieto"
                 loading="lazy"
@@ -348,6 +411,9 @@
             >
               <img
                 src="./projects/voltra.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Voltra"
                 loading="lazy"
@@ -399,6 +465,9 @@
             >
               <img
                 src="./projects/casa-en-orden.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Casa en Orden"
                 loading="lazy"
@@ -447,6 +516,9 @@
             >
               <img
                 src="./projects/magic-spoon.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Magic Spoon"
                 loading="lazy"
@@ -497,6 +569,9 @@
             >
               <img
                 src="./projects/ipatagonic.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio iPatagonic"
                 loading="lazy"
@@ -548,6 +623,9 @@
             >
               <img
                 src="./projects/nivaxel-flash.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Flash Realty"
                 loading="lazy"
@@ -598,6 +676,9 @@
             >
               <img
                 src="./projects/ferreteria-candelaria.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Ferretería Candelaria"
                 loading="lazy"
@@ -648,6 +729,9 @@
             >
               <img
                 src="./projects/hematologo-tijuana.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Hematólogo Tijuana"
                 loading="lazy"
@@ -698,6 +782,9 @@
             >
               <img
                 src="./projects/mundo-tesis.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Mundo Tesis"
                 loading="lazy"
@@ -748,6 +835,9 @@
             >
               <img
                 src="./projects/astroterapeutica.jpg"
+                width="1333"
+                height="926"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Astroterapéutica"
                 loading="lazy"
@@ -798,6 +888,9 @@
             >
               <img
                 src="./projects/taller-saberes.jpg"
+                width="1326"
+                height="906"
+                decoding="async"
                 data-i18n-alt="project.shotAlt"
                 alt="Captura de pantalla del sitio Taller Saberes"
                 loading="lazy"
@@ -876,40 +969,42 @@
         </div>
       </section>
 
-      <footer id="contacto">
-        <div class="footer-top">
-          <p class="eyebrow" data-i18n="footer.eyebrow">¿Tienes una idea?</p>
-          <a
-            href="#inicio"
-            data-i18n-aria="footer.topAria"
-            aria-label="Volver al inicio"
-            >↑</a
-          >
-        </div>
-        <h2 data-i18n-html="footer.title">
-          Hagamos algo<br /><span>imposible de ignorar.</span>
-        </h2>
-        <a
-          class="whatsapp-link"
-          href="https://wa.me/541125546238"
-          target="_blank"
-          rel="noreferrer"
-          data-i18n-aria="footer.waAria"
-          aria-label="Contactar a David Galindo por WhatsApp"
-        >
-          <span data-i18n="footer.waLabel">Conversemos por WhatsApp</span>
-          <strong>+54 11 2554 6238</strong>
-          <span>↗</span>
-        </a>
-        <div class="footer-bottom">
-          <p data-i18n="footer.name">David Galindo — Diseño & Marketing</p>
-          <p data-i18n="footer.status">
-            Disponible para proyectos y colaboraciones
-          </p>
-          <p>© 2026</p>
-        </div>
-      </footer>
     </main>
+
+    <footer id="contacto">
+      <div class="footer-top">
+        <p class="eyebrow" data-i18n="footer.eyebrow">¿Tenés una idea?</p>
+        <a
+          href="#inicio"
+          data-i18n-aria="footer.topAria"
+          aria-label="Volver al inicio"
+          >↑</a
+        >
+      </div>
+      <h2 data-i18n-html="footer.title">
+        Hagamos algo<br /><span>imposible de ignorar.</span>
+      </h2>
+      <a
+        class="whatsapp-link"
+        href="https://wa.me/541125546238"
+        data-wa
+        target="_blank"
+        rel="noreferrer"
+        data-i18n-aria="footer.waAria"
+        aria-label="Contactar a David Galindo por WhatsApp"
+      >
+        <span data-i18n="footer.waLabel">Conversemos por WhatsApp</span>
+        <strong>+54 11 2554 6238</strong>
+        <span>↗</span>
+      </a>
+      <div class="footer-bottom">
+        <p data-i18n="footer.name">David Galindo — Diseño & Marketing</p>
+        <p data-i18n="footer.status">
+          Disponible para proyectos y colaboraciones
+        </p>
+        <p>© <span id="year">2026</span></p>
+      </div>
+    </footer>
 
     <script>
       (function () {
@@ -927,6 +1022,8 @@
             "nav.profile": "Perfil",
             "nav.contact": "Contacto",
             "nav.cta": "Escribime",
+            "nav.skip": "Saltar al contenido",
+            "wa.text": "Hola David, vi tu portafolio y quiero contarte sobre un proyecto.",
             "nav.open": "Abrir menú",
             "nav.close": "Cerrar menú",
             "header.available": "Disponible",
@@ -1079,7 +1176,7 @@
             "service3.text":
               "Arquitectura, contenido y recorridos orientados a objetivos.",
 
-            "footer.eyebrow": "¿Tienes una idea?",
+            "footer.eyebrow": "¿Tenés una idea?",
             "footer.topAria": "Volver al inicio",
             "footer.title":
               "Hagamos algo<br /><span>imposible de ignorar.</span>",
@@ -1100,6 +1197,8 @@
             "nav.profile": "Profile",
             "nav.contact": "Contact",
             "nav.cta": "Message me",
+            "nav.skip": "Skip to content",
+            "wa.text": "Hi David, I saw your portfolio and would like to tell you about a project.",
             "nav.open": "Open menu",
             "nav.close": "Close menu",
             "header.available": "Available",
@@ -1337,6 +1436,14 @@
             el.setAttribute("alt", fill(t(el.getAttribute("data-i18n-alt")), el));
           });
 
+          document.querySelectorAll("[data-wa]").forEach(function (el) {
+            el.setAttribute(
+              "href",
+              "https://wa.me/541125546238?text=" +
+                encodeURIComponent(t("wa.text"))
+            );
+          });
+
           document.querySelectorAll(".lang-btn").forEach(function (button) {
             var isActive = button.getAttribute("data-lang") === current;
             button.setAttribute("aria-pressed", isActive ? "true" : "false");
@@ -1365,6 +1472,67 @@
         });
 
         apply(resolveInitial());
+
+        var year = document.getElementById("year");
+        if (year) year.textContent = new Date().getFullYear();
+
+        setupReveal();
+        setupActiveNav();
+
+        function setupReveal() {
+          var reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+          if (reduced.matches || !("IntersectionObserver" in window)) return;
+
+          var targets = document.querySelectorAll(
+            ".project-card, .section-head, .services > div"
+          );
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              });
+            },
+            { rootMargin: "0px 0px -8% 0px" }
+          );
+
+          targets.forEach(function (el) {
+            el.classList.add("reveal");
+            observer.observe(el);
+          });
+        }
+
+        function setupActiveNav() {
+          if (!("IntersectionObserver" in window)) return;
+
+          var links = {};
+          document
+            .querySelectorAll('#site-nav a[href^="#"]')
+            .forEach(function (link) {
+              links[link.getAttribute("href").slice(1)] = link;
+            });
+
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                var link = links[entry.target.id];
+                if (!link) return;
+                if (entry.isIntersecting) {
+                  link.setAttribute("aria-current", "true");
+                } else {
+                  link.removeAttribute("aria-current");
+                }
+              });
+            },
+            { rootMargin: "-45% 0px -50% 0px" }
+          );
+
+          Object.keys(links).forEach(function (id) {
+            var section = document.getElementById(id);
+            if (section) observer.observe(section);
+          });
+        }
 
         var toggle = document.querySelector(".nav-toggle");
         var nav = document.getElementById("site-nav");
