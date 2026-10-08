@@ -104,7 +104,7 @@ section[id]{scroll-margin-top:72px}
 .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
 .gallery button:hover img{transform:scale(1.04)}
 .gallery .g-wide{grid-column:span 2}.gallery .g-tall{grid-row:span 2}.gallery .g-big{grid-column:span 2;grid-row:span 2}
-@media (max-width:760px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:42vw}}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:42vw;grid-auto-flow:dense}}
 dialog.lb{border:0;padding:0;background:transparent;max-width:min(94vw,1300px);max-height:92vh}
 dialog.lb::backdrop{background:rgba(20,18,16,.9)}
 dialog.lb img{max-height:86vh;width:auto;max-width:100%;border-radius:10px;margin:auto}
@@ -241,9 +241,10 @@ footer a{color:var(--ink)}
         <button data-i="7"><img src="fotos/dormitorio-atardecer.jpg" alt="Dormitorio al atardecer" loading="lazy"></button>
         <button data-i="8"><img src="fotos/comedor-living.jpg" alt="Mesa puesta con vista al living" loading="lazy"></button>
         <button data-i="9"><img src="fotos/cafetera.jpg" alt="Cafetera espresso en la cocina" loading="lazy"></button>
-        <button class="g-wide" data-i="10"><img src="fotos/sofa-comedor.jpg" alt="Living integrado con el comedor" loading="lazy"></button>
-        <button data-i="11"><img src="fotos/cocina.jpg" alt="Cocina con horno, anafe eléctrico y bacha doble" loading="lazy"></button>
-        <button data-i="12"><img src="fotos/living-tv.jpg" alt="Living con TV y mesa ratona" loading="lazy"></button>
+        <button class="g-tall" data-i="10"><img src="fotos/vista-atardecer.jpg" alt="Atardecer sobre los edificios de estilo francés, visto desde la ventana" loading="lazy"></button>
+        <button class="g-big" data-i="11"><img src="fotos/living-tv.jpg" alt="Living con TV y mesa ratona" loading="lazy"></button>
+        <button data-i="12"><img src="fotos/cocina.jpg" alt="Cocina con horno, anafe eléctrico y bacha doble" loading="lazy"></button>
+        <button data-i="13"><img src="fotos/sofa-comedor.jpg" alt="Living integrado con el comedor" loading="lazy"></button>
       </div>
     </div>
   </section>
