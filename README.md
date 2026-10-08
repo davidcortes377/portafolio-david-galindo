@@ -97,3 +97,22 @@ Cada servicio (`id="servicio-0N"`) tiene sus textos en las claves `sN.*` del
 `i1…iN` (lo que incluye), `note`, `wa` (mensaje de WhatsApp). “Se combina con”
 enlaza a los servicios relacionados para armar el recorrido
 problema → servicio → servicios complementarios → conversación.
+
+## Casa Peña (`casa-pena/`)
+
+Sitio de reservas del departamento Casa Peña, publicado en
+`…/portafolio-david-galindo/casa-pena/`.
+
+- **`index.html`**: la página, con galería, comodidades, ubicación, calendario y formulario.
+- **Configurar el contacto**: al inicio del `<script>`, en `CONFIG`, completa
+  `whatsapp` (código de país sin `+`, ej. `5491112345678`) y/o `email`. El
+  formulario abre WhatsApp (o el correo) con la solicitud ya escrita.
+- **`reservas.json`**: las fechas ocupadas. Cada reserva bloquea desde `entrada`
+  hasta el día anterior a `salida`, y el día de salida queda libre para otro
+  ingreso. Las reservas que vienen ahora son de ejemplo. Para bloquear fechas,
+  edita este archivo en GitHub y el calendario se actualiza solo.
+- **Flyers**: `flyer-feed-1080x1350.jpg` (post de Instagram/Facebook),
+  `flyer-historia-1080x1920.jpg` (historias/WhatsApp) y `og-casa-pena.jpg`
+  (vista previa al compartir el link). Se generan desde `flyer.html`
+  (`?solo=feed|story|og`).
+- **`fotos/`**: las fotos optimizadas (máx. 1600 px).
