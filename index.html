@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f1ece2">
+<meta name="theme-color" content="#0d0c0b">
 <title>David Galindo — Diseño web & Estrategia digital</title>
 <meta name="description" content="David Galindo, diseñador web y estratega digital. Sitios, ecommerce y landing pages pensados para convertir visitas en clientes.">
 <link rel="canonical" href="https://davidcortes377.github.io/portafolio-david-galindo/">
@@ -334,6 +334,147 @@ h1 .ch{display:inline-block}
 .clock{font-variant-numeric:tabular-nums}
 @media (hover:hover) and (pointer:fine){.project:hover .project-head h3{font-style:italic}}
 
+/* ==========================================================
+   CAPA 2026 — editorial brutalista + natural
+   negro dominante · rojo · verde inglés · filetes dorados · formas orgánicas
+   ========================================================== */
+:root{
+  --ink:#0d0c0b;--paper:#efe9dc;--paper-2:#e4dccb;
+  --green:#123a2a;--green-deep:#0b2a1e;--red:#9a1b16;
+  --gold:#b89b5e;--gold-hi:#d8bf86;--gold-soft:rgba(184,155,94,.42);
+  --contours:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%23b89b5e' stroke-width='1' vector-effect='non-scaling-stroke'%3E%3Cpath d='M200 40C300 30 370 115 362 205C354 300 275 368 190 360C95 352 32 280 42 185C52 100 115 48 200 40Z'/%3E%3Cpath d='M205 78C282 72 336 135 328 205C320 278 262 330 195 324C122 318 74 262 82 190C90 125 140 83 205 78Z'/%3E%3Cpath d='M198 116C262 112 298 160 292 210C286 262 244 292 196 288C142 284 112 246 118 196C124 150 150 119 198 116Z'/%3E%3Cpath d='M204 152C244 150 262 180 258 210C254 242 228 258 198 255C166 252 150 228 154 198C158 172 176 154 204 152Z'/%3E%3Cpath d='M200 186C220 185 228 198 226 211C224 225 212 231 199 230C185 229 178 218 180 206C182 194 189 187 200 186Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+body{background:var(--paper)}
+::selection{background:var(--red);color:var(--paper)}
+.progress{background:linear-gradient(90deg,var(--red),var(--gold))}
+header.scrolled{background:rgba(239,233,220,.9);border-color:var(--gold-soft)}
+.brand sup{color:var(--red)}
+
+/* reglas brutalistas en claro, filetes dorados en oscuro */
+.sec-top:before{height:2px;opacity:1;background:var(--ink)}
+.on-dark .sec-top:before,.on-green .sec-top:before,.on-red .sec-top:before{height:1px;background:var(--gold)}
+.on-dark .label b,.on-green .label b{color:var(--gold-hi)}
+.label b{color:var(--red)}
+.btn{box-shadow:inset 0 0 0 1px rgba(184,155,94,.55)}
+.on-dark .btn{box-shadow:none}
+
+/* secciones oscuras: retícula de columnas en oro muy tenue */
+.on-dark,.on-green,.on-red{position:relative;overflow:clip}
+.on-dark>.wrap,.on-green>.wrap,.on-red>.wrap{position:relative;z-index:1}
+.on-dark,.on-green{background-image:linear-gradient(90deg,rgba(184,155,94,.07) 1px,transparent 1px);background-size:25% 100%;background-position:var(--gutter) 0}
+
+/* forma orgánica reutilizable */
+@keyframes morph{
+  0%,100%{border-radius:58% 42% 46% 54% / 52% 44% 56% 48%}
+  33%{border-radius:42% 58% 60% 40% / 46% 58% 42% 54%}
+  66%{border-radius:50% 50% 38% 62% / 60% 40% 60% 40%}
+}
+@keyframes drift{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(1.5%,-2%) rotate(6deg)}}
+
+/* HERO: placa negra, sol rojo orgánico, filete dorado, curvas de nivel */
+.hero-plate{background:var(--ink);outline:1px solid var(--gold);outline-offset:-14px}
+.hero-sun{background:var(--red);animation:morph 14s ease-in-out infinite;border-radius:58% 42% 46% 54% / 52% 44% 56% 48%}
+.hero-line{background:var(--gold);width:1px}
+.hero-guard{color:var(--red)}
+.hero-visual:before{content:"";position:absolute;right:-8%;top:-10%;width:78%;aspect-ratio:1;background:var(--contours) center/contain no-repeat;opacity:.75;animation:drift 22s ease-in-out infinite;pointer-events:none}
+.hero-visual:after{content:"";position:absolute;right:4%;bottom:-3%;width:clamp(70px,8vw,120px);aspect-ratio:1;background:var(--green);animation:morph 18s ease-in-out infinite reverse;border-radius:42% 58% 60% 40% / 46% 58% 42% 54%}
+.hero-foot{border-top:2px solid var(--ink);color:var(--ink)}
+h1 .mask:last-child .ch{color:var(--ink)}
+.hero-role{color:var(--red)}
+
+/* cinta: negra con hojas doradas */
+.marquee{background:var(--ink);color:var(--paper);border:0;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.marquee-track i{width:12px;height:12px;background:var(--gold);border-radius:0 100% 0 100%}
+
+/* TRABAJO */
+.work:before{content:"";position:absolute;right:-12vw;top:-6vw;width:48vw;max-width:720px;aspect-ratio:1;background:var(--contours) center/contain no-repeat;opacity:.35;pointer-events:none}
+.work-title h2 em,.experience-note{color:var(--gold-hi)}
+.project .media{outline:1px solid var(--gold-soft);outline-offset:8px}
+.project-head{border-top:1px solid var(--gold-soft);margin-top:1.4rem}
+.project-head .num{color:var(--gold)}
+.project-go{border-color:var(--gold-soft)}
+@media (hover:hover) and (pointer:fine){.project:hover .project-go{background:var(--gold);color:var(--ink)}.index-row:hover strong{color:var(--gold-hi)}}
+.all-projects{border-top-color:var(--gold)}
+.index-row{border-top-color:rgba(184,155,94,.22)}
+.index-row .num{color:var(--gold)}
+
+/* FILOSOFÍA: rojo profundo */
+.on-red{background:var(--red);color:var(--paper)}
+.on-red .label{color:#efe9dcb3}
+.on-red .label b{color:var(--gold-hi)}
+.philosophy.on-red h2 em{color:var(--ink)}
+.on-red .philosophy-body .quote{color:var(--paper)}
+.on-red .philosophy-text{color:#efe9dce0}
+.philosophy.on-red:before{content:"";position:absolute;left:-14vw;bottom:-18vw;width:56vw;aspect-ratio:1;background:var(--green-deep);animation:morph 20s ease-in-out infinite;opacity:.9;border-radius:58% 42% 46% 54% / 52% 44% 56% 48%}
+.philosophy.on-red:after{content:"";position:absolute;right:-6vw;top:8%;width:38vw;aspect-ratio:1;background:var(--contours) center/contain no-repeat;opacity:.55;pointer-events:none}
+.philosophy.on-red .mountain{z-index:1;opacity:.85;mix-blend-mode:multiply}
+
+/* SERVICIOS: reglas negras gruesas, acentos verdes y rojos */
+.services-head h2 em,.svc h3 em,.feature h3 em{color:var(--red)}
+.feature{border:2px solid var(--ink);box-shadow:14px 14px 0 var(--green);outline:1px solid var(--gold);outline-offset:-12px}
+.feature-tag b{background:var(--ink);color:var(--gold-hi)}
+.svc-list{border-top:2px solid var(--ink)}
+.svc{border-bottom:1px solid var(--ink)}
+.svc .num{color:var(--red)}
+@media (hover:hover) and (pointer:fine){.svc:hover .svc-go{background:var(--green);color:var(--paper);border-color:var(--green)}}
+
+/* PROCESO: verde inglés con oro */
+.on-green{background-color:var(--green)}
+.process:after{content:"";position:absolute;right:-10vw;bottom:-10vw;width:40vw;aspect-ratio:1;background:var(--red);opacity:.9;animation:morph 24s ease-in-out infinite;border-radius:42% 58% 60% 40% / 46% 58% 42% 54%}
+.process-side h2 em{color:var(--gold-hi)}
+.process-bar i{background:var(--gold)}
+.step{border-top-color:var(--gold-soft)}
+.step .num{color:var(--gold)}
+
+/* SOBRE MÍ: collage orgánico */
+.col-red{animation:morph 16s ease-in-out infinite;border-radius:58% 42% 46% 54% / 52% 44% 56% 48%}
+.col-pattern{border-radius:50% 50% 0 50%}
+.col-photo{outline:1px solid var(--gold);outline-offset:12px}
+.collage:after{content:"";position:absolute;left:-4%;top:-6%;width:46%;aspect-ratio:1;background:var(--contours) center/contain no-repeat;opacity:.8;pointer-events:none;z-index:-1}
+.about-copy h2 em{color:var(--green)}
+
+/* EXPERIENCIA: negro, cifras con filete dorado */
+.numbers{border-top-color:var(--gold)}
+.numbers div{border-right:1px solid rgba(184,155,94,.25);padding-left:1.4rem}
+.numbers div:first-child{padding-left:0}
+.numbers div:last-child{border-right:0}
+.numbers strong{color:var(--paper)}
+.numbers div:nth-child(2) strong{color:var(--gold-hi)}
+.industry:not(:last-child):after{color:var(--red)}
+@media (hover:hover) and (pointer:fine){.industry:hover{color:var(--gold-hi)}}
+.experience:before{content:"";position:absolute;left:-10vw;top:30%;width:34vw;aspect-ratio:1;background:var(--green);opacity:.75;animation:morph 22s ease-in-out infinite;border-radius:50% 50% 38% 62% / 60% 40% 60% 40%}
+
+/* CONTACTO + pie negro */
+.contact{position:relative}
+.contact-data{border-top:2px solid var(--ink)}
+.contact-data div{border-bottom-color:var(--ink)}
+.contact-portrait{outline:1px solid var(--gold);outline-offset:10px}
+.contact-portrait{position:relative}
+.contact-portrait:before{content:"";position:absolute;left:-34%;top:-16%;width:86%;aspect-ratio:1;background:var(--green);animation:morph 18s ease-in-out infinite;border-radius:42% 58% 60% 40% / 46% 58% 42% 54%;z-index:-1}
+.hero,.about,.contact{overflow-x:clip}
+/* titulares: aire para descendentes y la caída de la itálica */
+.w{padding:.2em .06em .2em 0;margin:-.2em -.06em -.2em 0}
+/* etiquetas de sección: nunca partidas */
+.sec-top{flex-wrap:wrap;gap:.5rem 1.5rem}
+.sec-top>span{white-space:nowrap}
+.philosophy.on-red:after{top:auto;bottom:6%}
+@media (max-width:580px){
+  .numbers div,.numbers div:first-child{padding:1.4rem 0 1.2rem;border-right:0;border-bottom:1px solid rgba(184,155,94,.25)}
+  .numbers{gap:0}
+  .feature{box-shadow:8px 8px 0 var(--green);outline-offset:-8px}
+  .work:before{width:80vw;right:-30vw;top:-10vw}
+  .philosophy.on-red:before{width:90vw;left:-30vw;bottom:-30vw}
+  .experience:before{width:60vw;left:-30vw}
+  .contact-portrait:before{left:-28%;top:-10%}
+}
+footer{background:var(--ink);color:var(--paper);padding-top:clamp(3rem,6vw,5rem);border-top:1px solid var(--gold);position:relative;overflow:clip}
+footer:before{content:"";position:absolute;right:-8vw;top:-10vw;width:40vw;aspect-ratio:1;background:var(--contours) center/contain no-repeat;opacity:.4;pointer-events:none}
+footer .wrap{position:relative}
+.footer-guard{color:var(--gold)}
+.footer-in{color:#efe9dc99;border-top:1px solid rgba(184,155,94,.25)}
+@media (hover:hover) and (pointer:fine){.footer-in nav a:hover{color:var(--gold-hi)}}
+.cursor{background:var(--gold);color:var(--ink)}
+
 @media (max-width:1000px){
   .svc{grid-template-columns:3rem 1fr 48px}
   .svc p{grid-column:2}
@@ -380,6 +521,7 @@ h1 .ch{display:inline-block}
   .marquee-track{animation:none}
   .js .sec-top:before{transform:none;transition:none}
   .js .process-orn{clip-path:none;opacity:0;transition:opacity .4s ease}
+  .hero-sun,.hero-visual:before,.hero-visual:after,.philosophy.on-red:before,.process:after,.col-red,.experience:before,.contact-portrait:before{animation:none}
   .js .process-orn.in{opacity:1}
   html{scroll-behavior:auto}
   .js .hero .mask>span,.js .hero .seq,.js .hero-visual{animation:fadeOnly .4s ease forwards;transform:none}
@@ -515,7 +657,7 @@ h1 .ch{display:inline-block}
 </section>
 
 <!-- FILOSOFÍA · claro, silencio -->
-<section class="philosophy" id="enfoque">
+<section class="philosophy on-red" id="enfoque">
   <div class="wrap">
     <div class="sec-top label"><span><b>(02)</b> Filosofía</span><span>Diseño con intención</span></div>
     <h2 data-split>El diseño<br>no es<br><em>decoración.</em></h2>
