@@ -102,19 +102,19 @@ section[id]{scroll-margin-top:84px}
 .ph img{position:absolute;inset:0;z-index:2}
 
 /* ---------- hero ---------- */
-.hero{padding:clamp(40px,7vw,96px) 0 clamp(48px,7vw,88px)}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero{padding:clamp(28px,4.5vw,64px) 0 clamp(40px,5vw,72px)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:.55rem;font:500 .76rem/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--sage);background:rgba(95,122,82,.12);padding:.55rem .8rem;border-radius:999px}
 .eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 0 rgba(95,122,82,.5);animation:pulse 2.4s var(--ease-out) infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(95,122,82,.45)}70%,100%{box-shadow:0 0 0 9px rgba(95,122,82,0)}}
-.hero h1{font-size:clamp(3rem,7.4vw,6.4rem);margin:1.4rem 0 1.4rem}
+.hero h1{font-size:clamp(2.6rem,5.6vw,5rem);margin:1.1rem 0 1.1rem}
 .hero h1 em{color:var(--crust)}
 .hero h1 .strike{position:relative;white-space:nowrap}
 .hero h1 .strike svg{position:absolute;left:-2%;bottom:-.1em;width:104%;height:.35em;overflow:visible}
 .hero h1 .strike path{stroke:var(--honey);stroke-width:7;fill:none;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw .9s .5s var(--ease-out) forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
 .hero .lead{font-size:clamp(1.08rem,1.5vw,1.25rem);color:var(--ink-soft);max-width:34em}
-.hero .ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin:2rem 0 2.2rem}
+.hero .ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.6rem 0 1.8rem}
 .proof{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
 .faces{display:flex}
 .faces i{width:38px;height:38px;border-radius:50%;border:2.5px solid var(--paper);margin-left:-10px;background:linear-gradient(135deg,#e7b98a,#a8481f)}
@@ -144,6 +144,55 @@ section[id]{scroll-margin-top:84px}
   .hero-art{max-width:520px;width:100%;margin:0 auto}
 }
 
+
+/* ---------- menú rápido de compra (hero) ---------- */
+.quick{background:var(--card);border-radius:28px;padding:18px;box-shadow:0 0 0 1px rgba(31,24,18,.06),0 40px 80px -40px rgba(31,24,18,.45)}
+.quick-head{display:flex;justify-content:space-between;align-items:center;padding:4px 6px 12px}
+.live{display:inline-flex;align-items:center;gap:.45rem;font-size:.8rem;font-weight:600;color:var(--sage)}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--sage);animation:pulse 2.4s var(--ease-out) infinite}
+.qrow{display:grid;grid-template-columns:64px 1fr auto auto;gap:14px;align-items:center;padding:10px;border-radius:18px;text-decoration:none;transition:background-color .18s var(--ease-out),transform .16s var(--ease-out);-webkit-tap-highlight-color:transparent}
+.qrow + .qrow{margin-top:4px}
+.qrow:active{transform:scale(.985)}
+.qrow .ph{width:64px;height:64px;border-radius:14px}
+.qt b{display:block;font-weight:650;font-size:1rem;line-height:1.25}
+.qt small{color:var(--muted);font-size:.82rem}
+.qt .hot{font:inherit;font-style:normal;color:var(--crust);font-weight:600}
+.qp{text-align:right;line-height:1.1}
+.qp b{display:block;font:400 1.9rem/1 var(--serif)}
+.qp s{font-size:.8rem;color:var(--muted)}
+.qgo{font:650 .86rem/1 var(--sans);color:#fff8ee;background:var(--crust);padding:.75rem 1rem;border-radius:999px;transition:background-color .18s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){
+  .qrow:hover{background:var(--paper)}
+  .qrow:hover .qgo{background:var(--crust-deep)}
+}
+.pack-row{background:var(--ink);color:var(--paper);margin-top:10px!important}
+.pack-row .qt small,.pack-row .qp s{color:rgba(244,236,223,.6)}
+.pack-row .qgo{background:var(--honey);color:var(--ink)}
+@media (hover:hover) and (pointer:fine){.pack-row:hover{background:#2c231b}.pack-row:hover .qgo{background:#f0b84d}}
+.qbadge{width:64px;height:64px;border-radius:14px;background:var(--honey);color:var(--ink);display:grid;place-items:center;font:italic 400 1.35rem/1 var(--serif)}
+.quick .secure{margin-top:12px;text-align:center;flex-wrap:wrap}
+.quick .secure a{color:var(--crust)}
+@media (max-width:520px){
+  .quick{padding:10px;border-radius:22px}
+  .qrow{grid-template-columns:52px 1fr auto;gap:10px;padding:8px}
+  .qrow .ph,.qbadge{width:52px;height:52px}
+  .qgo{grid-column:1/-1;text-align:center;padding:.8rem}
+  .qt b{font-size:.95rem}
+}
+
+@media (max-width:900px){
+  .xm{display:none}
+  .hero{padding-top:20px}
+  .hero .wrap{gap:22px}
+  .hero h1{margin:.8rem 0 .8rem}
+  .hero .lead{font-size:1rem}
+  .hero-ctas{display:none!important}
+  .proof{order:3}
+  .proof{margin-top:.8rem}
+  .proof .faces{display:none}
+  .live{display:none}
+  .promo .wrap{padding-top:.5rem;padding-bottom:.5rem;gap:.3rem .8rem}
+}
 /* ---------- cinta ---------- */
 .ribbon-wrap{overflow:hidden;padding:14px 0}
 .ribbon{background:var(--crust);color:var(--paper);overflow:hidden;padding:1rem 0;transform:rotate(-1.2deg);margin:0 -2vw;width:104vw}
@@ -172,6 +221,7 @@ section[id]{scroll-margin-top:84px}
 
 /* ---------- cursos ---------- */
 #cursos{background:var(--paper-2)}
+#cursos.sec{padding-top:clamp(56px,7vw,96px)}
 .courses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .course{display:flex;flex-direction:column;background:var(--card);border-radius:28px;padding:10px;box-shadow:0 0 0 1px rgba(31,24,18,.06);transition:transform .25s var(--ease-out),box-shadow .25s var(--ease-out)}
 @media (hover:hover) and (pointer:fine){.course:hover{transform:translateY(-4px);box-shadow:0 0 0 1px rgba(31,24,18,.08),0 30px 50px -30px rgba(31,24,18,.4)}}
@@ -332,7 +382,7 @@ footer a:hover{color:var(--crust)}
 
 <div class="promo" role="region" aria-label="Promoción">
   <div class="wrap">
-    <span><b>Precio de lanzamiento</b> · hasta 50% off en todos los cursos. Termina en</span>
+    <span><b>Precio de lanzamiento</b><span class="xm"> · hasta 50% off en todos los cursos</span>. Termina en</span>
     <span class="clock" aria-live="off"><span data-d>00d</span><span data-h>00h</span><span data-m>00m</span><span data-s>00s</span></span>
   </div>
 </div>
@@ -358,9 +408,9 @@ footer a:hover{color:var(--crust)}
     <div>
       <span class="eyebrow rv"><i></i>Cursos online · apto celíacos</span>
       <h1 class="rv" style="--i:1">Pan sin gluten que <em>nadie</em> diría que es <span class="strike">sin gluten<svg viewBox="0 0 400 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 22 C 90 6, 200 4, 396 14"/></svg></span>.</h1>
-      <p class="lead rv" style="--i:2">Aprendé con Agus a hornear pan de molde, pizza, facturas y masa madre <strong>que se ven, huelen y se sienten como los de panadería</strong>. Recetas probadas, paso a paso, para hacer en tu casa y sin ingredientes raros.</p>
-      <div class="ctas rv" style="--i:3">
-        <a class="btn" href="#cursos">Quiero empezar a hornear <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="lead rv" style="--i:2">Aprendé con Agus a hornear pan de molde, pizza, facturas y masa madre <strong>que se ven, huelen y se sienten como los de panadería</strong>.<span class="xm"> Recetas probadas, paso a paso, para hacer en tu casa y sin ingredientes raros.</span></p>
+      <div class="ctas hero-ctas rv" style="--i:3">
+        <a class="btn" href="#cursos">Ver los cursos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn ghost" href="#pack">Ver el pack completo</a>
       </div>
       <div class="proof rv" style="--i:4">
@@ -369,44 +419,30 @@ footer a:hover{color:var(--crust)}
       </div>
     </div>
 
-    <div class="hero-art rv" style="--i:2">
-      <figure class="ph main"><img src="fotos/hero.jpg" alt="Agus sosteniendo un pan sin gluten recién horneado" onerror="this.remove()"><span>Foto · Agus con pan recién horneado</span></figure>
-      <figure class="ph small t4"><img src="fotos/miga.jpg" alt="Miga aireada de un pan sin gluten" onerror="this.remove()"><span>Foto · la miga</span></figure>
-      <div class="stamp" aria-hidden="true">
-        <svg viewBox="0 0 120 120"><defs><path id="c" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#c">100% sin TACC · Recetas probadas · </textPath></text></svg>
-        <div class="core">sin<br>TACC</div>
-      </div>
-      <div class="float-card">
-        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <div><b>Acceso de por vida</b><small>Mirá las clases cuando quieras</small></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="ribbon-wrap" aria-hidden="true"><div class="ribbon">
-  <div class="track">
-    <span>Pan de molde</span><span>Pizza a la piedra</span><span>Medialunas</span><span>Focaccia</span><span>Masa madre</span><span>Pan de hamburguesa</span><span>Budines</span><span>Chipá</span><span>Grisines</span>
-    <span>Pan de molde</span><span>Pizza a la piedra</span><span>Medialunas</span><span>Focaccia</span><span>Masa madre</span><span>Pan de hamburguesa</span><span>Budines</span><span>Chipá</span><span>Grisines</span>
-  </div>
-</div></div>
-
-<!-- ================= DOLORES ================= -->
-<section class="sec">
-  <div class="wrap">
-    <div class="head">
-      <h2 class="rv">¿Te pasó alguna vez <em>esto?</em></h2>
-      <p class="rv" style="--i:1">Si sos celíaco, cocinás para alguien que lo es o simplemente dejaste el gluten, seguro te suena.</p>
-    </div>
-    <div class="pains">
-      <article class="pain rv"><span class="n">01</span><p class="q">“Me queda como un ladrillo.”</p><p>Seguís la receta al pie de la letra y el pan sale denso, húmedo por dentro y duro al día siguiente.</p></article>
-      <article class="pain rv" style="--i:1"><span class="n">02</span><p class="q">“Lo que compro es carísimo y feo.”</p><p>Pagás el triple por un pan de supermercado que se desarma, no tiene sabor y está lleno de aditivos.</p></article>
-      <article class="pain rv" style="--i:2"><span class="n">03</span><p class="q">“Extraño la pizza y las facturas.”</p><p>Las reuniones, el desayuno del domingo, la pizza del viernes… sentís que te perdés lo más rico.</p></article>
-    </div>
-    <div class="turn rv">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-      <p><b>No es tu culpa: el pan sin gluten tiene otras reglas.</b> En los cursos te enseño cuáles son, por qué funcionan y cómo aplicarlas a cualquier receta.</p>
-    </div>
+    <aside class="quick rv" style="--i:2" aria-label="Cursos y precios">
+      <div class="quick-head"><span class="meta">Elegí y comprá en 1 clic</span><span class="live"><i></i>Acceso inmediato</span></div>
+      <a class="qrow" href="#" data-buy="panaderia">
+        <figure class="ph"><img src="fotos/curso-panaderia.jpg" alt="" onerror="this.remove()"></figure>
+        <span class="qt"><b>Panadería sin gluten desde cero</b><small>18 clases · inicial · <em class="hot">el más elegido</em></small></span>
+        <span class="qp"><b>$29</b><s>$59</s></span><span class="qgo" aria-hidden="true">Comprar</span>
+      </a>
+      <a class="qrow" href="#" data-buy="pizza">
+        <figure class="ph t2"><img src="fotos/curso-pizza.jpg" alt="" onerror="this.remove()"></figure>
+        <span class="qt"><b>Pizzas, focaccias y prepizzas</b><small>12 clases · todos los niveles</small></span>
+        <span class="qp"><b>$25</b><s>$45</s></span><span class="qgo" aria-hidden="true">Comprar</span>
+      </a>
+      <a class="qrow" href="#" data-buy="facturas">
+        <figure class="ph t5"><img src="fotos/curso-facturas.jpg" alt="" onerror="this.remove()"></figure>
+        <span class="qt"><b>Facturas y masa madre</b><small>16 clases · intermedio</small></span>
+        <span class="qp"><b>$32</b><s>$59</s></span><span class="qgo" aria-hidden="true">Comprar</span>
+      </a>
+      <a class="qrow pack-row" href="#" data-buy="pack">
+        <span class="qbadge">3 en 1</span>
+        <span class="qt"><b>Pack completo + bonus</b><small>Los 3 cursos · ahorrás $149</small></span>
+        <span class="qp"><b>$59</b><s>$208</s></span><span class="qgo" aria-hidden="true">Comprar</span>
+      </a>
+      <p class="secure"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pago seguro · USD · garantía de 7 días · <a href="#cursos">ver detalle de cada curso</a></p>
+    </aside>
   </div>
 </section>
 
@@ -414,7 +450,7 @@ footer a:hover{color:var(--crust)}
 <section class="sec" id="cursos">
   <div class="wrap">
     <div class="head">
-      <h2 class="rv">Elegí tu curso y <em>empezá hoy</em></h2>
+      <h2 class="rv">Los cursos, <em>en detalle</em></h2>
       <p class="rv" style="--i:1">Pago único, acceso inmediato a tu mail y de por vida. Sin suscripciones.</p>
     </div>
 
@@ -497,6 +533,32 @@ footer a:hover{color:var(--crust)}
         <p class="secure"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Acceso inmediato · garantía de 7 días</p>
         <div class="pay" aria-label="Medios de pago"><span>Tarjeta</span><span>Mercado Pago</span><span>PayPal</span><span>Transferencia</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon-wrap" aria-hidden="true"><div class="ribbon">
+  <div class="track">
+    <span>Pan de molde</span><span>Pizza a la piedra</span><span>Medialunas</span><span>Focaccia</span><span>Masa madre</span><span>Pan de hamburguesa</span><span>Budines</span><span>Chipá</span><span>Grisines</span>
+    <span>Pan de molde</span><span>Pizza a la piedra</span><span>Medialunas</span><span>Focaccia</span><span>Masa madre</span><span>Pan de hamburguesa</span><span>Budines</span><span>Chipá</span><span>Grisines</span>
+  </div>
+</div></div>
+
+<!-- ================= DOLORES ================= -->
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">¿Te pasó alguna vez <em>esto?</em></h2>
+      <p class="rv" style="--i:1">Si sos celíaco, cocinás para alguien que lo es o simplemente dejaste el gluten, seguro te suena.</p>
+    </div>
+    <div class="pains">
+      <article class="pain rv"><span class="n">01</span><p class="q">“Me queda como un ladrillo.”</p><p>Seguís la receta al pie de la letra y el pan sale denso, húmedo por dentro y duro al día siguiente.</p></article>
+      <article class="pain rv" style="--i:1"><span class="n">02</span><p class="q">“Lo que compro es carísimo y feo.”</p><p>Pagás el triple por un pan de supermercado que se desarma, no tiene sabor y está lleno de aditivos.</p></article>
+      <article class="pain rv" style="--i:2"><span class="n">03</span><p class="q">“Extraño la pizza y las facturas.”</p><p>Las reuniones, el desayuno del domingo, la pizza del viernes… sentís que te perdés lo más rico.</p></article>
+    </div>
+    <div class="turn rv">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      <p><b>No es tu culpa: el pan sin gluten tiene otras reglas.</b> En los cursos te enseño cuáles son, por qué funcionan y cómo aplicarlas a cualquier receta.</p>
     </div>
   </div>
 </section>
