@@ -125,11 +125,11 @@ propuesta para mostrarle. Publicada en `…/portafolio-david-galindo/salto-sin-g
 - **Colores de marca**: en `:root` al inicio del `<style>` (`--crust`, `--honey`,
   `--sage`, `--paper`, `--ink`). Cambiarlos para igualar el Instagram.
 - **Links de pago y WhatsApp**: en `CONFIG` al inicio del `<script>`
-  (`checkout.panaderia|pizza|facturas|pack`, `whatsapp`). Sin link, el botón
+  (`checkout.panaderia|hojaldre|facturas|cookies|pack`, `whatsapp`). Sin link, el botón
   muestra un aviso (modo demo).
 - **Cuenta regresiva**: `CONFIG.promoEnds`; vacío = termina cada domingo 23:59.
-- **Fotos**: crear `salto-sin-gluten/fotos/` con `hero.jpg`, `miga.jpg`,
-  `curso-panaderia.jpg`, `curso-pizza.jpg`, `curso-facturas.jpg`, `agus.jpg`,
-  `alumno-1.jpg`, `alumno-2.jpg`. Mientras no existan se ve un fondo cálido
-  con la etiqueta de qué foto va.
-- Cursos, precios, cifras y testimonios son **de ejemplo**.
+- **Fotos**: en `salto-sin-gluten/fotos/` (`logo.jpg`, `agus.jpg`, `hojaldre.jpg`,
+  `facturas.jpg`, `cookies.jpg`), tomadas de su Instagram. Son de baja
+  resolución: conviene pedirle las originales y reemplazarlas con el mismo nombre.
+- Los 4 cursos (Panadería, Hojaldre, Facturas y cremonas, Cookies) son sus
+  temáticas reales; **precios, cantidad de clases, cifras y testimonios son de ejemplo**.

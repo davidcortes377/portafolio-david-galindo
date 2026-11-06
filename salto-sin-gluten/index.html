@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f4ecdf">
 <title>Salto Sin Gluten — Cursos de panadería sin gluten</title>
-<meta name="description" content="Aprendé a hacer pan, pizza, facturas y masa madre sin gluten que nadie diría que son sin gluten. Cursos online de Agustine, a tu ritmo y con acceso de por vida.">
+<meta name="description" content="Aprendé a hacer pan, hojaldre, facturas y cookies sin gluten que nadie diría que son sin gluten. Cursos online de Agustine, a tu ritmo y con acceso de por vida.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Salto Sin Gluten — Cursos de panadería sin gluten">
-<meta property="og:description" content="Pan, pizza, facturas y masa madre sin gluten. Cursos online, a tu ritmo, con acceso de por vida.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23a8481f'/%3E%3Ctext x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%23f4ecdf'%3Es%3C/text%3E%3C/svg%3E">
+<meta property="og:description" content="Pan, hojaldre, facturas y cookies sin gluten. Cursos online, a tu ritmo, con acceso de por vida.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23e79b40'/%3E%3Ctext x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%23f4ecdf'%3Es%3C/text%3E%3C/svg%3E">
 <link rel="preload" href="../fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -28,9 +28,9 @@
   --paper:#f4ecdf;      /* fondo crema */
   --paper-2:#ebdfcc;
   --card:#fbf7f0;
-  --crust:#a8481f;      /* corteza horneada: color principal */
-  --crust-deep:#86360f;
-  --honey:#e6a93a;      /* acento cálido */
+  --crust:#b56924;      /* naranja tostado (logo de Salto) */
+  --crust-deep:#934f14;
+  --honey:#e79b40;      /* naranja del logo */
   --sage:#5f7a52;       /* verde "apto" */
   --hair:1px solid rgba(31,24,18,.14);
   --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
@@ -57,7 +57,7 @@ section[id]{scroll-margin-top:84px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
 /* ---------- botones (Emil: rápido, ease-out, feedback al presionar) ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;border:0;cursor:pointer;font:650 1rem/1 var(--sans);text-decoration:none;padding:1.05rem 1.6rem;border-radius:999px;background:var(--crust);color:#fff8ee;transition:background-color .2s var(--ease-out),transform .16s var(--ease-out),box-shadow .2s var(--ease-out);box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 8px 22px -10px rgba(134,54,15,.7);-webkit-tap-highlight-color:transparent}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;border:0;cursor:pointer;font:650 1rem/1 var(--sans);text-decoration:none;padding:1.05rem 1.6rem;border-radius:999px;background:var(--crust);color:#fff8ee;transition:background-color .2s var(--ease-out),transform .16s var(--ease-out),box-shadow .2s var(--ease-out);box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 8px 22px -10px rgba(147,79,20,.6);-webkit-tap-highlight-color:transparent}
 .btn:active{transform:scale(.97)}
 .btn svg{width:18px;height:18px;transition:transform .2s var(--ease-out)}
 @media (hover:hover) and (pointer:fine){
@@ -81,6 +81,7 @@ section[id]{scroll-margin-top:84px}
 .top{position:sticky;top:0;z-index:50;background:rgba(244,236,223,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:var(--hair)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.brand .logo{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:center 55%;transform:scale(1);box-shadow:0 0 0 1px rgba(31,24,18,.08)}
 .brand .mark{width:38px;height:38px;border-radius:50%;background:var(--crust);color:var(--paper);display:grid;place-items:center;font:italic 400 1.5rem/1 var(--serif);padding-bottom:3px}
 .brand b{font:400 1.45rem/1 var(--serif);letter-spacing:-.01em;font-weight:400}
 .brand b em{color:var(--crust)}
@@ -222,14 +223,15 @@ section[id]{scroll-margin-top:84px}
 /* ---------- cursos ---------- */
 #cursos{background:var(--paper-2)}
 #cursos.sec{padding-top:clamp(56px,7vw,96px)}
-.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.courses{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .course{display:flex;flex-direction:column;background:var(--card);border-radius:28px;padding:10px;box-shadow:0 0 0 1px rgba(31,24,18,.06);transition:transform .25s var(--ease-out),box-shadow .25s var(--ease-out)}
 @media (hover:hover) and (pointer:fine){.course:hover{transform:translateY(-4px);box-shadow:0 0 0 1px rgba(31,24,18,.08),0 30px 50px -30px rgba(31,24,18,.4)}}
 .course .ph{aspect-ratio:4/3;border-radius:20px}
 .course .tag{position:absolute;top:12px;left:12px;z-index:3;font:600 .72rem/1 var(--sans);background:var(--paper);color:var(--ink);padding:.5rem .7rem;border-radius:999px}
 .course .tag.hot{background:var(--honey)}
 .course .body{padding:20px 16px 14px;display:flex;flex-direction:column;flex:1}
-.course h3{font-size:2rem;margin-bottom:.6rem}
+.course h3{font-size:1.9rem;margin-bottom:.6rem}
+.cat{font:500 .7rem/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--crust);margin-bottom:.6rem}
 .course .desc{color:var(--ink-soft);font-size:.96rem;margin-bottom:1.1rem}
 .facts{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.1rem}
 .facts li{font:500 .72rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);background:var(--paper);padding:.5rem .6rem;border-radius:8px}
@@ -243,7 +245,7 @@ section[id]{scroll-margin-top:84px}
 .price .off{font:650 .76rem/1 var(--sans);color:var(--sage);background:rgba(95,122,82,.14);padding:.4rem .55rem;border-radius:999px}
 .course .btn{width:100%}
 .secure{display:flex;align-items:center;justify-content:center;gap:.4rem;margin-top:.7rem;font-size:.78rem;color:var(--muted)}
-@media (max-width:1000px){.courses{grid-template-columns:1fr 1fr}}
+@media (max-width:1140px){.courses{grid-template-columns:1fr 1fr}}
 @media (max-width:680px){.courses{grid-template-columns:1fr}}
 
 /* pack */
@@ -281,6 +283,7 @@ section[id]{scroll-margin-top:84px}
 
 /* ---------- sobre ---------- */
 .about .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,88px);align-items:center}
+.about .note{position:absolute;left:18px;bottom:22px;z-index:3;transform:rotate(-4deg);background:var(--honey);color:var(--ink);font:italic 400 1.5rem/1.05 var(--serif);padding:.8rem 1rem;border-radius:6px;box-shadow:0 14px 30px -14px rgba(31,24,18,.6)}
 .about .ph{aspect-ratio:4/5;border-radius:var(--r) var(--r) 220px var(--r)}
 .about h2{font-size:clamp(2.4rem,5vw,4.2rem);margin:1rem 0 1.4rem}
 .about h2 em{color:var(--crust)}
@@ -389,7 +392,7 @@ footer a:hover{color:var(--crust)}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#" aria-label="Salto Sin Gluten, inicio"><span class="mark">s</span><b>Salto <em>sin gluten</em></b></a>
+    <a class="brand" href="#" aria-label="Salto Sin Gluten, inicio"><img class="logo" src="fotos/logo.jpg" alt="" width="44" height="44"><b>Salto <em>sin gluten</em></b></a>
     <nav class="nav" aria-label="Principal">
       <a href="#cursos">Cursos</a>
       <a href="#como-funciona">Cómo funciona</a>
@@ -406,9 +409,9 @@ footer a:hover{color:var(--crust)}
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow rv"><i></i>Cursos online · apto celíacos</span>
+      <span class="eyebrow rv"><i></i>Academia virtual · desde Balvanera</span>
       <h1 class="rv" style="--i:1">Pan sin gluten que <em>nadie</em> diría que es <span class="strike">sin gluten<svg viewBox="0 0 400 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 22 C 90 6, 200 4, 396 14"/></svg></span>.</h1>
-      <p class="lead rv" style="--i:2">Aprendé con Agus a hornear pan de molde, pizza, facturas y masa madre <strong>que se ven, huelen y se sienten como los de panadería</strong>.<span class="xm"> Recetas probadas, paso a paso, para hacer en tu casa y sin ingredientes raros.</span></p>
+      <p class="lead rv" style="--i:2">Aprendé con Agus a hornear pan, hojaldre, facturas y cookies <strong>que se ven, huelen y se sienten como los de panadería</strong>.<span class="xm"> Recetas probadas, paso a paso, para hacer en tu casa y sin ingredientes raros.</span></p>
       <div class="ctas hero-ctas rv" style="--i:3">
         <a class="btn" href="#cursos">Ver los cursos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn ghost" href="#pack">Ver el pack completo</a>
@@ -422,24 +425,29 @@ footer a:hover{color:var(--crust)}
     <aside class="quick rv" style="--i:2" aria-label="Cursos y precios">
       <div class="quick-head"><span class="meta">Elegí y comprá en 1 clic</span><span class="live"><i></i>Acceso inmediato</span></div>
       <a class="qrow" href="#" data-buy="panaderia">
-        <figure class="ph"><img src="fotos/curso-panaderia.jpg" alt="" onerror="this.remove()"></figure>
-        <span class="qt"><b>Panadería sin gluten desde cero</b><small>18 clases · inicial · <em class="hot">el más elegido</em></small></span>
+        <figure class="ph"><img src="fotos/agus.jpg" alt="" style="object-position:center 70%" onerror="this.remove()"></figure>
+        <span class="qt"><b>Panadería sin gluten</b><small>16 clases · inicial · <em class="hot">el más elegido</em></small></span>
         <span class="qp"><b>$29</b><s>$59</s></span><span class="qgo" aria-hidden="true">Comprar</span>
       </a>
-      <a class="qrow" href="#" data-buy="pizza">
-        <figure class="ph t2"><img src="fotos/curso-pizza.jpg" alt="" onerror="this.remove()"></figure>
-        <span class="qt"><b>Pizzas, focaccias y prepizzas</b><small>12 clases · todos los niveles</small></span>
-        <span class="qp"><b>$25</b><s>$45</s></span><span class="qgo" aria-hidden="true">Comprar</span>
+      <a class="qrow" href="#" data-buy="hojaldre">
+        <figure class="ph"><img src="fotos/hojaldre.jpg" alt="" style="object-position:center" onerror="this.remove()"></figure>
+        <span class="qt"><b>Hojaldre sin gluten</b><small>10 clases · técnica y capas</small></span>
+        <span class="qp"><b>$27</b><s>$49</s></span><span class="qgo" aria-hidden="true">Comprar</span>
       </a>
       <a class="qrow" href="#" data-buy="facturas">
-        <figure class="ph t5"><img src="fotos/curso-facturas.jpg" alt="" onerror="this.remove()"></figure>
-        <span class="qt"><b>Facturas y masa madre</b><small>16 clases · intermedio</small></span>
-        <span class="qp"><b>$32</b><s>$59</s></span><span class="qgo" aria-hidden="true">Comprar</span>
+        <figure class="ph"><img src="fotos/facturas.jpg" alt="" style="object-position:center" onerror="this.remove()"></figure>
+        <span class="qt"><b>Facturas y cremonas</b><small>12 clases · para el mate</small></span>
+        <span class="qp"><b>$25</b><s>$45</s></span><span class="qgo" aria-hidden="true">Comprar</span>
+      </a>
+      <a class="qrow" href="#" data-buy="cookies">
+        <figure class="ph"><img src="fotos/cookies.jpg" alt="" style="object-position:center" onerror="this.remove()"></figure>
+        <span class="qt"><b>Cookies y algo más</b><small>8 clases · el lado dulce</small></span>
+        <span class="qp"><b>$19</b><s>$35</s></span><span class="qgo" aria-hidden="true">Comprar</span>
       </a>
       <a class="qrow pack-row" href="#" data-buy="pack">
-        <span class="qbadge">3 en 1</span>
-        <span class="qt"><b>Pack completo + bonus</b><small>Los 3 cursos · ahorrás $149</small></span>
-        <span class="qp"><b>$59</b><s>$208</s></span><span class="qgo" aria-hidden="true">Comprar</span>
+        <span class="qbadge">4 en 1</span>
+        <span class="qt"><b>Pack completo + bonus</b><small>Los 4 cursos · ahorrás $164</small></span>
+        <span class="qp"><b>$69</b><s>$233</s></span><span class="qgo" aria-hidden="true">Comprar</span>
       </a>
       <p class="secure"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pago seguro · USD · garantía de 7 días · <a href="#cursos">ver detalle de cada curso</a></p>
     </aside>
@@ -455,56 +463,55 @@ footer a:hover{color:var(--crust)}
     </div>
 
     <div class="courses">
-      <!-- Curso 1 -->
       <article class="course rv">
-        <figure class="ph"><img src="fotos/curso-panaderia.jpg" alt="Pan de molde sin gluten" onerror="this.remove()"><span>Foto · pan de molde</span><b class="tag hot">El más elegido</b></figure>
+        <figure class="ph"><img src="fotos/agus.jpg" alt="Panadería sin gluten" style="object-position:center 70%" onerror="this.remove()"><b class="tag hot">El más elegido</b></figure>
         <div class="body">
-          <h3>Panadería sin gluten desde cero</h3>
-          <p class="desc">La base de todo. Entendé las harinas, los hidrocoloides y la fermentación para que nunca más te salga un ladrillo.</p>
-          <ul class="facts"><li>18 clases</li><li>12 recetas</li><li>Nivel inicial</li></ul>
-          <ul class="learn">
-            <li>Pan de molde, pan francés y de hamburguesa</li>
-            <li>Tu mix de harinas casero (más barato)</li>
-            <li>Cómo conservar y congelar sin que se seque</li>
-          </ul>
+          <span class="cat">Panadería</span>
+          <h3>Panadería sin gluten</h3>
+          <p class="desc">Un buen pan empieza por entender lo que pasa en la masa. La base para que nunca más te salga un ladrillo.</p>
+          <ul class="facts"><li>16 clases</li><li>10 recetas</li><li>Inicial</li></ul>
+          <ul class="learn"><li>Pan de molde, pan de campo y de hamburguesa</li><li>Tu mix de harinas casero (más barato)</li><li>Cómo conservar y congelar sin que se seque</li></ul>
           <div class="price"><span class="now">$29<small>USD</small></span><s>$59</s><span class="off">−50%</span></div>
           <a class="btn" href="#" data-buy="panaderia">Comprar ahora</a>
           <p class="secure"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pago seguro · garantía de 7 días</p>
         </div>
       </article>
-
-      <!-- Curso 2 -->
       <article class="course rv" style="--i:1">
-        <figure class="ph t2"><img src="fotos/curso-pizza.jpg" alt="Pizza sin gluten" onerror="this.remove()"><span>Foto · pizza y focaccia</span><b class="tag">Nuevo</b></figure>
+        <figure class="ph"><img src="fotos/hojaldre.jpg" alt="Hojaldre sin gluten" style="object-position:center" onerror="this.remove()"></figure>
         <div class="body">
-          <h3>Pizzas, focaccias y prepizzas</h3>
-          <p class="desc">Bordes inflados, base crocante y masa que se estira. Para la pizza del viernes y para vender.</p>
-          <ul class="facts"><li>12 clases</li><li>9 recetas</li><li>Todos los niveles</li></ul>
-          <ul class="learn">
-            <li>Pizza al molde, a la piedra y a la parrilla</li>
-            <li>Focaccia con burbujas de verdad</li>
-            <li>Prepizzas para congelar o vender</li>
-          </ul>
-          <div class="price"><span class="now">$25<small>USD</small></span><s>$45</s><span class="off">−44%</span></div>
-          <a class="btn" href="#" data-buy="pizza">Comprar ahora</a>
+          <span class="cat">Hojaldres</span>
+          <h3>Hojaldre sin gluten</h3>
+          <p class="desc">Capas, textura y todo el sabor de un clásico que vuelve a tu mesa.</p>
+          <ul class="facts"><li>10 clases</li><li>7 recetas</li><li>Intermedio</li></ul>
+          <ul class="learn"><li>Masa de hojaldre paso a paso</li><li>Laminado sin que se rompa la masa</li><li>Palmeritas, cañoncitos y vigilantes</li></ul>
+          <div class="price"><span class="now">$27<small>USD</small></span><s>$49</s><span class="off">−45%</span></div>
+          <a class="btn" href="#" data-buy="hojaldre">Comprar ahora</a>
           <p class="secure"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pago seguro · garantía de 7 días</p>
         </div>
       </article>
-
-      <!-- Curso 3 -->
       <article class="course rv" style="--i:2">
-        <figure class="ph t5"><img src="fotos/curso-facturas.jpg" alt="Medialunas sin gluten" onerror="this.remove()"><span>Foto · medialunas</span></figure>
+        <figure class="ph"><img src="fotos/facturas.jpg" alt="Facturas y cremonas" style="object-position:center" onerror="this.remove()"></figure>
         <div class="body">
-          <h3>Facturas y masa madre</h3>
-          <p class="desc">El curso avanzado: hojaldre, medialunas, criollitos y tu propia masa madre sin gluten.</p>
-          <ul class="facts"><li>16 clases</li><li>10 recetas</li><li>Nivel intermedio</li></ul>
-          <ul class="learn">
-            <li>Masa madre desde el día 1</li>
-            <li>Medialunas de manteca y de grasa</li>
-            <li>Laminado sin que se rompa la masa</li>
-          </ul>
-          <div class="price"><span class="now">$32<small>USD</small></span><s>$59</s><span class="off">−46%</span></div>
+          <span class="cat">Para el mate</span>
+          <h3>Facturas y cremonas</h3>
+          <p class="desc">La hora del mate merece sus favoritos, también sin gluten.</p>
+          <ul class="facts"><li>12 clases</li><li>9 recetas</li><li>Intermedio</li></ul>
+          <ul class="learn"><li>Medialunas, cremonas y bolas de fraile</li><li>Crema pastelera y dulce de membrillo</li><li>Cómo hornear en tanda y que queden tiernas</li></ul>
+          <div class="price"><span class="now">$25<small>USD</small></span><s>$45</s><span class="off">−44%</span></div>
           <a class="btn" href="#" data-buy="facturas">Comprar ahora</a>
+          <p class="secure"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pago seguro · garantía de 7 días</p>
+        </div>
+      </article>
+      <article class="course rv" style="--i:3">
+        <figure class="ph"><img src="fotos/cookies.jpg" alt="Cookies y algo más" style="object-position:center" onerror="this.remove()"><b class="tag">Nuevo</b></figure>
+        <div class="body">
+          <span class="cat">Pastelería</span>
+          <h3>Cookies y algo más</h3>
+          <p class="desc">Texturas que tientan y preparaciones para compartir o vender.</p>
+          <ul class="facts"><li>8 clases</li><li>12 recetas</li><li>Todos los niveles</li></ul>
+          <ul class="learn"><li>Cookies crocantes por fuera, húmedas por dentro</li><li>Brownies, alfajores y budines</li><li>Cómo envasarlas para vender</li></ul>
+          <div class="price"><span class="now">$19<small>USD</small></span><s>$35</s><span class="off">−46%</span></div>
+          <a class="btn" href="#" data-buy="cookies">Comprar ahora</a>
           <p class="secure"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pago seguro · garantía de 7 días</p>
         </div>
       </article>
@@ -515,20 +522,21 @@ footer a:hover{color:var(--crust)}
       <div>
         <span class="meta">La opción más conveniente</span>
         <h3>Pack completo <em>Salto sin gluten</em></h3>
-        <p>Los tres cursos más los bonus exclusivos. Todo lo que necesitás para hornear cualquier cosa sin gluten, desde el pan de todos los días hasta las facturas del domingo.</p>
+        <p>Los cuatro cursos más los bonus exclusivos. Todo lo que necesitás para hornear cualquier cosa sin gluten, desde el pan de todos los días hasta las facturas para el mate.</p>
         <ul class="incl">
-          <li><span>Panadería sin gluten desde cero</span><span>$59</span></li>
-          <li><span>Pizzas, focaccias y prepizzas</span><span>$45</span></li>
-          <li><span>Facturas y masa madre</span><span>$59</span></li>
+          <li><span>Panadería sin gluten</span><span>$59</span></li>
+          <li><span>Hojaldre sin gluten</span><span>$49</span></li>
+          <li><span>Facturas y cremonas</span><span>$45</span></li>
+          <li><span>Cookies y algo más</span><span>$35</span></li>
           <li class="bonus"><span>Recetario PDF con 40 recetas</span><span>$15</span></li>
           <li class="bonus"><span>Clase: cómo vender tus panes sin gluten</span><span>$20</span></li>
           <li class="bonus"><span>Comunidad privada de alumnos</span><span>$10</span></li>
         </ul>
       </div>
       <div class="box">
-        <p class="was">Valor total <s>$208 USD</s></p>
-        <p class="big">$59<small>USD</small></p>
-        <p class="save">Ahorrás $149 · un solo pago</p>
+        <p class="was">Valor total <s>$233 USD</s></p>
+        <p class="big">$69<small>USD</small></p>
+        <p class="save">Ahorrás $164 · un solo pago</p>
         <a class="btn block" href="#" data-buy="pack">Quiero el pack completo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <p class="secure"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Acceso inmediato · garantía de 7 días</p>
         <div class="pay" aria-label="Medios de pago"><span>Tarjeta</span><span>Mercado Pago</span><span>PayPal</span><span>Transferencia</span></div>
@@ -539,8 +547,8 @@ footer a:hover{color:var(--crust)}
 
 <div class="ribbon-wrap" aria-hidden="true"><div class="ribbon">
   <div class="track">
-    <span>Pan de molde</span><span>Pizza a la piedra</span><span>Medialunas</span><span>Focaccia</span><span>Masa madre</span><span>Pan de hamburguesa</span><span>Budines</span><span>Chipá</span><span>Grisines</span>
-    <span>Pan de molde</span><span>Pizza a la piedra</span><span>Medialunas</span><span>Focaccia</span><span>Masa madre</span><span>Pan de hamburguesa</span><span>Budines</span><span>Chipá</span><span>Grisines</span>
+    <span>Pan de molde</span><span>Hojaldre</span><span>Medialunas</span><span>Cremonas</span><span>Cookies</span><span>Pan de campo</span><span>Vigilantes</span><span>Alfajores</span><span>Bolas de fraile</span>
+    <span>Pan de molde</span><span>Hojaldre</span><span>Medialunas</span><span>Cremonas</span><span>Cookies</span><span>Pan de campo</span><span>Vigilantes</span><span>Alfajores</span><span>Bolas de fraile</span>
   </div>
 </div></div>
 
@@ -554,7 +562,7 @@ footer a:hover{color:var(--crust)}
     <div class="pains">
       <article class="pain rv"><span class="n">01</span><p class="q">“Me queda como un ladrillo.”</p><p>Seguís la receta al pie de la letra y el pan sale denso, húmedo por dentro y duro al día siguiente.</p></article>
       <article class="pain rv" style="--i:1"><span class="n">02</span><p class="q">“Lo que compro es carísimo y feo.”</p><p>Pagás el triple por un pan de supermercado que se desarma, no tiene sabor y está lleno de aditivos.</p></article>
-      <article class="pain rv" style="--i:2"><span class="n">03</span><p class="q">“Extraño la pizza y las facturas.”</p><p>Las reuniones, el desayuno del domingo, la pizza del viernes… sentís que te perdés lo más rico.</p></article>
+      <article class="pain rv" style="--i:2"><span class="n">03</span><p class="q">“Extraño las facturas con el mate.”</p><p>Las reuniones, el desayuno del domingo, la merienda con amigos… sentís que te perdés lo más rico.</p></article>
     </div>
     <div class="turn rv">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
@@ -582,12 +590,12 @@ footer a:hover{color:var(--crust)}
 <!-- ================= SOBRE AGUS ================= -->
 <section class="sec about" id="agus" style="padding-top:0">
   <div class="wrap">
-    <figure class="ph t3 rv"><img src="fotos/agus.jpg" alt="Retrato de Agustine en su cocina" onerror="this.remove()"><span>Foto · retrato de Agus</span></figure>
+    <figure class="ph t3 rv"><img src="fotos/agus.jpg" alt="Agus mostrando la miga de su pan sin gluten" style="object-position:center 60%" onerror="this.remove()"><b class="note">Sí, esa miga<br>es sin gluten.</b></figure>
     <div class="txt">
       <span class="meta rv">Quién te enseña</span>
       <h2 class="rv" style="--i:1">Hola, soy <em>Agus</em>.</h2>
-      <p class="rv" style="--i:2">Cuando me diagnosticaron celiaquía pensé que se terminaba el pan rico. Probé cientos de recetas que no funcionaban hasta que entendí que <strong>el pan sin gluten no se hace igual: se hace distinto</strong>.</p>
-      <p class="rv" style="--i:3">Hoy comparto todo lo que aprendí en <strong>@saltosingluten</strong> y en estos cursos, para que vos te ahorres años de prueba y error y vuelvas a disfrutar de la mesa con tu familia.</p>
+      <p class="rv" style="--i:2">Desde mi cocina en Balvanera hago panadería sin gluten todos los días. Después de mucha prueba y error entendí que <strong>el pan sin gluten no se hace igual: se hace distinto</strong>.</p>
+      <p class="rv" style="--i:3">En <strong>@saltosingluten</strong> y en esta academia virtual comparto todo lo que pasa entre la masa y el horno, para que vos te ahorres años de errores y vuelvas a disfrutar de una buena panadería.</p>
       <div class="nums rv" style="--i:4">
         <div><b>+3.200</b><span>alumnos</span></div>
         <div><b>+60</b><span>recetas probadas</span></div>
@@ -606,12 +614,12 @@ footer a:hover{color:var(--crust)}
       <p class="rv" style="--i:1">Mensajes reales que llegan todas las semanas por Instagram y WhatsApp.</p>
     </div>
     <div class="quotes">
-      <figure class="quote rv"><span class="stars">★★★★★</span><blockquote class="lg">“Mi hijo es celíaco y por primera vez se comió un sándwich sin preguntar si era sin gluten.”</blockquote><figcaption><i></i><div>Laura M.<small>Córdoba · Panadería desde cero</small></div></figcaption></figure>
-      <figure class="quote rv" style="--i:1"><figure class="ph t4"><img src="fotos/alumno-1.jpg" alt="Pan horneado por una alumna" onerror="this.remove()"><span>Foto · pan de una alumna</span></figure><span class="stars">★★★★★</span><blockquote>Después de 8 años sin comer pan de verdad, la focaccia me hizo llorar. Las explicaciones son clarísimas.</blockquote><figcaption><i></i><div>Sofía R.<small>Montevideo · Pizzas y focaccias</small></div></figcaption></figure>
-      <figure class="quote rv" style="--i:2"><span class="stars">★★★★★</span><blockquote>Empecé a vender prepizzas en mi barrio con las recetas del curso. Ya recuperé lo que pagué varias veces.</blockquote><figcaption><i></i><div>Martín G.<small>Rosario · Pack completo</small></div></figcaption></figure>
-      <figure class="quote rv"><span class="stars">★★★★★</span><blockquote>Lo mejor es que Agus responde cada duda. Mi masa madre está viva gracias a él.</blockquote><figcaption><i></i><div>Carolina P.<small>Santiago de Chile · Facturas y masa madre</small></div></figcaption></figure>
-      <figure class="quote rv" style="--i:1"><span class="stars">★★★★★</span><blockquote class="lg">“Gasto la mitad que antes en pan y es mil veces más rico.”</blockquote><figcaption><i></i><div>Andrea L.<small>Buenos Aires · Panadería desde cero</small></div></figcaption></figure>
-      <figure class="quote rv" style="--i:2"><figure class="ph t5"><img src="fotos/alumno-2.jpg" alt="Medialunas horneadas por una alumna" onerror="this.remove()"><span>Foto · medialunas de alumna</span></figure><span class="stars">★★★★★</span><blockquote>Nunca pensé que iba a poder hacer medialunas sin gluten. Las llevé al trabajo y nadie se dio cuenta.</blockquote><figcaption><i></i><div>Valeria T.<small>Salto · Pack completo</small></div></figcaption></figure>
+      <figure class="quote rv"><span class="stars">★★★★★</span><blockquote class="lg">“Mi hijo es celíaco y por primera vez se comió un sándwich sin preguntar si era sin gluten.”</blockquote><figcaption><i></i><div>Laura M.<small>Córdoba · Panadería sin gluten</small></div></figcaption></figure>
+      <figure class="quote rv" style="--i:1"><span class="stars">★★★★★</span><blockquote>Después de 8 años sin comer un vigilante, el hojaldre me hizo llorar. Las explicaciones son clarísimas.</blockquote><figcaption><i></i><div>Sofía R.<small>Montevideo · Hojaldre sin gluten</small></div></figcaption></figure>
+      <figure class="quote rv" style="--i:2"><span class="stars">★★★★★</span><blockquote>Empecé a vender cookies en mi barrio con las recetas del curso. Ya recuperé lo que pagué varias veces.</blockquote><figcaption><i></i><div>Martín G.<small>Rosario · Pack completo</small></div></figcaption></figure>
+      <figure class="quote rv"><span class="stars">★★★★★</span><blockquote>Lo mejor es que Agus responde cada duda. Mis cremonas por fin quedan tiernas gracias a él.</blockquote><figcaption><i></i><div>Carolina P.<small>Santiago de Chile · Facturas y cremonas</small></div></figcaption></figure>
+      <figure class="quote rv" style="--i:1"><span class="stars">★★★★★</span><blockquote class="lg">“Gasto la mitad que antes en pan y es mil veces más rico.”</blockquote><figcaption><i></i><div>Andrea L.<small>Buenos Aires · Panadería sin gluten</small></div></figcaption></figure>
+      <figure class="quote rv" style="--i:2"><span class="stars">★★★★★</span><blockquote>Nunca pensé que iba a poder hacer medialunas sin gluten. Las llevé al trabajo y nadie se dio cuenta.</blockquote><figcaption><i></i><div>Valeria T.<small>Salto · Pack completo</small></div></figcaption></figure>
     </div>
   </div>
 </section>
@@ -640,7 +648,7 @@ footer a:hover{color:var(--crust)}
     </aside>
     <div>
       <div class="qa"><button aria-expanded="false">¿Cuánto tiempo tengo acceso a los cursos?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Para siempre. Pagás una sola vez y podés volver a ver las clases todas las veces que quieras, incluidas las actualizaciones futuras.</p></div></div></div>
-      <div class="qa"><button aria-expanded="false">Nunca hice pan, ¿lo voy a poder hacer?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Sí. “Panadería sin gluten desde cero” está pensado para personas que nunca amasaron. Empezamos por lo más básico y avanzamos paso a paso.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">¿Qué curso me conviene para empezar?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>“Panadería sin gluten”. Está pensado para quienes nunca amasaron: empezamos por lo más básico y avanzamos paso a paso. Después podés seguir con hojaldre y facturas.</p></div></div></div>
       <div class="qa"><button aria-expanded="false">¿Necesito máquinas o ingredientes difíciles de conseguir?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>No. Todo se hace con horno de casa y a mano (si tenés batidora, mejor). Los ingredientes se consiguen en cualquier dietética y te muestro alternativas para cada uno.</p></div></div></div>
       <div class="qa"><button aria-expanded="false">¿Las recetas son aptas para celíacos?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Sí, todas son 100% sin TACC. Además te explico cómo evitar la contaminación cruzada en tu cocina.</p></div></div></div>
       <div class="qa"><button aria-expanded="false">¿Cómo pago desde mi país?<span class="pm" aria-hidden="true"></span></button><div class="a"><div><p>Aceptamos tarjetas de crédito y débito de todo el mundo, Mercado Pago, PayPal y transferencia. El precio se convierte automáticamente a tu moneda.</p></div></div></div>
@@ -656,7 +664,7 @@ footer a:hover{color:var(--crust)}
     <h2 class="rv" style="--i:1">El próximo pan que hornees puede ser <em>el mejor.</em></h2>
     <p class="rv" style="--i:2">Sumate a los más de 3.200 alumnos que volvieron a disfrutar del pan, sin gluten y sin miedo.</p>
     <div class="ctas rv" style="--i:3">
-      <a class="btn" href="#" data-buy="pack">Quiero el pack completo · $59</a>
+      <a class="btn" href="#" data-buy="pack">Quiero el pack completo · $69</a>
       <a class="btn ghost" href="#cursos">Ver cursos por separado</a>
     </div>
   </div>
@@ -665,7 +673,7 @@ footer a:hover{color:var(--crust)}
 
 <footer>
   <div class="wrap">
-    <span>© <span data-year>2026</span> Salto Sin Gluten · Agustine</span>
+    <span>© <span data-year>2026</span> Salto Sin Gluten · Panadería sin gluten · Balvanera, Buenos Aires</span>
     <nav aria-label="Pie de página">
       <a href="https://www.instagram.com/saltosingluten/" target="_blank" rel="noopener">Instagram</a>
       <a href="#" data-wa>WhatsApp</a>
@@ -676,7 +684,7 @@ footer a:hover{color:var(--crust)}
 </footer>
 
 <div class="buybar" aria-hidden="true">
-  <div><small>Pack completo · 3 cursos + bonus</small><b>$59</b><s>$208</s></div>
+  <div><small>Pack completo · 4 cursos + bonus</small><b>$69</b><s>$233</s></div>
   <a class="btn" href="#" data-buy="pack" tabindex="-1">Comprar</a>
 </div>
 
@@ -693,8 +701,9 @@ const CONFIG = {
   waText: "¡Hola Agus! Vi los cursos de Salto Sin Gluten y tengo una consulta.",
   checkout: {                 // links de pago (Hotmart, Mercado Pago, Stripe…)
     panaderia: "",
-    pizza: "",
+    hojaldre: "",
     facturas: "",
+    cookies: "",
     pack: ""
   },
   promoEnds: ""               // fecha fin de promo "2026-11-30T23:59:00"; vacío = próximo domingo
